@@ -1,9 +1,9 @@
 ---
-lt:
+fa:
   account:
-    delete: Pašaslinti paskyrą
-    delete_confirmation: Ar tikrai norite ištrinti paskyrą?
-    deleted: Paskyrą sėkmingai ištrinta
+    delete: Delete account
+    delete_confirmation: Are you sure you want to delete the account?
+    deleted: Account successfully deleted
     deletion_info:
       data_consequences:
         other: Of the data the user created (e.g. e-mail, preferences, work packages,
@@ -20,10 +20,10 @@ lt:
           user". As the data of every deleted account is reassigned to this account
           it will not be possible to distinguish the data you created from the data
           of another deleted account.
-      heading: Ištrinti paskyrą %{name}
+      heading: Delete account %{name}
       info:
-        other: Paskyros ištrynimas yra negrįžtamas veiksmas.
-        self: Jūsų paskyros ištrynimas yra negrįžtamas veiksmas.
+        other: Deleting the user account is an irreversible action.
+        self: Deleting your user account is an irreversible action.
       login_consequences:
         other: The account will be deleted from the system. Therefore, the user will
           no longer be able to log in with his current credentials. He/she can choose
@@ -33,19 +33,19 @@ lt:
           longer be able to log in with your current credentials. If you choose to
           become a user of this application again, you can do so by using the means
           this application grants.
-  actionview_instancetag_blank_option: Prašome pasirinkti
+  actionview_instancetag_blank_option: Please select
   activerecord:
     attributes:
       attachment:
-        downloads: Atsisiuntimai
-        filename: Failas
-        filesize: Dydis
+        downloads: Downloads
+        filename: File
+        filesize: Size
       auth_source:
-        account: Paskyrą
-        attr_firstname: Vardo atributas
-        attr_lastname: Pavardes atributas
-        attr_login: Vartotojo vardo atributas
-        attr_mail: El. paštos atributas
+        account: Account
+        attr_firstname: Firstname attribute
+        attr_lastname: Lastname attribute
+        attr_login: Login attribute
+        attr_mail: Email attribute
         base_dn: Base DN
         host: Host
         onthefly: On-the-fly user creation
@@ -54,9 +54,9 @@ lt:
         commented: Commented
       custom_field:
         default_value: Default value
-        editable: Redaguojama
-        field_format: Formatas
-        is_filter: Naudojamas kaip filtras
+        editable: Editable
+        field_format: Format
+        is_filter: Used as a filter
         is_required: Required
         max_length: Maximum length
         min_length: Minimum length
@@ -231,8 +231,6 @@ lt:
                   your last one.
                 other: has been used before. Please choose one that is different from
                   your last %{count}.
-                few: has been used before. Please choose one that is different from
-                  your last %{count}.
         member:
           principal_blank: Please choose at least one user or group.
           role_blank: Please choose at least one role.
@@ -241,9 +239,8 @@ lt:
         header:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
-          few: "%{count} errors prohibited this %{model} from being saved"
     models:
-      attachment: Failas
+      attachment: File
       board: Forum
       comment: Comment
       custom_field: Custom field
@@ -258,7 +255,6 @@ lt:
       role:
         one: Role
         other: Roles
-        few: Roles
       type: Type
       planning_element: Planning element
       project_type: Project type
@@ -437,48 +433,37 @@ lt:
       about_x_hours:
         one: about 1 hour
         other: about %{count} hours
-        few: about %{count} hours
       about_x_months:
         one: about 1 month
         other: about %{count} months
-        few: about %{count} months
       about_x_years:
         one: about 1 year
         other: about %{count} years
-        few: about %{count} years
       almost_x_years:
         one: almost 1 year
         other: almost %{count} years
-        few: almost %{count} years
       half_a_minute: half a minute
       less_than_x_minutes:
         one: less than a minute
         other: less than %{count} minutes
-        few: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
         other: less than %{count} seconds
-        few: less than %{count} seconds
       over_x_years:
         one: over 1 year
         other: over %{count} years
-        few: over %{count} years
       x_days:
         one: 1 day
         other: "%{count} days"
-        few: "%{count} days"
       x_minutes:
         one: 1 minute
         other: "%{count} minutes"
-        few: "%{count} minutes"
       x_months:
         one: 1 month
         other: "%{count} months"
-        few: "%{count} months"
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-        few: "%{count} seconds"
   default_activity_management: Management
   default_activity_design: Design
   default_activity_development: Development
@@ -602,7 +587,7 @@ lt:
   general_csv_encoding: UTF-8
   general_csv_separator: ","
   general_first_day_of_week: '7'
-  general_lang_name: Lietuvių
+  general_lang_name: "فارسی"
   general_pdf_encoding: ISO-8859-1
   general_text_No: 'No'
   general_text_Yes: 'Yes'
@@ -626,7 +611,6 @@ lt:
         one: Please enter one more character
         other: Please enter {{count}} more characters
         zero: Please enter more characters
-        few: Please enter {{count}} more characters
       load_more: Loading more results ...
       no_matches: No matches found
       searching: Searching ...
@@ -634,7 +618,6 @@ lt:
         one: You can only select one item
         other: You can only select {{limit}} items
         zero: You cannot select any items
-        few: You can only select {{limit}} items
     timelines:
       tooManyProjects: More than %{count} Projects. Please use a better filter!
       cancel: Cancel
@@ -665,7 +648,7 @@ lt:
     tl_toolbar:
       zooms: Zoom level
       outlines: Hierarchy level
-  label_account: Paskyrą
+  label_account: Account
   label_activity: Activity
   label_add_another_file: Add another file
   label_add_columns: Add selected columns
@@ -1075,27 +1058,22 @@ lt:
     one: 1 closed
     other: "%{count} closed"
     zero: 0 closed
-    few: "%{count} closed"
   label_x_comments:
     one: 1 comment
     other: "%{count} comments"
     zero: no comments
-    few: "%{count} comments"
   label_x_open_work_packages_abbr:
     one: 1 open
     other: "%{count} open"
     zero: 0 open
-    few: "%{count} open"
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
     other: "%{count} open / %{total}"
     zero: 0 open / %{total}
-    few: "%{count} open / %{total}"
   label_x_projects:
     one: 1 project
     other: "%{count} projects"
     zero: no projects
-    few: "%{count} projects"
   label_year: Year
   label_yesterday: yesterday
   label_keyboard_shortcut_help_heading: Available Keyboard Shortcuts
@@ -1221,7 +1199,6 @@ lt:
           byte:
             one: Byte
             other: Bytes
-            few: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1534,7 +1511,6 @@ lt:
     duration_days:
       one: 1 day
       other: "%{count} days"
-      few: "%{count} days"
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
@@ -1707,7 +1683,6 @@ lt:
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
       other: locked temporarily (%{count} failed login attempts)
-      few: locked temporarily (%{count} failed login attempts)
     deleted: Deleted user
     error_status_change_failed: 'Changing the user status failed due to the following
       errors: %{errors}'

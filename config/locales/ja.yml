@@ -1,29 +1,19 @@
 ---
 ja:
   account:
-    delete: Delete account
-    delete_confirmation: Are you sure you want to delete the account?
-    deleted: Account successfully deleted
+    delete: "アカウントを削除"
+    delete_confirmation: "アカウントを削除してもよろしいですか？"
+    deleted: "アカウントが正常に削除されました"
     deletion_info:
       data_consequences:
-        other: Of the data the user created (e.g. e-mail, preferences, work packages,
-          wiki entries) as much as possible will be deleted. Note however, that data
-          like work packages and wiki entries can not be deleted without impeding
-          the work of the other users. Such data is hence reassigned to an account
-          called "Deleted user". As the data of every deleted account is reassigned
-          to this account it will not be possible to distinguish the data the user
-          created from the data of another deleted account.
-        self: Of the data you created (e.g. e-mail, preferences, work packages, wiki
-          entries) as much as possible will be deleted. Note however, that data like
-          work packages and wiki entries can not be deleted without impeding the work
-          of the other users. Such data is hence reassigned to an account called "Deleted
-          user". As the data of every deleted account is reassigned to this account
-          it will not be possible to distinguish the data you created from the data
-          of another deleted account.
-      heading: Delete account %{name}
+        other: "ユーザーが作成した殆どのデータ (例えば電子メール、設定、ワーク パッケージ 、wiki記載 )が削除されます。ただし、ワーク パッケージと
+          wiki 記載のようなデータは、他のユーザーの作業を妨害することがなく削除できません。このようなデータは、それ故に「削除されたユーザ」と呼ばれるアカウントに再割り当てされます。すべての削除されたアカウントのデータがこのアカウントに再割り当ているので削除された別のユーザーのデータと区別することができません。"
+        self: "ユーザーが作成した殆どのデータ (例えば電子メール、設定、ワーク パッケージ 、wiki記載 )が削除されます。ただし、ワーク パッケージと
+          wiki 記載のようなデータは、他のユーザーの作業を妨害することがなく削除できません。このようなデータは、それ故に「削除されたユーザ」と呼ばれるアカウントに再割り当てされます。すべての削除されたアカウントのデータがこのアカウントに再割り当ているので削除された別のユーザーのデータと区別することができません。"
+      heading: "アカウント名「 %{name} 」を削除します。"
       info:
-        other: Deleting the user account is an irreversible action.
-        self: Deleting your user account is an irreversible action.
+        other: "ユーザーアカウントの削除は復元できない操作です。"
+        self: "アカウントの削除は復元できない操作です。"
       login_consequences:
         other: The account will be deleted from the system. Therefore, the user will
           no longer be able to log in with his current credentials. He/she can choose
@@ -110,7 +100,7 @@ ja:
         auth_source: Authentication mode
         identity_url: OpenID の URL
         language: Language
-        last_login_on: Last connection
+        last_login_on: "前回の接続"
         mail_notification: Email notifications
         new_password: New password
         password_confirmation: Confirmation
@@ -151,7 +141,7 @@ ja:
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: Target version
+        fixed_version: "対処バージョン"
         parent: Parent
         parent_issue: Parent
         parent_work_packae: Parent
@@ -477,7 +467,7 @@ ja:
   default_status_scheduled: "予定済み"
   default_status_in_progress: "処理中…"
   default_status_tested: "テスト済み"
-  default_status_on_hold: on hold
+  default_status_on_hold: "保留"
   default_status_rejected: "拒否"
   default_status_closed: closed
   default_priority_low: Low
@@ -618,7 +608,7 @@ ja:
         other: "選択 {{制限}} 項目のみができます。"
         zero: You cannot select any items
     timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
+      tooManyProjects: "プロジェクト数が%{count} 件を超えました。フィルターを変えてください ！"
       cancel: Cancel
       save: Save
       due_date: Due date
@@ -629,24 +619,23 @@ ja:
       start_date: Start date
       error: "エラーが発生しました。"
       create_planning_select_project: "プロジェクト:"
-      really_close_dialog: Do you really want to close the dialog and loose the entered
-        data?
-      zoom_slider: Zoom slider
+      really_close_dialog: "ダイアログボックスを閉じて入力したデータを破棄してもよろしいですか？"
+      zoom_slider: "ズーム スライダー"
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
     button_check_all: Check all
     button_uncheck_all: Uncheck all
-    label_collapsed: collapsed
-    label_expanded: expanded
+    label_collapsed: "折り畳み"
+    label_expanded: "展開"
     label_collapse_all: Collapse all
     label_expand_all: Expand all
-    label_menu_item_toggle: Show/hide submenu items
-    label_menu_collapse: collapse
-    label_menu_expand: expand
+    label_menu_item_toggle: "サブメニュー項目の表示/非表示"
+    label_menu_collapse: "以下を非表示"
+    label_menu_expand: "展開"
     tl_toolbar:
-      zooms: Zoom level
-      outlines: Hierarchy level
+      zooms: "ズーム レベル"
+      outlines: "階層レベル"
   label_account: Account
   label_activity: Activity
   label_add_another_file: Add another file
@@ -665,7 +654,7 @@ ja:
   label_age: Age
   label_ago: days ago
   label_all: all
-  label_all_work_packages: all work packages
+  label_all_work_packages: "すべての作業パッケージ"
   label_all_time: all time
   label_all_words: All words
   label_and_its_subprojects: "%{value} and its subprojects"
@@ -763,7 +752,7 @@ ja:
   label_environment: Environment
   label_equals: is
   label_example: Example
-  label_expand: Expand
+  label_expand: "展開"
   label_expand_all: Expand all
   label_export_to: 'Also available in:'
   label_f_hour: "%{value} hour"
@@ -825,7 +814,7 @@ ja:
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: Last connection
+  label_last_login: "前回の接続"
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
@@ -1334,7 +1323,7 @@ ja:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: Allow OpenID login and registration
+  setting_openid: OpenID ログインと登録を許可します。
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
@@ -1445,7 +1434,7 @@ ja:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick available (optional)
+  text_rmagick_available: RMagick を利用 (任意)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1513,8 +1502,8 @@ ja:
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
-    edit_timeline: Edit timeline report
-    delete_timeline: Delete timeline report
+    edit_timeline: "時系列レポートを編集"
+    delete_timeline: "時系列レポートを削除"
     empty: "(empty)"
     enable_type_in_project: Enable type "%{type}"
     end: End
@@ -1591,9 +1580,9 @@ ja:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: from %{startdate} to %{enddate}
-      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
-        from now
+      project_time_filter_historical: "%{startdate} ～ %{enddate}"
+      project_time_filter_relative: "%{startspan}%{startspanunit}前の時刻から%{endspan}%{endspanunit}（今から）
+        まで"
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status

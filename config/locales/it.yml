@@ -109,7 +109,7 @@ it:
       user:
         admin: Amministratore
         auth_source: Modalità di autenticazione
-        identity_url: OpenID URL
+        identity_url: Indirizzo OpenID
         language: Linguaggio
         last_login_on: Ultima connessione
         mail_notification: Notificazioni email
@@ -505,7 +505,7 @@ it:
   default_role_member: Membro
   default_type: Pacchetto di Lavoro
   default_type_task: Attività
-  default_type_deliverable: Deliverable
+  default_type_deliverable: Consegnabile
   default_type_milestone: Traguardo
   default_type_phase: Fase
   default_type_bug: Bug
@@ -633,7 +633,8 @@ it:
         other: Puoi selezionare {{limit}} oggetti
         zero: You cannot select any items
     timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
+      tooManyProjects: Più di %{count} Progetti. Si prega di utilizzare uno o più
+        filtri!
       cancel: Cancella
       save: Salva
       due_date: Data di fine
@@ -644,8 +645,8 @@ it:
       start_date: Data di inizio
       error: Si è verificato un errore.
       create_planning_select_project: 'Progetto:'
-      really_close_dialog: Do you really want to close the dialog and loose the entered
-        data?
+      really_close_dialog: Sei sicuro di voler chiudere e perdere le modifiche non
+        salvate?
       zoom_slider: Zoom slider
     filter:
       noneElement: "(nessuno)"
