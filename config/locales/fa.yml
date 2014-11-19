@@ -1,18 +1,17 @@
 ---
 fa:
   account:
-    delete: Delete account
-    delete_confirmation: Are you sure you want to delete the account?
-    deleted: Account successfully deleted
+    delete: "حذف حساب کاربری"
+    delete_confirmation: "مطمئن هستید که می خواهید حساب کاربری را حذف کنید؟"
+    deleted: "حساب با موفقیت حذف شد"
     deletion_info:
       data_consequences:
-        other: Of the data the user created (e.g. e-mail, preferences, work packages,
-          wiki entries) as much as possible will be deleted. Note however, that data
-          like work packages and wiki entries can not be deleted without impeding
-          the work of the other users. Such data is hence reassigned to an account
-          called "Deleted user". As the data of every deleted account is reassigned
-          to this account it will not be possible to distinguish the data the user
-          created from the data of another deleted account.
+        other: "اطلاعات کاربر ایجاد شده (مانند ایمیل، تنظیمات، بسته های کاری , ویکی
+          ها) تا آنجا که ممکن است حذف خواهد شد. با این حال، توجه داشته باشید که داده
+          هایی مانند بسته های کاری و نوشته های ویکی وابسته به دیگر کاربران پاک نمی
+          شود. این گونه داده ها به حسابی به نام \"کاربر حذف شده \" تعلق میگیرد. از
+          آنجا داده های تمام حسابهای حذف شده به این حساب منتسب می شود ، ممکن نخواهد
+          بود داده های کاربران مختلف را تشخیص داد."
         self: Of the data you created (e.g. e-mail, preferences, work packages, wiki
           entries) as much as possible will be deleted. Note however, that data like
           work packages and wiki entries can not be deleted without impeding the work
@@ -22,8 +21,8 @@ fa:
           of another deleted account.
       heading: Delete account %{name}
       info:
-        other: Deleting the user account is an irreversible action.
-        self: Deleting your user account is an irreversible action.
+        other: "حذف یک حساب کاربری عملیاتی غیرقابل برگشت است."
+        self: "حذف حساب کاربری عملیاتی غیرقابل برگشت است."
       login_consequences:
         other: The account will be deleted from the system. Therefore, the user will
           no longer be able to log in with his current credentials. He/she can choose
@@ -33,96 +32,103 @@ fa:
           longer be able to log in with your current credentials. If you choose to
           become a user of this application again, you can do so by using the means
           this application grants.
-  actionview_instancetag_blank_option: Please select
+    error_inactive_activation_by_mail: Your account has not yet been activated. To
+      activate your account, click on the link that was emailed to you.
+    error_inactive_manual_activation: Your account has not yet been activated. Please
+      wait for an administrator to activate your account.
+    error_self_registration_disabled: "ثبت نام در این سیستم غیرفعال شده است. لطفا
+      ایجاد یک حساب کاربری را از مدیر بخواهید."
+    login_with_auth_provider: "یا با حساب موجود خود وارد سیستم شوید"
+  actionview_instancetag_blank_option: "لطفا انتخاب کنید"
   activerecord:
     attributes:
       attachment:
-        downloads: Downloads
-        filename: File
-        filesize: Size
+        downloads: "دانلود ها"
+        filename: "فایل"
+        filesize: "اندازه‌"
       auth_source:
-        account: Account
-        attr_firstname: Firstname attribute
-        attr_lastname: Lastname attribute
-        attr_login: Login attribute
-        attr_mail: Email attribute
+        account: "حساب کاربری"
+        attr_firstname: "مشخصه نام"
+        attr_lastname: "مشخصه نام خانوادگی"
+        attr_login: "ویژگی ورود به سیستم"
+        attr_mail: "ویژگی ایمیل"
         base_dn: Base DN
-        host: Host
+        host: "میزبان"
         onthefly: On-the-fly user creation
-        port: Port
+        port: "پورت"
       comment:
-        commented: Commented
+        commented: "دارای اظهار نظر"
       custom_field:
-        default_value: Default value
-        editable: Editable
-        field_format: Format
-        is_filter: Used as a filter
-        is_required: Required
-        max_length: Maximum length
-        min_length: Minimum length
-        possible_values: Possible values
-        regexp: Regular expression
-        searchable: Searchable
-        visible: Visible
+        default_value: "مقدار پیش فرض"
+        editable: "قابل ویرایش"
+        field_format: "قالب‎بندی"
+        is_filter: "به عنوان یک فیلتر استفاده شده"
+        is_required: "الزامی"
+        max_length: "حداکثر طول"
+        min_length: "حداقل طول"
+        possible_values: "مقادیر ممکن"
+        regexp: "عبارت منظم"
+        searchable: "قابل جستجو"
+        visible: "قابل مشاهده"
       custom_value:
-        value: Value
+        value: "مقدار"
       relation:
-        delay: Delay
-        from: Work Package
-        to: Related work package
+        delay: "تأخیر"
+        from: "بسته کاری"
+        to: "بسته کاری وابسته"
       status:
-        is_closed: Work package closed
+        is_closed: "بسته کاری بسته شد"
       journal:
-        notes: Notes
+        notes: "یادداشت ها"
       member:
-        roles: Roles
+        roles: "نقش ها"
       project:
-        homepage: Homepage
-        identifier: Identifier
-        work_packages: Work Packages
-        parent: Subproject of
-        versions: Versions
-        project_type: Project type
-        responsible: Responsible
-        types: Types
-        queries: Queries
+        homepage: "صفحه اصلی"
+        identifier: "شناسه"
+        work_packages: "بسته های کاری"
+        parent: "زیر پروژه ای از "
+        versions: "نسخه ها"
+        project_type: "نوع پروژه"
+        responsible: "مسئول"
+        types: "انواع"
+        queries: "پرس و جو ها"
       query:
-        column_names: Columns
-        group_by: Group results by
-        filters: Filters
+        column_names: "ستون‌ها"
+        group_by: "دسته بندی نتایج با"
+        filters: "فیلترها"
       repository:
-        url: URL
+        url: "نشانی اینترنت"
       role:
-        assignable: Work packages can be assigned to this role
+        assignable: "بسته های کاری که می تواند به این نقش اختصاص داده شود"
       time_entry:
-        activity: Activity
-        hours: Hours
-        work_package: Work Package
-        spent_on: Date
-        type: Type
+        activity: "فعالیت"
+        hours: "ساعت‌‌‌‌‌‌"
+        work_package: "بسته کاری"
+        spent_on: "تاریخ"
+        type: "نوع"
       type:
-        is_in_roadmap: Work packages displayed in roadmap
+        is_in_roadmap: "بسته های کاری در نقشه راه نمایش داده شده اند"
         in_aggregation: Work packages displayed in aggregation
         is_milestone: Work packages displayed as milestone
-        color: Color
+        color: "رنگ"
       user:
-        admin: Administrator
-        auth_source: Authentication mode
-        identity_url: OpenID URL
-        language: Language
-        last_login_on: Last connection
-        mail_notification: Email notifications
-        new_password: New password
-        password_confirmation: Confirmation
-        force_password_change: Enforce password change on next login
+        admin: "مدیر"
+        auth_source: "حالت تأیید اعتبار"
+        language: "زبان"
+        last_login_on: "آخرین ورود"
+        mail_notification: "اعلان های ایمیل"
+        new_password: "رمز عبور جديد"
+        password_confirmation: "تاییدیه"
+        force_password_change: "اجبار برای تغییر گذرواژه در ورود بعدی"
       user_preference:
-        comments_sorting: Display comments
-        hide_mail: Hide my email address
-        impaired: Accessibility mode
-        time_zone: Time zone
-        warn_on_leaving_unsaved: Warn me when leaving a page with unsaved text
+        comments_sorting: "نمایش نظرات"
+        hide_mail: "مخفی کردن آدرس ایمیل من"
+        impaired: "حالت دسترسی"
+        time_zone: "منطقه زمانی"
+        warn_on_leaving_unsaved: "هنگام ترک یک صفحه با متن ذخیره نشده به من هشدار
+          بده"
       version:
-        effective_date: Due date
+        effective_date: "موعد مقرر"
         sharing: Sharing
       wiki:
         start_page: Start page
@@ -151,17 +157,17 @@ fa:
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: Target version
+        fixed_version: Version
         parent: Parent
         parent_issue: Parent
-        parent_work_packae: Parent
+        parent_work_package: Parent
         priority: Priority
         progress: "% done"
-        responsible: Responsible
+        responsible: "مسئول"
         spent_time: Spent time
         subproject: Subproject
         time_entries: Log time
-        type: Type
+        type: "نوع"
         watcher: Watcher
     errors:
       messages:
@@ -177,18 +183,20 @@ fa:
         exclusion: is reserved
         greater_than: must be greater than %{count}
         greater_than_or_equal_to: must be greater than or equal to %{count}
+        smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
+          length
         greater_than_start_date: must be greater than start date
         inclusion: is not included in the list
         invalid: is invalid
         less_than: must be less than %{count}
         less_than_or_equal_to: must be less than or equal to %{count}
         not_a_date: is not a date
-        not_a_number: is not a number
-        not_an_integer: is not an integer
-        not_same_project: doesn't belong to the same project
-        odd: must be odd
-        taken: has already been taken
-        too_long: is too long (maximum is %{count} characters)
+        not_a_number: "یک عدد نیست"
+        not_an_integer: "یک عدد صحیح نیست"
+        not_same_project: "به همان پروژه تعلق ندارد"
+        odd: "باید فرد باشد"
+        taken: "در حال حاضر گرفته شده است"
+        too_long: "بیش از حد طولانی است (حداکثر %{count} کاراکتر)"
         too_short: is too short (minimum is %{count} characters)
         wrong_length: is the wrong length (should be %{count} characters)
         after: must be after %{date}
@@ -208,15 +216,15 @@ fa:
               not_start_date: is not on start date, although this is required for
                 milestones
             parent_id:
-              cannot_be_milestone: cannot be a milestone
+              cannot_be_milestone: "نمی توان یک نقطه عطف باشد"
               cannot_be_in_another_project: cannot be in another project
-              not_a_valid_parent: is invaild
-              does_not_exist: does not exist
+              not_a_valid_parent: is invalid
+              does_not_exist: "وجود ندارد"
             status_id:
               status_transition_invalid: no valid transition exists from old to new
                 status for the current user roles
             priority_id:
-              only_active_priorities_allowed: needs to be active
+              only_active_priorities_allowed: "باید فعال باشد"
         user:
           attributes:
             password:
@@ -232,7 +240,7 @@ fa:
                 other: has been used before. Please choose one that is different from
                   your last %{count}.
         member:
-          principal_blank: Please choose at least one user or group.
+          principal_blank: "لطفا حداقل یک کاربر یا گروه را انتخاب کنید."
           role_blank: Please choose at least one role.
       template:
         body: 'Please check the following fields:'
@@ -240,10 +248,10 @@ fa:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
     models:
-      attachment: File
-      board: Forum
-      comment: Comment
-      custom_field: Custom field
+      attachment: "فایل"
+      board: "تالار گفتگو"
+      comment: "نظر"
+      custom_field: "فیلدهای سفارشی"
       group: Group
       issue: Issue
       category: Category
@@ -255,14 +263,15 @@ fa:
       role:
         one: Role
         other: Roles
-      type: Type
+      type: "نوع"
       planning_element: Planning element
-      project_type: Project type
+      project_type: "نوع پروژه"
       user: User
       version: Version
       wiki: Wiki
       wiki_page: Wiki page
       workflow: Workflow
+      work_package: Work package
   errors:
     header_invalid_fields: 'There were problems with the following fields:'
   activity:
@@ -276,7 +285,7 @@ fa:
     base: 'General Error:'
     blocks_ids: Blocks
     category: Category
-    comments: Comment
+    comments: "نظر"
     content: Content
     created_at: Created on
     created_on: Created on
@@ -284,12 +293,12 @@ fa:
     default_columns: Default columns
     description: Description
     display_sums: Display Sums
-    due_date: Due date
+    due_date: "موعد مقرر"
     estimated_hours: Estimated time
     firstname: First name
     group: Group
     groupname: Group name
-    is_default: Default value
+    is_default: "مقدار پیش فرض"
     is_for_all: For all projects
     is_public: Public
     lastname: Last name
@@ -304,7 +313,7 @@ fa:
     subject: Subject
     summary: Summary
     title: Title
-    type: Type
+    type: "نوع"
     updated_at: Updated on
     updated_on: Updated on
     user: User
@@ -338,7 +347,7 @@ fa:
   button_list: List
   button_lock: Lock
   button_log_time: Log time
-  button_login: Login
+  button_login: Sign in
   button_move: Move
   button_move_and_follow: Move and follow
   button_quote: Quote
@@ -464,40 +473,44 @@ fa:
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-  default_activity_management: Management
+    units:
+      hour:
+        one: hour
+        other: hours
+  default_activity_management: "مدیریت"
   default_activity_design: Design
   default_activity_development: Development
-  default_activity_testing: Testing
-  default_activity_Support: Support
+  default_activity_testing: "آزمون"
+  default_activity_Support: "پشتیبانی"
   default_activity_Other: Other
-  default_status_new: new
-  default_status_specified: specified
-  default_status_confirmed: confirmed
-  default_status_to_be_scheduled: to be scheduled
-  default_status_scheduled: scheduled
-  default_status_in_progress: in progress
-  default_status_tested: tested
-  default_status_on_hold: on hold
-  default_status_rejected: rejected
+  default_status_new: "جدید"
+  default_status_specified: "مشخص شده"
+  default_status_confirmed: "تایید شده"
+  default_status_to_be_scheduled: "برنامه ریزی شود"
+  default_status_scheduled: "برنامه ریزی شده"
+  default_status_in_progress: "در حال انجام"
+  default_status_tested: "آزمایش شده"
+  default_status_on_hold: "در انتظار"
+  default_status_rejected: "رد شده"
   default_status_closed: closed
   default_priority_low: Low
   default_priority_normal: Normal
   default_priority_high: High
   default_priority_immediate: Immediate
-  default_project_type_customer: Customer Project
-  default_project_type_internal: Internal Project
-  default_reported_project_status_green: Green
+  default_project_type_customer: "پروژه مشتری"
+  default_project_type_internal: "پروژه داخلی"
+  default_reported_project_status_green: "سبز"
   default_reported_project_status_amber: Amber
-  default_reported_project_status_red: Red
+  default_reported_project_status_red: "قرمز"
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
   default_role_reader: Reader
   default_role_member: Member
-  default_type: Work Package
-  default_type_task: Task
-  default_type_deliverable: Deliverable
+  default_type: "بسته کاری"
+  default_type_task: "وظیفه"
+  default_type_deliverable: "تحویل شدنی"
   default_type_milestone: Milestone
   default_type_phase: Phase
   default_type_bug: Bug
@@ -524,8 +537,7 @@ fa:
   description_category_reassign: Choose category
   description_message_content: Message content
   description_my_project: You are member
-  description_notes: Notes
-  description_option_toggle: Show/Hide options
+  description_notes: "یادداشت ها"
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -534,7 +546,6 @@ fa:
   description_select_work_package: Select work package
   description_selected_columns: Selected Columns
   description_sub_work_package: Sub work package of current
-  description_subwork_package: Sub work package of
   description_toc_toggle: Show/Hide table of contents
   description_user_mail_notification: Mail notification settings
   description_wiki_subpages_reassign: Choose new parent page
@@ -546,6 +557,7 @@ fa:
   error_can_not_archive_project: This project cannot be archived
   error_can_not_delete_custom_field: Unable to delete custom field
   error_can_not_delete_type: This type contains work packages and cannot be deleted.
+  error_can_not_delete_standard_type: Standard types cannot be deleted.
   error_can_not_remove_role: This role is in use and cannot be deleted.
   error_can_not_reopen_work_package_on_closed_version: A work package assigned to
     a closed version cannot be reopened
@@ -559,6 +571,8 @@ fa:
     Please check your configuration (Go to "Administration -> Work package statuses").
   error_no_type_in_project: No type is associated to this project. Please check the
     Project settings.
+  error_omniauth_registration_timed_out: The registration via an external authentication
+    provider timed out. Please try again.
   error_scm_annotate: The entry does not exist or cannot be annotated.
   error_scm_command_failed: 'An error occurred when trying to access the repository:
     %{value}'
@@ -572,6 +586,8 @@ fa:
   error_workflow_copy_target: Please select target type(s) and role(s)
   error_menu_item_not_created: Menu item could not be added
   error_menu_item_not_saved: Menu item could not be saved
+  error_external_authentication_failed: An error occured during external authentication.
+    Please try again.
   events:
     project: Project edited
     changeset: Changeset edited
@@ -589,67 +605,19 @@ fa:
   general_first_day_of_week: '7'
   general_lang_name: "فارسی"
   general_pdf_encoding: ISO-8859-1
-  general_text_No: 'No'
-  general_text_Yes: 'Yes'
   general_text_no: 'no'
   general_text_yes: 'yes'
+  general_text_No: 'No'
+  general_text_Yes: 'Yes'
   gui_validation_error: 1 error
   gui_validation_error_plural: "%{count} errors"
-  js:
-    unsupported_browser:
-      title: Your browser is not supported
-      message: The browser you are using is no longer supported by OpenProject. Please
-        update your browser.
-      learn_more: Learn more
-    logoff: You have been logged off
-    redirect_login: Do you want to be redirected to the login page?
-    ajax:
-      hide: Hide
-      loading: Loading ...
-    select2:
-      input_too_short:
-        one: Please enter one more character
-        other: Please enter {{count}} more characters
-        zero: Please enter more characters
-      load_more: Loading more results ...
-      no_matches: No matches found
-      searching: Searching ...
-      selection_too_big:
-        one: You can only select one item
-        other: You can only select {{limit}} items
-        zero: You cannot select any items
-    timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
-      cancel: Cancel
-      save: Save
-      due_date: Due date
-      name: Name
-      project_status: Project status
-      project_type: Project type
-      responsible: Responsible
-      start_date: Start date
-      error: An error has occured.
-      create_planning_select_project: 'Project:'
-      really_close_dialog: Do you really want to close the dialog and loose the entered
-        data?
-      zoom_slider: Zoom slider
-    filter:
-      noneElement: "(none)"
-      noneSelection: "(none)"
-    button_check_all: Check all
-    button_uncheck_all: Uncheck all
-    label_collapsed: collapsed
-    label_expanded: expanded
-    label_collapse_all: Collapse all
-    label_expand_all: Expand all
-    label_menu_item_toggle: Show/hide submenu items
-    label_menu_collapse: collapse
-    label_menu_expand: expand
-    tl_toolbar:
-      zooms: Zoom level
-      outlines: Hierarchy level
-  label_account: Account
-  label_activity: Activity
+  instructions_after_registration: You can sign in as soon as your account has been
+    activated by clicking %{signin}.
+  instructions_after_logout: You can sign in again by clicking %{signin}.
+  instructions_after_error: You can try to sign in again by clicking %{signin}. If
+    the error persists, ask your admin for help.
+  label_account: "حساب کاربری"
+  label_activity: "فعالیت"
   label_add_another_file: Add another file
   label_add_columns: Add selected columns
   label_add_note: Add a note
@@ -666,7 +634,6 @@ fa:
   label_age: Age
   label_ago: days ago
   label_all: all
-  label_all_work_packages: all work packages
   label_all_time: all time
   label_all_words: All words
   label_and_its_subprojects: "%{value} and its subprojects"
@@ -681,7 +648,7 @@ fa:
   label_attachment_plural: Files
   label_attribute: Attribute
   label_attribute_plural: Attributes
-  label_auth_source: Authentication mode
+  label_auth_source: "حالت تأیید اعتبار"
   label_auth_source_new: New authentication mode
   label_auth_source_plural: Authentication modes
   label_authentication: Authentication
@@ -711,14 +678,14 @@ fa:
   label_close_versions: Close completed versions
   label_closed_work_packages: closed
   label_collapse: Collapse
-  label_collapse_all: Collapse all
+  label_configuration: configuration
   label_comment_add: Add a comment
   label_comment_added: Comment added
   label_comment_delete: Delete comments
   label_comment_plural: Comments
   label_commits_per_author: Commits per author
   label_commits_per_month: Commits per month
-  label_confirmation: Confirmation
+  label_confirmation: "تاییدیه"
   label_contains: contains
   label_content: Content
   label_copied: copied
@@ -733,7 +700,7 @@ fa:
   label_custom_field_new: New custom field
   label_custom_field_plural: Custom fields
   label_custom_field_default_type: Empty type
-  label_date: Date
+  label_date: "تاریخ"
   label_date_from: From
   label_date_from_to: From %{start} to %{end}
   label_date_range: Date range
@@ -764,8 +731,6 @@ fa:
   label_environment: Environment
   label_equals: is
   label_example: Example
-  label_expand: Expand
-  label_expand_all: Expand all
   label_export_to: 'Also available in:'
   label_f_hour: "%{value} hour"
   label_f_hour_plural: "%{value} hours"
@@ -776,7 +741,7 @@ fa:
   label_file_plural: Files
   label_filesystem_path: Root directory
   label_filter_add: Add filter
-  label_filter_plural: Filters
+  label_filter_plural: "فیلترها"
   label_float: Float
   label_follows: follows
   label_force_user_language_to_default: Set language of users having a non allowed
@@ -788,6 +753,7 @@ fa:
   label_group_new: New group
   label_group_plural: Groups
   label_help: Help
+  label_here: here
   label_hide: Hide
   label_history: History
   label_home: Home
@@ -826,7 +792,7 @@ fa:
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: Last connection
+  label_last_login: "آخرین ورود"
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
@@ -839,7 +805,6 @@ fa:
   label_loading: Loading...
   label_logged_as: Logged in as
   label_login: Sign in
-  label_login_with_open_id_option: or login with OpenID
   label_logout: Sign out
   label_main_menu: Side Menu
   label_max_size: Maximum size
@@ -888,6 +853,7 @@ fa:
   label_not_contains: doesn't contain
   label_not_equals: is not
   label_notify_member_plural: Email updates
+  label_open_menu: Open menu
   label_open_work_packages: open
   label_open_work_packages_plural: open
   label_optional_description: Description
@@ -895,7 +861,7 @@ fa:
   label_overall_activity: Overall activity
   label_overall_spent_time: Overall spent time
   label_overview: Overview
-  label_password_lost: Lost password
+  label_password_lost: Forgot your password?
   label_password_rule_lowercase: Lowercase
   label_password_rule_numeric: Numeric Characters
   label_password_rule_special: Special Characters
@@ -929,7 +895,8 @@ fa:
   label_query_plural: Custom queries
   label_query_menu_item: Query menu item
   label_read: Read...
-  label_register: Register
+  label_register: Create a new account
+  label_register_with_developer: Register as developer
   label_registered_on: Registered on
   label_registration_activation_by_email: account activation by email
   label_registration_automatic_activation: automatic account activation
@@ -961,7 +928,7 @@ fa:
   label_roadmap_overdue: "%{value} late"
   label_role_and_permissions: Roles and permissions
   label_role_new: New role
-  label_role_plural: Roles
+  label_role_plural: "نقش ها"
   label_role_search: Search for roles
   label_scm: SCM
   label_search: Search
@@ -988,7 +955,6 @@ fa:
   label_subproject_new: New subproject
   label_subproject_plural: Subprojects
   label_subtask_plural: Subtasks
-  label_sum_for: Sum for %{value}
   label_summary: Summary
   label_system: System
   label_table_of_contents: Table of Contents
@@ -1005,7 +971,7 @@ fa:
   label_topic_plural: Topics
   label_total: Total
   label_type_new: New type
-  label_type_plural: Types
+  label_type_plural: "انواع"
   label_ui: User Interface
   label_update_work_package_done_ratios: Update work package done ratios
   label_updated_time: Updated %{value} ago
@@ -1026,7 +992,7 @@ fa:
   label_user_plural: Users
   label_user_search: Search for user
   label_version_new: New version
-  label_version_plural: Versions
+  label_version_plural: "نسخه ها"
   label_version_sharing_descendants: With subprojects
   label_version_sharing_hierarchy: With project hierarchy
   label_version_sharing_none: Not shared
@@ -1076,6 +1042,9 @@ fa:
     zero: no projects
   label_year: Year
   label_yesterday: yesterday
+  label_keyboard_function: Function
+  label_keyboard_shortcut: Shortcut
+  label_keyboard_accesskey: Accesskey
   label_keyboard_shortcut_help_heading: Available Keyboard Shortcuts
   label_keyboard_shortcut_within_project: 'Project related shortcuts:'
   label_keyboard_shortcut_global_shortcuts: 'Global shortcuts:'
@@ -1100,6 +1069,8 @@ fa:
     lists only)
   label_keyboard_shortcut_focus_next_item: Focus next list element (on some lists
     only)
+  macro_execution_error: Error executing the macro %{macro_name}
+  macro_unavailable: Macro %{macro_name} cannot be displayed.
   mail_body_account_activation_request: 'A new user (%{value}) has registered. The
     account is pending your approval:'
   mail_body_account_information: Your account information
@@ -1122,8 +1093,6 @@ fa:
   noscript_heading: JavaScript disabled
   noscript_learn_more: Learn more
   notice_account_activated: Your account has been activated. You can now log in.
-  notice_account_inactive: Your account has not yet been activated. To activate your
-    account, click on the link that was emailed to you.
   notice_account_invalid_credentials: Invalid user or password
   notice_account_invalid_credentials_or_blocked: Invalid user or password or the account
     is blocked due to multiple failed login attempts. If so, it will be unblocked
@@ -1143,6 +1112,8 @@ fa:
     look at your account page.
   notice_account_updated: Account was successfully updated.
   notice_account_wrong_password: Wrong password
+  notice_account_registered_and_logged_in: Welcome, your account has been activated.
+    You are logged in now.
   notice_api_access_key_reseted: Your API access key was reset.
   notice_can_t_change_password: This account uses an external authentication source.
     Impossible to change the password.
@@ -1182,6 +1153,7 @@ fa:
   notice_unable_delete_time_entry: Unable to delete time log entry.
   notice_unable_delete_version: Unable to delete version.
   notice_automatic_set_of_standard_type: Set standard type automatically.
+  notice_logged_out: You have been logged out.
   error_types_in_use_by_work_packages: 'The following types are still referenced by
     work packages: %{types}'
   number:
@@ -1269,7 +1241,7 @@ fa:
   permission_view_timelines: View timelines
   permission_view_wiki_edits: View wiki history
   permission_view_wiki_pages: View wiki
-  project_module_activity: Activity
+  project_module_activity: "فعالیت"
   project_module_boards: Forums
   project_module_calendar: Calendar
   project_module_work_package_tracking: Work package tracking
@@ -1335,13 +1307,12 @@ fa:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: Allow OpenID login and registration
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
   setting_password_days_valid: Number of days, after which to enforce a password change
     (disable with 0)
-  setting_password_min_length: Minimum length
+  setting_password_min_length: "حداقل طول"
   setting_password_min_adhered_rules: Minimum number of required classes
   setting_per_page_options: Objects per page options
   setting_plain_text_mail: Plain text mail (no HTML)
@@ -1431,6 +1402,8 @@ fa:
   text_no_configuration_data: |
     Roles, types, work package statuses and workflow have not been configured yet.
     It is highly recommended to load the default configuration. You will be able to modify it once loaded.
+  text_notice_too_many_values_are_inperformant: 'Note: Displaying more than 100 items
+    per page can increase the page load time.'
   text_own_membership_delete_confirmation: |
     You are about to remove some or all of your permissions and may no longer be able to edit this project after that.
     Are you sure you want to continue?
@@ -1446,7 +1419,6 @@ fa:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick available (optional)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1484,9 +1456,9 @@ fa:
     pm: pm
   timelines:
     admin_menu:
-      color: Color
+      color: "رنگ"
       colors: Colors
-      project_type: Project type
+      project_type: "نوع پروژه"
       project_types: Project types
     project_menu:
       planning_elements: Planning elements
@@ -1514,8 +1486,8 @@ fa:
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
-    edit_timeline: Edit timeline report
-    delete_timeline: Delete timeline report
+    edit_timeline: Edit timeline report %{timeline}
+    delete_timeline: Delete timeline report %{timeline}
     empty: "(empty)"
     enable_type_in_project: Enable type "%{type}"
     end: End
@@ -1550,13 +1522,13 @@ fa:
         default: default
       column:
         assigned_to: Assignee
-        type: Type
+        type: "نوع"
         due_date: End date
         name: Name
         status: Status
-        responsible: Responsible
+        responsible: "مسئول"
         start_date: Start date
-      columns: Columns
+      columns: "ستون‌ها"
       comparisons: Comparisons
       comparison:
         absolute: Absolute
@@ -1592,9 +1564,11 @@ fa:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: from %{startdate} to %{enddate}
-      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
-        from now
+      project_time_filter_historical_from: from
+      project_time_filter_historical_to: to
+      project_time_filter_historical: "%{start_label} %{startdate} %{end_label} %{enddate}"
+      project_time_filter_relative: "%{start_label} %{startspan}%{startspanunit} ago,
+        %{end_label} %{endspan}%{endspanunit} from now"
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status
@@ -1678,6 +1652,10 @@ fa:
     active: active
     activate: Activate
     activate_and_reset_failed_logins: Activate and reset failed logins
+    authentication_provider: Authentication Provider
+    authentication_settings_disabled_due_to_external_authentication: This user authenticates
+      via an external authentication provider, so there is no password in OpenProject
+      to be changed.
     assign_random_password: Assign random password (sent to user via e-mail)
     blocked: locked temporarily
     blocked_num_failed_logins:
@@ -1693,9 +1671,16 @@ fa:
     status_user_and_brute_force: "%{user} and %{brute_force}"
     unlock: Unlock
     unlock_and_reset_failed_logins: Unlock and reset failed logins
+    no_login: This user authenticates through login by password. Since it is disabled,
+      they cannot log in.
+    password_change_unsupported: Change of password is not supported.
+    authorization_rejected: You are not allowed to sign in.
   version_status_closed: closed
   version_status_locked: locked
   version_status_open: open
+  note: Note
+  note_password_login_disabled: Password login has been disabled by %{configuration}.
+  warning: Warning
   warning_attachments_not_saved: "%{count} file(s) could not be saved."
   menu_item: Menu item
   menu_item_setting: Visibility
