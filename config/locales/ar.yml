@@ -1,9 +1,9 @@
 ---
-bg:
+ar:
   account:
-    delete: "Изтрий акаунт"
-    delete_confirmation: "Наистина ли искате да изтриете акаунта?"
-    deleted: "Акаунта е успешно изтрит"
+    delete: Delete account
+    delete_confirmation: Are you sure you want to delete the account?
+    deleted: Account successfully deleted
     deletion_info:
       data_consequences:
         other: Of the data the user created (e.g. e-mail, preferences, work packages,
@@ -20,9 +20,9 @@ bg:
           user". As the data of every deleted account is reassigned to this account
           it will not be possible to distinguish the data you created from the data
           of another deleted account.
-      heading: "Изтрий акаунта на %{name}"
+      heading: Delete account %{name}
       info:
-        other: "Изтриването на акаунта е необратим процес."
+        other: Deleting the user account is an irreversible action.
         self: Deleting your user account is an irreversible action.
       login_consequences:
         other: The account will be deleted from the system. Therefore, the user will
@@ -33,43 +33,43 @@ bg:
           longer be able to log in with your current credentials. If you choose to
           become a user of this application again, you can do so by using the means
           this application grants.
-  actionview_instancetag_blank_option: "Моля изберете"
+  actionview_instancetag_blank_option: Please select
   activerecord:
     attributes:
       attachment:
-        downloads: "Файлове за изтегляне"
-        filename: "Файл"
-        filesize: "Размер"
+        downloads: Downloads
+        filename: File
+        filesize: Size
       auth_source:
-        account: "Акаунт"
+        account: Account
         attr_firstname: Firstname attribute
         attr_lastname: Lastname attribute
         attr_login: Login attribute
         attr_mail: Email attribute
-        base_dn: "Базов DN"
-        host: "Хост"
-        onthefly: "Създаване на потребител на момента"
-        port: "Порт"
+        base_dn: Base DN
+        host: Host
+        onthefly: On-the-fly user creation
+        port: Port
       comment:
-        commented: "Коментирани"
+        commented: Commented
       custom_field:
-        default_value: "Стойност по подразбиране"
-        editable: "Редактируемо"
-        field_format: "Формат"
-        is_filter: "Се използва като филтър"
-        is_required: "Задължително"
-        max_length: "Максимална дължина"
-        min_length: "Минимална дължина"
-        possible_values: "Възможните стойности"
-        regexp: "Регулярен израз"
-        searchable: "Търсене"
-        visible: "Видимо"
+        default_value: Default value
+        editable: Editable
+        field_format: Format
+        is_filter: Used as a filter
+        is_required: Required
+        max_length: Maximum length
+        min_length: Minimum length
+        possible_values: Possible values
+        regexp: Regular expression
+        searchable: Searchable
+        visible: Visible
       custom_value:
-        value: "Стойност"
+        value: Value
       relation:
-        delay: "Забавяне"
-        from: "Работен пакет"
-        to: "Свързани работени пакети"
+        delay: Delay
+        from: Work Package
+        to: Related work package
       status:
         is_closed: Work package closed
       journal:
@@ -97,7 +97,7 @@ bg:
       time_entry:
         activity: Activity
         hours: Hours
-        work_package: "Работен пакет"
+        work_package: Work Package
         spent_on: Date
         type: Type
       type:
@@ -108,9 +108,9 @@ bg:
       user:
         admin: Administrator
         auth_source: Authentication mode
-        identity_url: OpenID Адрес
+        identity_url: OpenID URL
         language: Language
-        last_login_on: "Последната връзка"
+        last_login_on: Last connection
         mail_notification: Email notifications
         new_password: New password
         password_confirmation: Confirmation
@@ -151,7 +151,7 @@ bg:
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: "Целева версия"
+        fixed_version: Target version
         parent: Parent
         parent_issue: Parent
         parent_work_packae: Parent
@@ -210,7 +210,7 @@ bg:
             parent_id:
               cannot_be_milestone: cannot be a milestone
               cannot_be_in_another_project: cannot be in another project
-              not_a_valid_parent: "е невалидно"
+              not_a_valid_parent: is invaild
               does_not_exist: does not exist
             status_id:
               status_transition_invalid: no valid transition exists from old to new
@@ -231,6 +231,14 @@ bg:
                   your last one.
                 other: has been used before. Please choose one that is different from
                   your last %{count}.
+                zero: has been used before. Please choose one that is different from
+                  your last %{count}.
+                two: has been used before. Please choose one that is different from
+                  your last %{count}.
+                few: has been used before. Please choose one that is different from
+                  your last %{count}.
+                many: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Please choose at least one user or group.
           role_blank: Please choose at least one role.
@@ -239,8 +247,12 @@ bg:
         header:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
+          zero: "%{count} errors prohibited this %{model} from being saved"
+          two: "%{count} errors prohibited this %{model} from being saved"
+          few: "%{count} errors prohibited this %{model} from being saved"
+          many: "%{count} errors prohibited this %{model} from being saved"
     models:
-      attachment: "Файл"
+      attachment: File
       board: Forum
       comment: Comment
       custom_field: Custom field
@@ -255,6 +267,10 @@ bg:
       role:
         one: Role
         other: Roles
+        zero: Roles
+        two: Roles
+        few: Roles
+        many: Roles
       type: Type
       planning_element: Planning element
       project_type: Project type
@@ -289,7 +305,7 @@ bg:
     firstname: First name
     group: Group
     groupname: Group name
-    is_default: "Стойност по подразбиране"
+    is_default: Default value
     is_for_all: For all projects
     is_public: Public
     lastname: Last name
@@ -433,71 +449,115 @@ bg:
       about_x_hours:
         one: about 1 hour
         other: about %{count} hours
+        zero: about %{count} hours
+        two: about %{count} hours
+        few: about %{count} hours
+        many: about %{count} hours
       about_x_months:
         one: about 1 month
         other: about %{count} months
+        zero: about %{count} months
+        two: about %{count} months
+        few: about %{count} months
+        many: about %{count} months
       about_x_years:
         one: about 1 year
         other: about %{count} years
+        zero: about %{count} years
+        two: about %{count} years
+        few: about %{count} years
+        many: about %{count} years
       almost_x_years:
         one: almost 1 year
         other: almost %{count} years
+        zero: almost %{count} years
+        two: almost %{count} years
+        few: almost %{count} years
+        many: almost %{count} years
       half_a_minute: half a minute
       less_than_x_minutes:
         one: less than a minute
         other: less than %{count} minutes
+        zero: less than %{count} minutes
+        two: less than %{count} minutes
+        few: less than %{count} minutes
+        many: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
         other: less than %{count} seconds
+        zero: less than %{count} seconds
+        two: less than %{count} seconds
+        few: less than %{count} seconds
+        many: less than %{count} seconds
       over_x_years:
         one: over 1 year
         other: over %{count} years
+        zero: over %{count} years
+        two: over %{count} years
+        few: over %{count} years
+        many: over %{count} years
       x_days:
         one: 1 day
         other: "%{count} days"
+        zero: "%{count} days"
+        two: "%{count} days"
+        few: "%{count} days"
+        many: "%{count} days"
       x_minutes:
         one: 1 minute
         other: "%{count} minutes"
+        zero: "%{count} minutes"
+        two: "%{count} minutes"
+        few: "%{count} minutes"
+        many: "%{count} minutes"
       x_months:
         one: 1 month
         other: "%{count} months"
+        zero: "%{count} months"
+        two: "%{count} months"
+        few: "%{count} months"
+        many: "%{count} months"
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-  default_activity_management: "Управление"
+        zero: "%{count} seconds"
+        two: "%{count} seconds"
+        few: "%{count} seconds"
+        many: "%{count} seconds"
+  default_activity_management: Management
   default_activity_design: Design
   default_activity_development: Development
-  default_activity_testing: "Тестване"
-  default_activity_Support: "Поддръжка"
+  default_activity_testing: Testing
+  default_activity_Support: Support
   default_activity_Other: Other
-  default_status_new: "нов"
-  default_status_specified: "зададен"
-  default_status_confirmed: "потвърден"
-  default_status_to_be_scheduled: "да бъде планирано"
-  default_status_scheduled: "планирано"
-  default_status_in_progress: "в процес"
-  default_status_tested: "тествано"
-  default_status_on_hold: "в изчакване"
-  default_status_rejected: "отхвърлени"
+  default_status_new: new
+  default_status_specified: specified
+  default_status_confirmed: confirmed
+  default_status_to_be_scheduled: to be scheduled
+  default_status_scheduled: scheduled
+  default_status_in_progress: in progress
+  default_status_tested: tested
+  default_status_on_hold: on hold
+  default_status_rejected: rejected
   default_status_closed: closed
   default_priority_low: Low
   default_priority_normal: Normal
   default_priority_high: High
   default_priority_immediate: Immediate
-  default_project_type_customer: "Проект на клиента"
-  default_project_type_internal: "Вътрешен проект"
-  default_reported_project_status_green: "Зелен"
-  default_reported_project_status_amber: "Амбър"
-  default_reported_project_status_red: "Червен"
+  default_project_type_customer: Customer Project
+  default_project_type_internal: Internal Project
+  default_reported_project_status_green: Green
+  default_reported_project_status_amber: Amber
+  default_reported_project_status_red: Red
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
-  default_role_reader: "Четящ"
+  default_role_reader: Reader
   default_role_member: Member
-  default_type: "Работен пакет"
-  default_type_task: "Задачата"
-  default_type_deliverable: "Доставка"
+  default_type: Work Package
+  default_type_task: Task
+  default_type_deliverable: Deliverable
   default_type_milestone: Milestone
   default_type_phase: Phase
   default_type_bug: Bug
@@ -525,7 +585,7 @@ bg:
   description_message_content: Message content
   description_my_project: You are member
   description_notes: Notes
-  description_option_toggle: "Показване/скриване на опциите"
+  description_option_toggle: Show/Hide options
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -534,7 +594,7 @@ bg:
   description_select_work_package: Select work package
   description_selected_columns: Selected Columns
   description_sub_work_package: Sub work package of current
-  description_subwork_package: "Под работен пакет на"
+  description_subwork_package: Sub work package of
   description_toc_toggle: Show/Hide table of contents
   description_user_mail_notification: Mail notification settings
   description_wiki_subpages_reassign: Choose new parent page
@@ -587,7 +647,7 @@ bg:
   general_csv_encoding: UTF-8
   general_csv_separator: ","
   general_first_day_of_week: '7'
-  general_lang_name: "Български"
+  general_lang_name: "العربية"
   general_pdf_encoding: ISO-8859-1
   general_text_No: 'No'
   general_text_Yes: 'Yes'
@@ -597,30 +657,35 @@ bg:
   gui_validation_error_plural: "%{count} errors"
   js:
     unsupported_browser:
-      title: "Вашият браузър не се поддържа"
-      message: "Браузъра, който използвате не се поддържа от OpenProject. Актуализирайте
-        вашия браузър."
+      title: Your browser is not supported
+      message: The browser you are using is no longer supported by OpenProject. Please
+        update your browser.
       learn_more: Learn more
-    logoff: "Вие излязохте"
-    redirect_login: "Искате ли да бъдете пренасочени към страницата за вход?"
+    logoff: You have been logged off
+    redirect_login: Do you want to be redirected to the login page?
     ajax:
       hide: Hide
-      loading: "Зареждане ..."
+      loading: Loading ...
     select2:
       input_too_short:
-        one: "Моля, въведете още един знак"
-        other: "Моля, въведете още {{count}} знаци"
-        zero: Please enter more characters
-      load_more: "Зареждане на още резултати..."
-      no_matches: "Не са намерени съвпадения"
-      searching: "Търсене..."
+        one: Please enter one more character
+        other: Please enter {{count}} more characters
+        zero: Please enter {{count}} more characters
+        two: Please enter {{count}} more characters
+        few: Please enter {{count}} more characters
+        many: Please enter {{count}} more characters
+      load_more: Loading more results ...
+      no_matches: No matches found
+      searching: Searching ...
       selection_too_big:
-        one: "Можете да изберете само един елемент"
-        other: "Можете да изберете само {{limit}} елементта"
-        zero: You cannot select any items
+        one: You can only select one item
+        other: You can only select {{limit}} items
+        zero: You can only select {{limit}} items
+        two: You can only select {{limit}} items
+        few: You can only select {{limit}} items
+        many: You can only select {{limit}} items
     timelines:
-      tooManyProjects: "Намерени са повече от %{count} проекта. Моля, използвайте
-        по-точен филтър!"
+      tooManyProjects: More than %{count} Projects. Please use a better filter!
       cancel: Cancel
       save: Save
       due_date: Due date
@@ -629,27 +694,27 @@ bg:
       project_type: Project type
       responsible: Responsible
       start_date: Start date
-      error: "Възникна грешка."
-      create_planning_select_project: "Проект:"
-      really_close_dialog: "Наистина ли искате да затворите диалоговия прозорец и
-        да загубите въведените данни?"
-      zoom_slider: "Плъзгач за мащабиране"
+      error: An error has occured.
+      create_planning_select_project: 'Project:'
+      really_close_dialog: Do you really want to close the dialog and loose the entered
+        data?
+      zoom_slider: Zoom slider
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
     button_check_all: Check all
     button_uncheck_all: Uncheck all
-    label_collapsed: "свита"
-    label_expanded: "разширена"
+    label_collapsed: collapsed
+    label_expanded: expanded
     label_collapse_all: Collapse all
     label_expand_all: Expand all
-    label_menu_item_toggle: "Покажи/Скрий подменю позиции"
-    label_menu_collapse: "събери"
-    label_menu_expand: "разтвори"
+    label_menu_item_toggle: Show/hide submenu items
+    label_menu_collapse: collapse
+    label_menu_expand: expand
     tl_toolbar:
-      zooms: "Ниво на мащабиране"
-      outlines: "Йерархично ниво"
-  label_account: "Акаунт"
+      zooms: Zoom level
+      outlines: Hierarchy level
+  label_account: Account
   label_activity: Activity
   label_add_another_file: Add another file
   label_add_columns: Add selected columns
@@ -667,7 +732,7 @@ bg:
   label_age: Age
   label_ago: days ago
   label_all: all
-  label_all_work_packages: "всички работни пакети"
+  label_all_work_packages: all work packages
   label_all_time: all time
   label_all_words: All words
   label_and_its_subprojects: "%{value} and its subprojects"
@@ -765,7 +830,7 @@ bg:
   label_environment: Environment
   label_equals: is
   label_example: Example
-  label_expand: "Разтвори"
+  label_expand: Expand
   label_expand_all: Expand all
   label_export_to: 'Also available in:'
   label_f_hour: "%{value} hour"
@@ -827,7 +892,7 @@ bg:
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: "Последната връзка"
+  label_last_login: Last connection
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
@@ -840,7 +905,7 @@ bg:
   label_loading: Loading...
   label_logged_as: Logged in as
   label_login: Sign in
-  label_login_with_open_id_option: "или влезте с OpenID"
+  label_login_with_open_id_option: or login with OpenID
   label_logout: Sign out
   label_main_menu: Side Menu
   label_max_size: Maximum size
@@ -896,7 +961,7 @@ bg:
   label_overall_activity: Overall activity
   label_overall_spent_time: Overall spent time
   label_overview: Overview
-  label_password_lost: "Загубена парола"
+  label_password_lost: Lost password
   label_password_rule_lowercase: Lowercase
   label_password_rule_numeric: Numeric Characters
   label_password_rule_special: Special Characters
@@ -930,7 +995,7 @@ bg:
   label_query_plural: Custom queries
   label_query_menu_item: Query menu item
   label_read: Read...
-  label_register: "Регистрация"
+  label_register: Register
   label_registered_on: Registered on
   label_registration_activation_by_email: account activation by email
   label_registration_automatic_activation: automatic account activation
@@ -989,7 +1054,7 @@ bg:
   label_subproject_new: New subproject
   label_subproject_plural: Subprojects
   label_subtask_plural: Subtasks
-  label_sum_for: "Сума за %{value}"
+  label_sum_for: Sum for %{value}
   label_summary: Summary
   label_system: System
   label_table_of_contents: Table of Contents
@@ -1058,23 +1123,38 @@ bg:
   label_x_closed_work_packages_abbr:
     one: 1 closed
     other: "%{count} closed"
-    zero: 0 closed
+    zero: "%{count} closed"
+    two: "%{count} closed"
+    few: "%{count} closed"
+    many: "%{count} closed"
   label_x_comments:
     one: 1 comment
     other: "%{count} comments"
-    zero: no comments
+    zero: "%{count} comments"
+    two: "%{count} comments"
+    few: "%{count} comments"
+    many: "%{count} comments"
   label_x_open_work_packages_abbr:
     one: 1 open
     other: "%{count} open"
-    zero: 0 open
+    zero: "%{count} open"
+    two: "%{count} open"
+    few: "%{count} open"
+    many: "%{count} open"
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
     other: "%{count} open / %{total}"
-    zero: 0 open / %{total}
+    zero: "%{count} open / %{total}"
+    two: "%{count} open / %{total}"
+    few: "%{count} open / %{total}"
+    many: "%{count} open / %{total}"
   label_x_projects:
     one: 1 project
     other: "%{count} projects"
-    zero: no projects
+    zero: "%{count} projects"
+    two: "%{count} projects"
+    few: "%{count} projects"
+    many: "%{count} projects"
   label_year: Year
   label_yesterday: yesterday
   label_keyboard_shortcut_help_heading: Available Keyboard Shortcuts
@@ -1200,6 +1280,10 @@ bg:
           byte:
             one: Byte
             other: Bytes
+            zero: Bytes
+            two: Bytes
+            few: Bytes
+            many: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1336,13 +1420,13 @@ bg:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: "Позволи ползването на OpenID за вход и регистрация"
+  setting_openid: Allow OpenID login and registration
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
   setting_password_days_valid: Number of days, after which to enforce a password change
     (disable with 0)
-  setting_password_min_length: "Минимална дължина"
+  setting_password_min_length: Minimum length
   setting_password_min_adhered_rules: Minimum number of required classes
   setting_per_page_options: Objects per page options
   setting_plain_text_mail: Plain text mail (no HTML)
@@ -1447,7 +1531,7 @@ bg:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick e в наличност (по избор)
+  text_rmagick_available: RMagick available (optional)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1512,11 +1596,15 @@ bg:
     duration_days:
       one: 1 day
       other: "%{count} days"
+      zero: "%{count} days"
+      two: "%{count} days"
+      few: "%{count} days"
+      many: "%{count} days"
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
-    edit_timeline: "Редактиране на отчет за времевата скала"
-    delete_timeline: "Изтриване на отчет на времевата скала"
+    edit_timeline: Edit timeline report
+    delete_timeline: Delete timeline report
     empty: "(empty)"
     enable_type_in_project: Enable type "%{type}"
     end: End
@@ -1593,9 +1681,9 @@ bg:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: "от %{startdate} до %{enddate}"
-      project_time_filter_relative: "от преди %{startspan}%{startspanunit}, спрямо
-        %{endspan}%{endspanunit} от сега"
+      project_time_filter_historical: from %{startdate} to %{enddate}
+      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
+        from now
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status
@@ -1684,6 +1772,10 @@ bg:
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
       other: locked temporarily (%{count} failed login attempts)
+      zero: locked temporarily (%{count} failed login attempts)
+      two: locked temporarily (%{count} failed login attempts)
+      few: locked temporarily (%{count} failed login attempts)
+      many: locked temporarily (%{count} failed login attempts)
     deleted: Deleted user
     error_status_change_failed: 'Changing the user status failed due to the following
       errors: %{errors}'

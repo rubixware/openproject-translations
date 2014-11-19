@@ -1,18 +1,17 @@
 ---
-bg:
+fa:
   account:
-    delete: "Изтрий акаунт"
-    delete_confirmation: "Наистина ли искате да изтриете акаунта?"
-    deleted: "Акаунта е успешно изтрит"
+    delete: "حذف حساب کاربری"
+    delete_confirmation: "مطمئن هستید که می خواهید حساب کاربری را حذف کنید؟"
+    deleted: "حساب با موفقیت حذف شد"
     deletion_info:
       data_consequences:
-        other: Of the data the user created (e.g. e-mail, preferences, work packages,
-          wiki entries) as much as possible will be deleted. Note however, that data
-          like work packages and wiki entries can not be deleted without impeding
-          the work of the other users. Such data is hence reassigned to an account
-          called "Deleted user". As the data of every deleted account is reassigned
-          to this account it will not be possible to distinguish the data the user
-          created from the data of another deleted account.
+        other: "اطلاعات کاربر ایجاد شده (مانند ایمیل، تنظیمات، بسته های کاری , ویکی
+          ها) تا آنجا که ممکن است حذف خواهد شد. با این حال، توجه داشته باشید که داده
+          هایی مانند بسته های کاری و نوشته های ویکی وابسته به دیگر کاربران پاک نمی
+          شود. این گونه داده ها به حسابی به نام \"کاربر حذف شده \" تعلق میگیرد. از
+          آنجا داده های تمام حسابهای حذف شده به این حساب منتسب می شود ، ممکن نخواهد
+          بود داده های کاربران مختلف را تشخیص داد."
         self: Of the data you created (e.g. e-mail, preferences, work packages, wiki
           entries) as much as possible will be deleted. Note however, that data like
           work packages and wiki entries can not be deleted without impeding the work
@@ -20,10 +19,10 @@ bg:
           user". As the data of every deleted account is reassigned to this account
           it will not be possible to distinguish the data you created from the data
           of another deleted account.
-      heading: "Изтрий акаунта на %{name}"
+      heading: Delete account %{name}
       info:
-        other: "Изтриването на акаунта е необратим процес."
-        self: Deleting your user account is an irreversible action.
+        other: "حذف یک حساب کاربری عملیاتی غیرقابل برگشت است."
+        self: "حذف حساب کاربری عملیاتی غیرقابل برگشت است."
       login_consequences:
         other: The account will be deleted from the system. Therefore, the user will
           no longer be able to log in with his current credentials. He/she can choose
@@ -33,96 +32,97 @@ bg:
           longer be able to log in with your current credentials. If you choose to
           become a user of this application again, you can do so by using the means
           this application grants.
-  actionview_instancetag_blank_option: "Моля изберете"
+  actionview_instancetag_blank_option: "لطفا انتخاب کنید"
   activerecord:
     attributes:
       attachment:
-        downloads: "Файлове за изтегляне"
-        filename: "Файл"
-        filesize: "Размер"
+        downloads: "دانلود ها"
+        filename: "فایل"
+        filesize: "اندازه‌"
       auth_source:
-        account: "Акаунт"
-        attr_firstname: Firstname attribute
-        attr_lastname: Lastname attribute
-        attr_login: Login attribute
-        attr_mail: Email attribute
-        base_dn: "Базов DN"
-        host: "Хост"
-        onthefly: "Създаване на потребител на момента"
-        port: "Порт"
+        account: "حساب کاربری"
+        attr_firstname: "مشخصه نام"
+        attr_lastname: "مشخصه نام خانوادگی"
+        attr_login: "ویژگی ورود به سیستم"
+        attr_mail: "ویژگی ایمیل"
+        base_dn: Base DN
+        host: "میزبان"
+        onthefly: On-the-fly user creation
+        port: "پورت"
       comment:
-        commented: "Коментирани"
+        commented: "دارای اظهار نظر"
       custom_field:
-        default_value: "Стойност по подразбиране"
-        editable: "Редактируемо"
-        field_format: "Формат"
-        is_filter: "Се използва като филтър"
-        is_required: "Задължително"
-        max_length: "Максимална дължина"
-        min_length: "Минимална дължина"
-        possible_values: "Възможните стойности"
-        regexp: "Регулярен израз"
-        searchable: "Търсене"
-        visible: "Видимо"
+        default_value: "مقدار پیش فرض"
+        editable: "قابل ویرایش"
+        field_format: "قالب‎بندی"
+        is_filter: "به عنوان یک فیلتر استفاده شده"
+        is_required: "الزامی"
+        max_length: "حداکثر طول"
+        min_length: "حداقل طول"
+        possible_values: "مقادیر ممکن"
+        regexp: "عبارت منظم"
+        searchable: "قابل جستجو"
+        visible: "قابل مشاهده"
       custom_value:
-        value: "Стойност"
+        value: "مقدار"
       relation:
-        delay: "Забавяне"
-        from: "Работен пакет"
-        to: "Свързани работени пакети"
+        delay: "تأخیر"
+        from: "بسته کاری"
+        to: "بسته کاری وابسته"
       status:
-        is_closed: Work package closed
+        is_closed: "بسته کاری بسته شد"
       journal:
-        notes: Notes
+        notes: "یادداشت ها"
       member:
-        roles: Roles
+        roles: "نقش ها"
       project:
-        homepage: Homepage
-        identifier: Identifier
-        work_packages: Work Packages
-        parent: Subproject of
-        versions: Versions
-        project_type: Project type
-        responsible: Responsible
-        types: Types
-        queries: Queries
+        homepage: "صفحه اصلی"
+        identifier: "شناسه"
+        work_packages: "بسته های کاری"
+        parent: "زیر پروژه ای از "
+        versions: "نسخه ها"
+        project_type: "نوع پروژه"
+        responsible: "مسئول"
+        types: "انواع"
+        queries: "پرس و جو ها"
       query:
-        column_names: Columns
-        group_by: Group results by
-        filters: Filters
+        column_names: "ستون‌ها"
+        group_by: "دسته بندی نتایج با"
+        filters: "فیلترها"
       repository:
-        url: URL
+        url: "نشانی اینترنت"
       role:
-        assignable: Work packages can be assigned to this role
+        assignable: "بسته های کاری که می تواند به این نقش اختصاص داده شود"
       time_entry:
-        activity: Activity
-        hours: Hours
-        work_package: "Работен пакет"
-        spent_on: Date
-        type: Type
+        activity: "فعالیت"
+        hours: "ساعت‌‌‌‌‌‌"
+        work_package: "بسته کاری"
+        spent_on: "تاریخ"
+        type: "نوع"
       type:
-        is_in_roadmap: Work packages displayed in roadmap
+        is_in_roadmap: "بسته های کاری در نقشه راه نمایش داده شده اند"
         in_aggregation: Work packages displayed in aggregation
         is_milestone: Work packages displayed as milestone
-        color: Color
+        color: "رنگ"
       user:
-        admin: Administrator
-        auth_source: Authentication mode
-        identity_url: OpenID Адрес
-        language: Language
-        last_login_on: "Последната връзка"
-        mail_notification: Email notifications
-        new_password: New password
-        password_confirmation: Confirmation
-        force_password_change: Enforce password change on next login
+        admin: "مدیر"
+        auth_source: "حالت تأیید اعتبار"
+        identity_url: "نشانی اپن آی دی"
+        language: "زبان"
+        last_login_on: "آخرین اتصال"
+        mail_notification: "اعلان های ایمیل"
+        new_password: "رمز عبور جديد"
+        password_confirmation: "تاییدیه"
+        force_password_change: "اجبار برای تغییر گذرواژه در ورود بعدی"
       user_preference:
-        comments_sorting: Display comments
-        hide_mail: Hide my email address
-        impaired: Accessibility mode
-        time_zone: Time zone
-        warn_on_leaving_unsaved: Warn me when leaving a page with unsaved text
+        comments_sorting: "نمایش نظرات"
+        hide_mail: "مخفی کردن آدرس ایمیل من"
+        impaired: "حالت دسترسی"
+        time_zone: "منطقه زمانی"
+        warn_on_leaving_unsaved: "هنگام ترک یک صفحه با متن ذخیره نشده به من هشدار
+          بده"
       version:
-        effective_date: Due date
+        effective_date: "موعد مقرر"
         sharing: Sharing
       wiki:
         start_page: Start page
@@ -151,17 +151,17 @@ bg:
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: "Целева версия"
+        fixed_version: "نسخه مقصد"
         parent: Parent
         parent_issue: Parent
         parent_work_packae: Parent
         priority: Priority
         progress: "% done"
-        responsible: Responsible
+        responsible: "مسئول"
         spent_time: Spent time
         subproject: Subproject
         time_entries: Log time
-        type: Type
+        type: "نوع"
         watcher: Watcher
     errors:
       messages:
@@ -183,12 +183,12 @@ bg:
         less_than: must be less than %{count}
         less_than_or_equal_to: must be less than or equal to %{count}
         not_a_date: is not a date
-        not_a_number: is not a number
-        not_an_integer: is not an integer
-        not_same_project: doesn't belong to the same project
-        odd: must be odd
-        taken: has already been taken
-        too_long: is too long (maximum is %{count} characters)
+        not_a_number: "یک عدد نیست"
+        not_an_integer: "یک عدد صحیح نیست"
+        not_same_project: "به همان پروژه تعلق ندارد"
+        odd: "باید فرد باشد"
+        taken: "در حال حاضر گرفته شده است"
+        too_long: "بیش از حد طولانی است (حداکثر %{count} کاراکتر)"
         too_short: is too short (minimum is %{count} characters)
         wrong_length: is the wrong length (should be %{count} characters)
         after: must be after %{date}
@@ -208,15 +208,15 @@ bg:
               not_start_date: is not on start date, although this is required for
                 milestones
             parent_id:
-              cannot_be_milestone: cannot be a milestone
+              cannot_be_milestone: "نمی توان یک نقطه عطف باشد"
               cannot_be_in_another_project: cannot be in another project
-              not_a_valid_parent: "е невалидно"
-              does_not_exist: does not exist
+              not_a_valid_parent: "نامعتبر است"
+              does_not_exist: "وجود ندارد"
             status_id:
               status_transition_invalid: no valid transition exists from old to new
                 status for the current user roles
             priority_id:
-              only_active_priorities_allowed: needs to be active
+              only_active_priorities_allowed: "باید فعال باشد"
         user:
           attributes:
             password:
@@ -232,7 +232,7 @@ bg:
                 other: has been used before. Please choose one that is different from
                   your last %{count}.
         member:
-          principal_blank: Please choose at least one user or group.
+          principal_blank: "لطفا حداقل یک کاربر یا گروه را انتخاب کنید."
           role_blank: Please choose at least one role.
       template:
         body: 'Please check the following fields:'
@@ -240,10 +240,10 @@ bg:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
     models:
-      attachment: "Файл"
-      board: Forum
-      comment: Comment
-      custom_field: Custom field
+      attachment: "فایل"
+      board: "تالار گفتگو"
+      comment: "نظر"
+      custom_field: "فیلدهای سفارشی"
       group: Group
       issue: Issue
       category: Category
@@ -255,9 +255,9 @@ bg:
       role:
         one: Role
         other: Roles
-      type: Type
+      type: "نوع"
       planning_element: Planning element
-      project_type: Project type
+      project_type: "نوع پروژه"
       user: User
       version: Version
       wiki: Wiki
@@ -276,7 +276,7 @@ bg:
     base: 'General Error:'
     blocks_ids: Blocks
     category: Category
-    comments: Comment
+    comments: "نظر"
     content: Content
     created_at: Created on
     created_on: Created on
@@ -284,12 +284,12 @@ bg:
     default_columns: Default columns
     description: Description
     display_sums: Display Sums
-    due_date: Due date
+    due_date: "موعد مقرر"
     estimated_hours: Estimated time
     firstname: First name
     group: Group
     groupname: Group name
-    is_default: "Стойност по подразбиране"
+    is_default: "مقدار پیش فرض"
     is_for_all: For all projects
     is_public: Public
     lastname: Last name
@@ -304,7 +304,7 @@ bg:
     subject: Subject
     summary: Summary
     title: Title
-    type: Type
+    type: "نوع"
     updated_at: Updated on
     updated_on: Updated on
     user: User
@@ -464,40 +464,40 @@ bg:
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-  default_activity_management: "Управление"
+  default_activity_management: "مدیریت"
   default_activity_design: Design
   default_activity_development: Development
-  default_activity_testing: "Тестване"
-  default_activity_Support: "Поддръжка"
+  default_activity_testing: "آزمون"
+  default_activity_Support: "پشتیبانی"
   default_activity_Other: Other
-  default_status_new: "нов"
-  default_status_specified: "зададен"
-  default_status_confirmed: "потвърден"
-  default_status_to_be_scheduled: "да бъде планирано"
-  default_status_scheduled: "планирано"
-  default_status_in_progress: "в процес"
-  default_status_tested: "тествано"
-  default_status_on_hold: "в изчакване"
-  default_status_rejected: "отхвърлени"
+  default_status_new: "جدید"
+  default_status_specified: "مشخص شده"
+  default_status_confirmed: "تایید شده"
+  default_status_to_be_scheduled: "برنامه ریزی شود"
+  default_status_scheduled: "برنامه ریزی شده"
+  default_status_in_progress: "در حال انجام"
+  default_status_tested: "آزمایش شده"
+  default_status_on_hold: "در انتظار"
+  default_status_rejected: "رد شده"
   default_status_closed: closed
   default_priority_low: Low
   default_priority_normal: Normal
   default_priority_high: High
   default_priority_immediate: Immediate
-  default_project_type_customer: "Проект на клиента"
-  default_project_type_internal: "Вътрешен проект"
-  default_reported_project_status_green: "Зелен"
-  default_reported_project_status_amber: "Амбър"
-  default_reported_project_status_red: "Червен"
+  default_project_type_customer: "پروژه مشتری"
+  default_project_type_internal: "پروژه داخلی"
+  default_reported_project_status_green: "سبز"
+  default_reported_project_status_amber: Amber
+  default_reported_project_status_red: "قرمز"
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
-  default_role_reader: "Четящ"
+  default_role_reader: Reader
   default_role_member: Member
-  default_type: "Работен пакет"
-  default_type_task: "Задачата"
-  default_type_deliverable: "Доставка"
+  default_type: "بسته کاری"
+  default_type_task: "وظیفه"
+  default_type_deliverable: "تحویل شدنی"
   default_type_milestone: Milestone
   default_type_phase: Phase
   default_type_bug: Bug
@@ -524,8 +524,8 @@ bg:
   description_category_reassign: Choose category
   description_message_content: Message content
   description_my_project: You are member
-  description_notes: Notes
-  description_option_toggle: "Показване/скриване на опциите"
+  description_notes: "یادداشت ها"
+  description_option_toggle: "نمایش/پنهان کردن گزینه ها"
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -534,7 +534,7 @@ bg:
   description_select_work_package: Select work package
   description_selected_columns: Selected Columns
   description_sub_work_package: Sub work package of current
-  description_subwork_package: "Под работен пакет на"
+  description_subwork_package: "جزئی از بسته کاری "
   description_toc_toggle: Show/Hide table of contents
   description_user_mail_notification: Mail notification settings
   description_wiki_subpages_reassign: Choose new parent page
@@ -587,7 +587,7 @@ bg:
   general_csv_encoding: UTF-8
   general_csv_separator: ","
   general_first_day_of_week: '7'
-  general_lang_name: "Български"
+  general_lang_name: "فارسی"
   general_pdf_encoding: ISO-8859-1
   general_text_No: 'No'
   general_text_Yes: 'Yes'
@@ -597,60 +597,59 @@ bg:
   gui_validation_error_plural: "%{count} errors"
   js:
     unsupported_browser:
-      title: "Вашият браузър не се поддържа"
-      message: "Браузъра, който използвате не се поддържа от OpenProject. Актуализирайте
-        вашия браузър."
+      title: "مرورگر شما پشتیبانی نمی شود"
+      message: "مرورگری که از آن استفاده می کنید دیگر توسط OpenProject پشتیبانی نمی
+        شود. لطفا مرورگر خود را بروز رسانی کنید."
       learn_more: Learn more
-    logoff: "Вие излязохте"
-    redirect_login: "Искате ли да бъдете пренасочени към страницата за вход?"
+    logoff: "شما خارج شده اید"
+    redirect_login: "می خواهید به صفحه ورود به سیستم هدایت شوید؟"
     ajax:
       hide: Hide
-      loading: "Зареждане ..."
+      loading: "در حال بارگذاری ..."
     select2:
       input_too_short:
-        one: "Моля, въведете още един знак"
-        other: "Моля, въведете още {{count}} знаци"
+        one: Please enter one more character
+        other: "لطفا {{count}} کاراکتر بیشتر درج کنید."
         zero: Please enter more characters
-      load_more: "Зареждане на още резултати..."
-      no_matches: "Не са намерени съвпадения"
-      searching: "Търсене..."
+      load_more: "در حال بارگذاری نتایج بیشتر..."
+      no_matches: "هیچ مورد مطابقی یافت نشد"
+      searching: "جستجو ..."
       selection_too_big:
-        one: "Можете да изберете само един елемент"
-        other: "Можете да изберете само {{limit}} елементта"
+        one: You can only select one item
+        other: "شما فقط می توانید  {{limit}} آیتم انتخاب کنید"
         zero: You cannot select any items
     timelines:
-      tooManyProjects: "Намерени са повече от %{count} проекта. Моля, използвайте
-        по-точен филтър!"
+      tooManyProjects: "بیشتر از %{count} از پروژه ها. لطفا فیلتر بهتری استفاده کنید!"
       cancel: Cancel
       save: Save
-      due_date: Due date
+      due_date: "موعد مقرر"
       name: Name
       project_status: Project status
-      project_type: Project type
-      responsible: Responsible
+      project_type: "نوع پروژه"
+      responsible: "مسئول"
       start_date: Start date
-      error: "Възникна грешка."
-      create_planning_select_project: "Проект:"
-      really_close_dialog: "Наистина ли искате да затворите диалоговия прозорец и
-        да загубите въведените данни?"
-      zoom_slider: "Плъзгач за мащабиране"
+      error: "یک خطا رخ داده است."
+      create_planning_select_project: "پروژه:"
+      really_close_dialog: "واقعا می خواهدی کادر را ببندید و داده های درج شده را از
+        دست دهید؟"
+      zoom_slider: "زبانه متحرک بزرگنمایی"
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
     button_check_all: Check all
     button_uncheck_all: Uncheck all
-    label_collapsed: "свита"
-    label_expanded: "разширена"
+    label_collapsed: collapsed
+    label_expanded: expanded
     label_collapse_all: Collapse all
     label_expand_all: Expand all
-    label_menu_item_toggle: "Покажи/Скрий подменю позиции"
-    label_menu_collapse: "събери"
-    label_menu_expand: "разтвори"
+    label_menu_item_toggle: "نمایش/پنهان کردن آیتم های منوی فرعی"
+    label_menu_collapse: collapse
+    label_menu_expand: expand
     tl_toolbar:
-      zooms: "Ниво на мащабиране"
-      outlines: "Йерархично ниво"
-  label_account: "Акаунт"
-  label_activity: Activity
+      zooms: "سطح زوم"
+      outlines: "سطح سلسله مراتب"
+  label_account: "حساب کاربری"
+  label_activity: "فعالیت"
   label_add_another_file: Add another file
   label_add_columns: Add selected columns
   label_add_note: Add a note
@@ -667,7 +666,7 @@ bg:
   label_age: Age
   label_ago: days ago
   label_all: all
-  label_all_work_packages: "всички работни пакети"
+  label_all_work_packages: "تمام بسته های کاری"
   label_all_time: all time
   label_all_words: All words
   label_and_its_subprojects: "%{value} and its subprojects"
@@ -682,7 +681,7 @@ bg:
   label_attachment_plural: Files
   label_attribute: Attribute
   label_attribute_plural: Attributes
-  label_auth_source: Authentication mode
+  label_auth_source: "حالت تأیید اعتبار"
   label_auth_source_new: New authentication mode
   label_auth_source_plural: Authentication modes
   label_authentication: Authentication
@@ -719,7 +718,7 @@ bg:
   label_comment_plural: Comments
   label_commits_per_author: Commits per author
   label_commits_per_month: Commits per month
-  label_confirmation: Confirmation
+  label_confirmation: "تاییدیه"
   label_contains: contains
   label_content: Content
   label_copied: copied
@@ -734,7 +733,7 @@ bg:
   label_custom_field_new: New custom field
   label_custom_field_plural: Custom fields
   label_custom_field_default_type: Empty type
-  label_date: Date
+  label_date: "تاریخ"
   label_date_from: From
   label_date_from_to: From %{start} to %{end}
   label_date_range: Date range
@@ -765,7 +764,7 @@ bg:
   label_environment: Environment
   label_equals: is
   label_example: Example
-  label_expand: "Разтвори"
+  label_expand: "گشودن"
   label_expand_all: Expand all
   label_export_to: 'Also available in:'
   label_f_hour: "%{value} hour"
@@ -777,7 +776,7 @@ bg:
   label_file_plural: Files
   label_filesystem_path: Root directory
   label_filter_add: Add filter
-  label_filter_plural: Filters
+  label_filter_plural: "فیلترها"
   label_float: Float
   label_follows: follows
   label_force_user_language_to_default: Set language of users having a non allowed
@@ -827,7 +826,7 @@ bg:
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: "Последната връзка"
+  label_last_login: "آخرین اتصال"
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
@@ -840,7 +839,7 @@ bg:
   label_loading: Loading...
   label_logged_as: Logged in as
   label_login: Sign in
-  label_login_with_open_id_option: "или влезте с OpenID"
+  label_login_with_open_id_option: "یا با استفاده از اپن آی دی وارد شوید"
   label_logout: Sign out
   label_main_menu: Side Menu
   label_max_size: Maximum size
@@ -896,7 +895,7 @@ bg:
   label_overall_activity: Overall activity
   label_overall_spent_time: Overall spent time
   label_overview: Overview
-  label_password_lost: "Загубена парола"
+  label_password_lost: "گم شدن گذرواژه"
   label_password_rule_lowercase: Lowercase
   label_password_rule_numeric: Numeric Characters
   label_password_rule_special: Special Characters
@@ -930,7 +929,7 @@ bg:
   label_query_plural: Custom queries
   label_query_menu_item: Query menu item
   label_read: Read...
-  label_register: "Регистрация"
+  label_register: "نام‌نویسی"
   label_registered_on: Registered on
   label_registration_activation_by_email: account activation by email
   label_registration_automatic_activation: automatic account activation
@@ -962,7 +961,7 @@ bg:
   label_roadmap_overdue: "%{value} late"
   label_role_and_permissions: Roles and permissions
   label_role_new: New role
-  label_role_plural: Roles
+  label_role_plural: "نقش ها"
   label_role_search: Search for roles
   label_scm: SCM
   label_search: Search
@@ -989,7 +988,7 @@ bg:
   label_subproject_new: New subproject
   label_subproject_plural: Subprojects
   label_subtask_plural: Subtasks
-  label_sum_for: "Сума за %{value}"
+  label_sum_for: "مجموع %{value} "
   label_summary: Summary
   label_system: System
   label_table_of_contents: Table of Contents
@@ -1006,7 +1005,7 @@ bg:
   label_topic_plural: Topics
   label_total: Total
   label_type_new: New type
-  label_type_plural: Types
+  label_type_plural: "انواع"
   label_ui: User Interface
   label_update_work_package_done_ratios: Update work package done ratios
   label_updated_time: Updated %{value} ago
@@ -1027,7 +1026,7 @@ bg:
   label_user_plural: Users
   label_user_search: Search for user
   label_version_new: New version
-  label_version_plural: Versions
+  label_version_plural: "نسخه ها"
   label_version_sharing_descendants: With subprojects
   label_version_sharing_hierarchy: With project hierarchy
   label_version_sharing_none: Not shared
@@ -1270,7 +1269,7 @@ bg:
   permission_view_timelines: View timelines
   permission_view_wiki_edits: View wiki history
   permission_view_wiki_pages: View wiki
-  project_module_activity: Activity
+  project_module_activity: "فعالیت"
   project_module_boards: Forums
   project_module_calendar: Calendar
   project_module_work_package_tracking: Work package tracking
@@ -1336,13 +1335,13 @@ bg:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: "Позволи ползването на OpenID за вход и регистрация"
+  setting_openid: Allow OpenID login and registration
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
   setting_password_days_valid: Number of days, after which to enforce a password change
     (disable with 0)
-  setting_password_min_length: "Минимална дължина"
+  setting_password_min_length: "حداقل طول"
   setting_password_min_adhered_rules: Minimum number of required classes
   setting_per_page_options: Objects per page options
   setting_plain_text_mail: Plain text mail (no HTML)
@@ -1447,7 +1446,7 @@ bg:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick e в наличност (по избор)
+  text_rmagick_available: RMagick available (optional)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1485,9 +1484,9 @@ bg:
     pm: pm
   timelines:
     admin_menu:
-      color: Color
+      color: "رنگ"
       colors: Colors
-      project_type: Project type
+      project_type: "نوع پروژه"
       project_types: Project types
     project_menu:
       planning_elements: Planning elements
@@ -1515,8 +1514,8 @@ bg:
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
-    edit_timeline: "Редактиране на отчет за времевата скала"
-    delete_timeline: "Изтриване на отчет на времевата скала"
+    edit_timeline: "گزارش جدول زمانی را ویرایش کنید"
+    delete_timeline: "حذف گزارش جدول زمانی "
     empty: "(empty)"
     enable_type_in_project: Enable type "%{type}"
     end: End
@@ -1551,13 +1550,13 @@ bg:
         default: default
       column:
         assigned_to: Assignee
-        type: Type
+        type: "نوع"
         due_date: End date
         name: Name
         status: Status
-        responsible: Responsible
+        responsible: "مسئول"
         start_date: Start date
-      columns: Columns
+      columns: "ستون‌ها"
       comparisons: Comparisons
       comparison:
         absolute: Absolute
@@ -1593,9 +1592,9 @@ bg:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: "от %{startdate} до %{enddate}"
-      project_time_filter_relative: "от преди %{startspan}%{startspanunit}, спрямо
-        %{endspan}%{endspanunit} от сега"
+      project_time_filter_historical: from %{startdate} to %{enddate}
+      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
+        from now
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status

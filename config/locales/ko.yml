@@ -1,75 +1,64 @@
 ---
-bg:
+ko:
   account:
-    delete: "Изтрий акаунт"
-    delete_confirmation: "Наистина ли искате да изтриете акаунта?"
-    deleted: "Акаунта е успешно изтрит"
+    delete: "계정 삭제"
+    delete_confirmation: "이 계정을 정말로 삭제합니까?"
+    deleted: "계정을 성공적으로 삭제했습니다."
     deletion_info:
       data_consequences:
-        other: Of the data the user created (e.g. e-mail, preferences, work packages,
-          wiki entries) as much as possible will be deleted. Note however, that data
-          like work packages and wiki entries can not be deleted without impeding
-          the work of the other users. Such data is hence reassigned to an account
-          called "Deleted user". As the data of every deleted account is reassigned
-          to this account it will not be possible to distinguish the data the user
-          created from the data of another deleted account.
-        self: Of the data you created (e.g. e-mail, preferences, work packages, wiki
-          entries) as much as possible will be deleted. Note however, that data like
-          work packages and wiki entries can not be deleted without impeding the work
-          of the other users. Such data is hence reassigned to an account called "Deleted
-          user". As the data of every deleted account is reassigned to this account
-          it will not be possible to distinguish the data you created from the data
-          of another deleted account.
-      heading: "Изтрий акаунта на %{name}"
+        other: "이 사용자에 대한 데이터(예를 들어 이메일, 환경 설정, 일감, 위키 항목)를 가능한 범위까지 지울 것입니다. 다만 일감이나
+          위키 항목과 같은 데이터는 지워버릴 경우 다른 사용자의 작업을 방해하게 됩니다. 따라서 그러한 데이터는 \"삭제된 사용자\" 계정에
+          귀속됩니다. 삭제된 사용자의 작업물이 하나의 계정으로 귀속되기에, 작업물을 만든 원래 사용자가 누구인지 구분할 수 없게 됩니다."
+        self: "당신에 대한 데이터(예를 들어 이메일, 환경 설정, 일감, 위키 항목)를 가능한 범위까지 지울 것입니다. 다만 일감이나
+          위키 항목과 같은 데이터는 지워버릴 경우 다른 사용자의 작업을 방해하게 됩니다. 따라서 그러한 데이터는 \"삭제된 사용자\" 계정에
+          귀속됩니다. 삭제된 사용자의 작업물이 하나의 계정으로 귀속되기에, 당신이 만든 작업물과 다른 삭제된 사용자가 만든 작업물을 구분할
+          수 없게 됩니다."
+      heading: "계정 %{name}를 삭제"
       info:
-        other: "Изтриването на акаунта е необратим процес."
-        self: Deleting your user account is an irreversible action.
+        other: "사용자 계정을 삭제하는것은 돌이킬 수 없는 행동입니다."
+        self: "당신의 계정을 삭제하는 것은 되돌릴 수 없습니다."
       login_consequences:
-        other: The account will be deleted from the system. Therefore, the user will
-          no longer be able to log in with his current credentials. He/she can choose
-          to become a user of this application again by the means this application
-          grants.
-        self: Your account will be deleted from the system. Therefore, you will no
-          longer be able to log in with your current credentials. If you choose to
-          become a user of this application again, you can do so by using the means
-          this application grants.
-  actionview_instancetag_blank_option: "Моля изберете"
+        other: "이 계정이 시스템에서 삭제됩니다. 따라서 사용자는 지금의 인증 정보로 더 이상 로그인할 수 없습니다. 이 사람은 이 애플리케이션이
+          허용하는 방법을 따르면 다시 사용자가 될 수 있습니다."
+        self: "당신의 계정이 시스템에서 삭제됩니다. 따라서 당신은 지금의 인증 정보로 더 이상 로그인할 수 없습니다. 원한다면 이 애플리케이션이
+          허용하는 방법을 따라서 다시 사용자가 될 수 있습니다."
+  actionview_instancetag_blank_option: "선택하십시오"
   activerecord:
     attributes:
       attachment:
-        downloads: "Файлове за изтегляне"
-        filename: "Файл"
-        filesize: "Размер"
+        downloads: "다운로드"
+        filename: "파일"
+        filesize: "크기"
       auth_source:
-        account: "Акаунт"
-        attr_firstname: Firstname attribute
-        attr_lastname: Lastname attribute
-        attr_login: Login attribute
-        attr_mail: Email attribute
-        base_dn: "Базов DN"
-        host: "Хост"
-        onthefly: "Създаване на потребител на момента"
-        port: "Порт"
+        account: "계정"
+        attr_firstname: "성 속성"
+        attr_lastname: "이름 속성"
+        attr_login: "로그인 속성"
+        attr_mail: "이메일 속성"
+        base_dn: "기본 DN"
+        host: "호스트"
+        onthefly: "필요에 따라 자동으로 계정 생성"
+        port: "포트"
       comment:
-        commented: "Коментирани"
+        commented: "덧글을 달았습니다."
       custom_field:
-        default_value: "Стойност по подразбиране"
-        editable: "Редактируемо"
-        field_format: "Формат"
-        is_filter: "Се използва като филтър"
-        is_required: "Задължително"
-        max_length: "Максимална дължина"
-        min_length: "Минимална дължина"
-        possible_values: "Възможните стойности"
-        regexp: "Регулярен израз"
-        searchable: "Търсене"
-        visible: "Видимо"
+        default_value: "기본값"
+        editable: "편집 가능"
+        field_format: "형식"
+        is_filter: Used as a filter
+        is_required: Required
+        max_length: Maximum length
+        min_length: Minimum length
+        possible_values: Possible values
+        regexp: Regular expression
+        searchable: Searchable
+        visible: Visible
       custom_value:
-        value: "Стойност"
+        value: Value
       relation:
-        delay: "Забавяне"
-        from: "Работен пакет"
-        to: "Свързани работени пакети"
+        delay: Delay
+        from: Work Package
+        to: Related work package
       status:
         is_closed: Work package closed
       journal:
@@ -97,7 +86,7 @@ bg:
       time_entry:
         activity: Activity
         hours: Hours
-        work_package: "Работен пакет"
+        work_package: Work Package
         spent_on: Date
         type: Type
       type:
@@ -108,9 +97,9 @@ bg:
       user:
         admin: Administrator
         auth_source: Authentication mode
-        identity_url: OpenID Адрес
+        identity_url: OpenID URL
         language: Language
-        last_login_on: "Последната връзка"
+        last_login_on: "최근 접속"
         mail_notification: Email notifications
         new_password: New password
         password_confirmation: Confirmation
@@ -151,7 +140,7 @@ bg:
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: "Целева версия"
+        fixed_version: "목표 버전"
         parent: Parent
         parent_issue: Parent
         parent_work_packae: Parent
@@ -210,7 +199,7 @@ bg:
             parent_id:
               cannot_be_milestone: cannot be a milestone
               cannot_be_in_another_project: cannot be in another project
-              not_a_valid_parent: "е невалидно"
+              not_a_valid_parent: "잘못되었습니다."
               does_not_exist: does not exist
             status_id:
               status_transition_invalid: no valid transition exists from old to new
@@ -240,7 +229,7 @@ bg:
           one: 1 error prohibited this %{model} from being saved
           other: "%{count} errors prohibited this %{model} from being saved"
     models:
-      attachment: "Файл"
+      attachment: "파일"
       board: Forum
       comment: Comment
       custom_field: Custom field
@@ -289,7 +278,7 @@ bg:
     firstname: First name
     group: Group
     groupname: Group name
-    is_default: "Стойност по подразбиране"
+    is_default: "기본값"
     is_for_all: For all projects
     is_public: Public
     lastname: Last name
@@ -464,40 +453,40 @@ bg:
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-  default_activity_management: "Управление"
+  default_activity_management: "관리"
   default_activity_design: Design
   default_activity_development: Development
-  default_activity_testing: "Тестване"
-  default_activity_Support: "Поддръжка"
+  default_activity_testing: "테스팅"
+  default_activity_Support: "지원"
   default_activity_Other: Other
-  default_status_new: "нов"
-  default_status_specified: "зададен"
-  default_status_confirmed: "потвърден"
-  default_status_to_be_scheduled: "да бъде планирано"
-  default_status_scheduled: "планирано"
-  default_status_in_progress: "в процес"
-  default_status_tested: "тествано"
-  default_status_on_hold: "в изчакване"
-  default_status_rejected: "отхвърлени"
+  default_status_new: "신규"
+  default_status_specified: "지정됨"
+  default_status_confirmed: "확인됨"
+  default_status_to_be_scheduled: "계획 예정"
+  default_status_scheduled: "계획됨"
+  default_status_in_progress: "진행"
+  default_status_tested: "테스트됨"
+  default_status_on_hold: "보류"
+  default_status_rejected: "거부됨"
   default_status_closed: closed
   default_priority_low: Low
   default_priority_normal: Normal
   default_priority_high: High
   default_priority_immediate: Immediate
-  default_project_type_customer: "Проект на клиента"
-  default_project_type_internal: "Вътрешен проект"
-  default_reported_project_status_green: "Зелен"
-  default_reported_project_status_amber: "Амбър"
-  default_reported_project_status_red: "Червен"
+  default_project_type_customer: "고객 프로젝트"
+  default_project_type_internal: "내부 프로젝트"
+  default_reported_project_status_green: "초록"
+  default_reported_project_status_amber: "황색"
+  default_reported_project_status_red: "빨강"
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
-  default_role_reader: "Четящ"
+  default_role_reader: "참관자"
   default_role_member: Member
-  default_type: "Работен пакет"
-  default_type_task: "Задачата"
-  default_type_deliverable: "Доставка"
+  default_type: Work Package
+  default_type_task: "일감"
+  default_type_deliverable: "제공 가능"
   default_type_milestone: Milestone
   default_type_phase: Phase
   default_type_bug: Bug
@@ -525,7 +514,7 @@ bg:
   description_message_content: Message content
   description_my_project: You are member
   description_notes: Notes
-  description_option_toggle: "Показване/скриване на опциите"
+  description_option_toggle: "옵션 보여주기/숨기기"
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -534,7 +523,7 @@ bg:
   description_select_work_package: Select work package
   description_selected_columns: Selected Columns
   description_sub_work_package: Sub work package of current
-  description_subwork_package: "Под работен пакет на"
+  description_subwork_package: "다음의 하위 일감:"
   description_toc_toggle: Show/Hide table of contents
   description_user_mail_notification: Mail notification settings
   description_wiki_subpages_reassign: Choose new parent page
@@ -587,7 +576,7 @@ bg:
   general_csv_encoding: UTF-8
   general_csv_separator: ","
   general_first_day_of_week: '7'
-  general_lang_name: "Български"
+  general_lang_name: "한국어"
   general_pdf_encoding: ISO-8859-1
   general_text_No: 'No'
   general_text_Yes: 'Yes'
@@ -597,30 +586,28 @@ bg:
   gui_validation_error_plural: "%{count} errors"
   js:
     unsupported_browser:
-      title: "Вашият браузър не се поддържа"
-      message: "Браузъра, който използвате не се поддържа от OpenProject. Актуализирайте
-        вашия браузър."
+      title: "지원되지 않는 브라우저입니다"
+      message: OpenProject에서 지원되지 않는 브라우저를 사용하고 계십니다. 브라우저를 업데이트하시기 바랍니다.
       learn_more: Learn more
-    logoff: "Вие излязохте"
-    redirect_login: "Искате ли да бъдете пренасочени към страницата за вход?"
+    logoff: "로그아웃하셨습니다."
+    redirect_login: "로그인 페이지로 이동하시겠습니까?"
     ajax:
       hide: Hide
-      loading: "Зареждане ..."
+      loading: "불러오는 중 ..."
     select2:
       input_too_short:
-        one: "Моля, въведете още един знак"
-        other: "Моля, въведете още {{count}} знаци"
+        one: Please enter one more character
+        other: "{{count}}개 글자가 더 필요합니다."
         zero: Please enter more characters
-      load_more: "Зареждане на още резултати..."
-      no_matches: "Не са намерени съвпадения"
-      searching: "Търсене..."
+      load_more: "더 많은 결과를 불러오고 있습니다 ..."
+      no_matches: "조건에 맞는 결과가 없습니다."
+      searching: "찾는 중 ..."
       selection_too_big:
-        one: "Можете да изберете само един елемент"
-        other: "Можете да изберете само {{limit}} елементта"
+        one: You can only select one item
+        other: "{{limit}}개만 선택하실 수 있습니다."
         zero: You cannot select any items
     timelines:
-      tooManyProjects: "Намерени са повече от %{count} проекта. Моля, използвайте
-        по-точен филтър!"
+      tooManyProjects: "프로젝트 수가 %{count}개를 초과합니다. 검색 조건을 좁히시기 바랍니다."
       cancel: Cancel
       save: Save
       due_date: Due date
@@ -629,27 +616,26 @@ bg:
       project_type: Project type
       responsible: Responsible
       start_date: Start date
-      error: "Възникна грешка."
-      create_planning_select_project: "Проект:"
-      really_close_dialog: "Наистина ли искате да затворите диалоговия прозорец и
-        да загубите въведените данни?"
-      zoom_slider: "Плъзгач за мащабиране"
+      error: "오류가 발생했습니다."
+      create_planning_select_project: "프로젝트:"
+      really_close_dialog: "입력된 자료를 저장하지 않고 대화상자를 닫으시겠습니까?"
+      zoom_slider: "줌 슬라이더"
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
     button_check_all: Check all
     button_uncheck_all: Uncheck all
-    label_collapsed: "свита"
-    label_expanded: "разширена"
+    label_collapsed: "축소"
+    label_expanded: "확장"
     label_collapse_all: Collapse all
     label_expand_all: Expand all
-    label_menu_item_toggle: "Покажи/Скрий подменю позиции"
-    label_menu_collapse: "събери"
-    label_menu_expand: "разтвори"
+    label_menu_item_toggle: "하위메뉴 보이기/숨기기"
+    label_menu_collapse: "숨기기"
+    label_menu_expand: "넓히기"
     tl_toolbar:
-      zooms: "Ниво на мащабиране"
-      outlines: "Йерархично ниво"
-  label_account: "Акаунт"
+      zooms: "확대 수준"
+      outlines: "계층 수준"
+  label_account: "계정"
   label_activity: Activity
   label_add_another_file: Add another file
   label_add_columns: Add selected columns
@@ -667,7 +653,7 @@ bg:
   label_age: Age
   label_ago: days ago
   label_all: all
-  label_all_work_packages: "всички работни пакети"
+  label_all_work_packages: "모든 일감"
   label_all_time: all time
   label_all_words: All words
   label_and_its_subprojects: "%{value} and its subprojects"
@@ -765,7 +751,7 @@ bg:
   label_environment: Environment
   label_equals: is
   label_example: Example
-  label_expand: "Разтвори"
+  label_expand: "확장"
   label_expand_all: Expand all
   label_export_to: 'Also available in:'
   label_f_hour: "%{value} hour"
@@ -827,7 +813,7 @@ bg:
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: "Последната връзка"
+  label_last_login: "최근 접속"
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
@@ -840,7 +826,7 @@ bg:
   label_loading: Loading...
   label_logged_as: Logged in as
   label_login: Sign in
-  label_login_with_open_id_option: "или влезте с OpenID"
+  label_login_with_open_id_option: "또는 OpenID로 로그인"
   label_logout: Sign out
   label_main_menu: Side Menu
   label_max_size: Maximum size
@@ -896,7 +882,7 @@ bg:
   label_overall_activity: Overall activity
   label_overall_spent_time: Overall spent time
   label_overview: Overview
-  label_password_lost: "Загубена парола"
+  label_password_lost: "패스워드 분실"
   label_password_rule_lowercase: Lowercase
   label_password_rule_numeric: Numeric Characters
   label_password_rule_special: Special Characters
@@ -930,7 +916,7 @@ bg:
   label_query_plural: Custom queries
   label_query_menu_item: Query menu item
   label_read: Read...
-  label_register: "Регистрация"
+  label_register: "등록하기"
   label_registered_on: Registered on
   label_registration_activation_by_email: account activation by email
   label_registration_automatic_activation: automatic account activation
@@ -989,7 +975,7 @@ bg:
   label_subproject_new: New subproject
   label_subproject_plural: Subprojects
   label_subtask_plural: Subtasks
-  label_sum_for: "Сума за %{value}"
+  label_sum_for: "%{value}의 합"
   label_summary: Summary
   label_system: System
   label_table_of_contents: Table of Contents
@@ -1123,8 +1109,7 @@ bg:
   noscript_heading: JavaScript disabled
   noscript_learn_more: Learn more
   notice_account_activated: Your account has been activated. You can now log in.
-  notice_account_inactive: Your account has not yet been activated. To activate your
-    account, click on the link that was emailed to you.
+  notice_account_inactive: "당신의 계정이 아직 활성화되지 않았습니다. 계정을 활성화하기 위해, 이메일로 전송된 링크를 클릭하십시오."
   notice_account_invalid_credentials: Invalid user or password
   notice_account_invalid_credentials_or_blocked: Invalid user or password or the account
     is blocked due to multiple failed login attempts. If so, it will be unblocked
@@ -1336,13 +1321,13 @@ bg:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: "Позволи ползването на OpenID за вход и регистрация"
+  setting_openid: OpenID로의 로그인과 등록을 허용
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
   setting_password_days_valid: Number of days, after which to enforce a password change
     (disable with 0)
-  setting_password_min_length: "Минимална дължина"
+  setting_password_min_length: Minimum length
   setting_password_min_adhered_rules: Minimum number of required classes
   setting_per_page_options: Objects per page options
   setting_plain_text_mail: Plain text mail (no HTML)
@@ -1447,7 +1432,7 @@ bg:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick e в наличност (по избор)
+  text_rmagick_available: RMagick 사용 가능 (선택적)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1515,8 +1500,8 @@ bg:
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
-    edit_timeline: "Редактиране на отчет за времевата скала"
-    delete_timeline: "Изтриване на отчет на времевата скала"
+    edit_timeline: "타임라인 보고서 편집"
+    delete_timeline: "타임라인 보고서 삭제"
     empty: "(empty)"
     enable_type_in_project: Enable type "%{type}"
     end: End
@@ -1593,9 +1578,9 @@ bg:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: "от %{startdate} до %{enddate}"
-      project_time_filter_relative: "от преди %{startspan}%{startspanunit}, спрямо
-        %{endspan}%{endspanunit} от сега"
+      project_time_filter_historical: "%{startdate}에서 %{enddate}까지"
+      project_time_filter_relative: "%{startspan}%{startspanunit} 전부터 %{endspan}%{endspanunit}
+        후까지"
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status
