@@ -451,15 +451,15 @@ zh-TW:
   default_activity_testing: "測試"
   default_activity_Support: "支援"
   default_activity_Other: "其他"
-  default_status_new: new
+  default_status_new: "新增"
   default_status_specified: specified
-  default_status_confirmed: confirmed
-  default_status_to_be_scheduled: to be scheduled
-  default_status_scheduled: scheduled
+  default_status_confirmed: "已確認"
+  default_status_to_be_scheduled: "待排程"
+  default_status_scheduled: "已排程"
   default_status_in_progress: "進行中"
-  default_status_tested: tested
-  default_status_on_hold: on hold
-  default_status_rejected: rejected
+  default_status_tested: "已測試"
+  default_status_on_hold: "擱置"
+  default_status_rejected: "拒絕"
   default_status_closed: closed
   default_priority_low: "低"
   default_priority_normal: "一般"
@@ -506,7 +506,7 @@ zh-TW:
   description_message_content: Message content
   description_my_project: You are member
   description_notes: "備註"
-  description_option_toggle: Show/Hide options
+  description_option_toggle: "顯示/隱藏選項"
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -578,7 +578,7 @@ zh-TW:
   gui_validation_error_plural: "%{count} errors"
   js:
     unsupported_browser:
-      title: Your browser is not supported
+      title: "您的瀏覽器不支援"
       message: The browser you are using is no longer supported by OpenProject. Please
         update your browser.
       learn_more: Learn more
