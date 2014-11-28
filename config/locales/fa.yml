@@ -487,13 +487,13 @@ fa:
   default_project_type_customer: "پروژه مشتری"
   default_project_type_internal: "پروژه داخلی"
   default_reported_project_status_green: "سبز"
-  default_reported_project_status_amber: Amber
+  default_reported_project_status_amber: "کهربا"
   default_reported_project_status_red: "قرمز"
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
-  default_role_reader: Reader
+  default_role_reader: "خواننده"
   default_role_member: Member
   default_type: "بسته کاری"
   default_type_task: "وظیفه"
@@ -638,13 +638,13 @@ fa:
       noneSelection: "(none)"
     button_check_all: Check all
     button_uncheck_all: Uncheck all
-    label_collapsed: collapsed
-    label_expanded: expanded
+    label_collapsed: "فروریخته"
+    label_expanded: "بست یافته"
     label_collapse_all: Collapse all
     label_expand_all: Expand all
     label_menu_item_toggle: "نمایش/پنهان کردن آیتم های منوی فرعی"
-    label_menu_collapse: collapse
-    label_menu_expand: expand
+    label_menu_collapse: "فرو ریختن"
+    label_menu_expand: "بست دادن"
     tl_toolbar:
       zooms: "سطح زوم"
       outlines: "سطح سلسله مراتب"
@@ -1335,7 +1335,7 @@ fa:
   setting_mail_handler_api_key: API key
   setting_mail_handler_body_delimiters: Truncate emails after one of these lines
   setting_new_project_user_role_id: Role given to a non-admin user who creates a project
-  setting_openid: Allow OpenID login and registration
+  setting_openid: "اجازه دادن برای ورود و ثبت نام با OpenID"
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
@@ -1446,7 +1446,7 @@ fa:
   text_repository_usernames_mapping: |
     Select or update the OpenProject user mapped to each username found in the repository log.
     Users with the same OpenProject and repository username or email are automatically mapped.
-  text_rmagick_available: RMagick available (optional)
+  text_rmagick_available: RMagick موجود (اختیاری)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
   text_select_project_modules: 'Select modules to enable for this project:'
@@ -1592,9 +1592,9 @@ fa:
         timeframe
       project_time_filter_absolute_timeframe: Absolute timeframe
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: from %{startdate} to %{enddate}
-      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
-        from now
+      project_time_filter_historical: "از %{startdate} تا %{enddate}"
+      project_time_filter_relative: "از %{startspan}%{startspanunit} قبل، تا %{endspan}%{endspanunit}
+        از الان"
       project_filters: Filter projects
       project_responsible: Show projects with responsible
       project_status: Show project status
