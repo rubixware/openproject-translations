@@ -608,14 +608,14 @@ tr:
       loading: Yükleniyor ...
     select2:
       input_too_short:
-        one: Please enter one more character
+        one: Lütfen {{count}} karakter daha giriniz
         other: Lütfen {{count}} karakter daha giriniz
         zero: Please enter more characters
       load_more: Daha fazla sonuç yükleniyor ...
       no_matches: Eşleşme bulunamadı
       searching: Aranıyor ...
       selection_too_big:
-        one: You can only select one item
+        one: Sadece {{limit}} öge seçebilirsiniz
         other: Sadece {{limit}} öge seçebilirsiniz
         zero: You cannot select any items
     timelines:
