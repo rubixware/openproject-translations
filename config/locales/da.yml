@@ -106,7 +106,7 @@ da:
       user:
         admin: Administrator
         auth_source: Godkendelsestilstand
-        identity_url: OpenID URL
+        identity_url: OpenID url
         language: Sprog
         last_login_on: Seneste forbindelse
         mail_notification: E-mailpåmindelser
@@ -208,7 +208,7 @@ da:
             parent_id:
               cannot_be_milestone: kan ikke være en milepæl
               cannot_be_in_another_project: kan ikke være i et andet projekt
-              not_a_valid_parent: is invaild
+              not_a_valid_parent: er ugyldig
               does_not_exist: findes ikke
             status_id:
               status_transition_invalid: der findes ingen gyldig overgang fra gammel
@@ -462,40 +462,40 @@ da:
       x_seconds:
         one: 1 sekund
         other: "%{count} sekunder"
-  default_activity_management: Management
+  default_activity_management: Håndtering
   default_activity_design: Design
   default_activity_development: Udvikling
-  default_activity_testing: Testing
+  default_activity_testing: Tester
   default_activity_Support: Support
   default_activity_Other: Other
-  default_status_new: new
-  default_status_specified: specified
-  default_status_confirmed: confirmed
-  default_status_to_be_scheduled: to be scheduled
-  default_status_scheduled: scheduled
-  default_status_in_progress: in progress
-  default_status_tested: tested
-  default_status_on_hold: on hold
-  default_status_rejected: rejected
+  default_status_new: ny
+  default_status_specified: specificeret
+  default_status_confirmed: bekræftet
+  default_status_to_be_scheduled: skal skemalægges
+  default_status_scheduled: planlagt
+  default_status_in_progress: under bearbejdelse
+  default_status_tested: testet
+  default_status_on_hold: hvilende
+  default_status_rejected: afvist
   default_status_closed: lukket
   default_priority_low: Lav
   default_priority_normal: Normal
   default_priority_high: Høj
   default_priority_immediate: Straks
-  default_project_type_customer: Customer Project
-  default_project_type_internal: Internal Project
-  default_reported_project_status_green: Green
-  default_reported_project_status_amber: Amber
-  default_reported_project_status_red: Red
+  default_project_type_customer: Kundeprojekt
+  default_project_type_internal: Internt projekt
+  default_reported_project_status_green: Grøn
+  default_reported_project_status_amber: Gul
+  default_reported_project_status_red: Rød
   default_role_anonymous: Anonymt
   default_role_developer: Udvikler
   default_role_manager: Ansvarlig
   default_role_non_member: Ikke medlem
-  default_role_reader: Reader
+  default_role_reader: Læser
   default_role_member: Medlem
   default_type: Arbejdspakke
-  default_type_task: Task
-  default_type_deliverable: Deliverable
+  default_type_task: Opgave
+  default_type_deliverable: Leveringsklar
   default_type_milestone: Milepæl
   default_type_phase: Fase
   default_type_bug: Fejl
@@ -523,7 +523,7 @@ da:
   description_message_content: Meddelelsens indhold
   description_my_project: Du er medlem
   description_notes: Noter
-  description_option_toggle: Show/Hide options
+  description_option_toggle: Vis/Skjul muligheder
   description_parent_work_package: Overordnet arbejdspakken for denne
   description_project_scope: Bredde af søgning
   description_query_sort_criteria_attribute: Sorteringsegenskab
@@ -532,7 +532,7 @@ da:
   description_select_work_package: Vælg arbejdspakke
   description_selected_columns: Valgte kolonner
   description_sub_work_package: Underordnet arbejdspakke til denne
-  description_subwork_package: Sub work package of
+  description_subwork_package: Underordnet arbejdspakke af
   description_toc_toggle: Vis/Skjul indholdsfortegnelse
   description_user_mail_notification: Indstillinger for e-mailadvisering
   description_wiki_subpages_reassign: Vælg ny overordnet side
@@ -596,29 +596,30 @@ da:
   gui_validation_error_plural: "%{count} fejl"
   js:
     unsupported_browser:
-      title: Your browser is not supported
-      message: The browser you are using is no longer supported by OpenProject. Please
-        update your browser.
+      title: Din browser understøttes ikke
+      message: Den browser du bruger understøttes ikke længere af OpenProject. Vær
+        venlig at opdatere din browser.
       learn_more: Learn more
-    logoff: You have been logged off
-    redirect_login: Do you want to be redirected to the login page?
+    logoff: Du er blevet logget ud
+    redirect_login: Vil du videre til login-siden?
     ajax:
       hide: Gem
-      loading: Loading ...
+      loading: Henter...
     select2:
       input_too_short:
-        one: Please enter one more character
-        other: Please enter {{count}} more characters
+        one: Indtast venligst ét tegn mere
+        other: Indtast venligst {{count}} tegn mere
         zero: Please enter more characters
-      load_more: Loading more results ...
-      no_matches: No matches found
-      searching: Searching ...
+      load_more: Henter flere resultater...
+      no_matches: Ingen passende resultater fundet
+      searching: Søger...
       selection_too_big:
-        one: You can only select one item
-        other: You can only select {{limit}} items
+        one: Du kan kun vælge ét element
+        other: Du kan kun vælge {{limit}} elementer
         zero: You cannot select any items
     timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
+      tooManyProjects: Mere end %{count} projekter. Vær venligt at bruge et bedre
+        filter!
       cancel: Annuller
       save: Gem
       due_date: Forfaldsdato
@@ -627,18 +628,18 @@ da:
       project_type: Projekttype
       responsible: Ansvarlig
       start_date: Start dato
-      error: An error has occured.
-      create_planning_select_project: 'Project:'
-      really_close_dialog: Do you really want to close the dialog and loose the entered
+      error: Der er opstået en fejl.
+      create_planning_select_project: 'Projekt:'
+      really_close_dialog: Vil du virkelig lukke dialogboksen og miste de indtastede
         data?
-      zoom_slider: Zoom slider
+      zoom_slider: Zoomregulator
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
     button_check_all: Vælg alt
     button_uncheck_all: Fjern alle markeringer
-    label_collapsed: collapsed
-    label_expanded: expanded
+    label_collapsed: sammenfoldet
+    label_expanded: udfoldet
     label_collapse_all: Fold alle sammen
     label_expand_all: Fold alle ud
     label_menu_item_toggle: Show/hide submenu items
