@@ -108,9 +108,9 @@
       user:
         admin: Administrator
         auth_source: Authentication mode
-        identity_url: OpenID URL
+        identity_url: OpenID url
         language: Language
-        last_login_on: Last connection
+        last_login_on: Seneste tilkobling
         mail_notification: Email notifications
         new_password: New password
         password_confirmation: Confirmation
@@ -151,7 +151,7 @@
         created_at: Created
       work_package:
         done_ratio: "% done"
-        fixed_version: Target version
+        fixed_version: Mål-versjon
         parent: Parent
         parent_issue: Parent
         parent_work_packae: Parent
@@ -210,7 +210,7 @@
             parent_id:
               cannot_be_milestone: cannot be a milestone
               cannot_be_in_another_project: cannot be in another project
-              not_a_valid_parent: is invaild
+              not_a_valid_parent: er ugyldig
               does_not_exist: does not exist
             status_id:
               status_transition_invalid: no valid transition exists from old to new
@@ -464,40 +464,40 @@
       x_seconds:
         one: 1 second
         other: "%{count} seconds"
-  default_activity_management: Management
+  default_activity_management: Administrasjon
   default_activity_design: Design
   default_activity_development: Development
   default_activity_testing: Testing
-  default_activity_Support: Support
+  default_activity_Support: Støtte
   default_activity_Other: Other
-  default_status_new: new
-  default_status_specified: specified
-  default_status_confirmed: confirmed
-  default_status_to_be_scheduled: to be scheduled
-  default_status_scheduled: scheduled
-  default_status_in_progress: in progress
-  default_status_tested: tested
-  default_status_on_hold: on hold
-  default_status_rejected: rejected
+  default_status_new: ny
+  default_status_specified: angitt
+  default_status_confirmed: bekreftet
+  default_status_to_be_scheduled: skal planlegges
+  default_status_scheduled: planlagt
+  default_status_in_progress: pågår
+  default_status_tested: testet
+  default_status_on_hold: på vent
+  default_status_rejected: avvist
   default_status_closed: closed
   default_priority_low: Low
   default_priority_normal: Normal
   default_priority_high: High
   default_priority_immediate: Immediate
-  default_project_type_customer: Customer Project
-  default_project_type_internal: Internal Project
-  default_reported_project_status_green: Green
-  default_reported_project_status_amber: Amber
-  default_reported_project_status_red: Red
+  default_project_type_customer: Kundeprosjekt
+  default_project_type_internal: Internt prosjekt
+  default_reported_project_status_green: Grønn
+  default_reported_project_status_amber: Gul
+  default_reported_project_status_red: Rød
   default_role_anonymous: Anonymous
   default_role_developer: Developer
   default_role_manager: Manager
   default_role_non_member: Non member
-  default_role_reader: Reader
+  default_role_reader: Leser
   default_role_member: Member
   default_type: Work Package
-  default_type_task: Task
-  default_type_deliverable: Deliverable
+  default_type_task: Oppgave
+  default_type_deliverable: Leverbar
   default_type_milestone: Milestone
   default_type_phase: Phase
   default_type_bug: Bug
@@ -525,7 +525,7 @@
   description_message_content: Message content
   description_my_project: You are member
   description_notes: Notes
-  description_option_toggle: Show/Hide options
+  description_option_toggle: Vis/skjul alternativer
   description_parent_work_package: Parent work package of current
   description_project_scope: Search scope
   description_query_sort_criteria_attribute: Sort attribute
@@ -534,7 +534,7 @@
   description_select_work_package: Select work package
   description_selected_columns: Selected Columns
   description_sub_work_package: Sub work package of current
-  description_subwork_package: Sub work package of
+  description_subwork_package: Underordnet arbeidspakke
   description_toc_toggle: Show/Hide table of contents
   description_user_mail_notification: Mail notification settings
   description_wiki_subpages_reassign: Choose new parent page
@@ -597,29 +597,29 @@
   gui_validation_error_plural: "%{count} errors"
   js:
     unsupported_browser:
-      title: Your browser is not supported
-      message: The browser you are using is no longer supported by OpenProject. Please
-        update your browser.
+      title: Nettleseren din støttes ikke
+      message: Nettleseren du bruker er ikke lenger støttet av OpenProject. Oppdater
+        leseren.
       learn_more: Learn more
-    logoff: You have been logged off
-    redirect_login: Do you want to be redirected to the login page?
+    logoff: Du har nå blevet logget ut
+    redirect_login: Vil du bli omdirigert til påloggingssiden?
     ajax:
       hide: Hide
-      loading: Loading ...
+      loading: Laster ...
     select2:
       input_too_short:
-        one: Please enter one more character
-        other: Please enter {{count}} more characters
+        one: Skriv inn ett mer tegn
+        other: Skriv inn {{count}} mer tegn
         zero: Please enter more characters
-      load_more: Loading more results ...
-      no_matches: No matches found
-      searching: Searching ...
+      load_more: Laster inn flere resultater...
+      no_matches: Ingen treff
+      searching: Søker ...
       selection_too_big:
-        one: You can only select one item
-        other: You can only select {{limit}} items
+        one: Du kan bare velge ett element
+        other: Du kan bare velge {{limit}} elementer
         zero: You cannot select any items
     timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
+      tooManyProjects: Mer enn %{count} prosjekter. Bruk et bedre filter!
       cancel: Cancel
       save: Save
       due_date: Due date
@@ -628,11 +628,11 @@
       project_type: Project type
       responsible: Responsible
       start_date: Start date
-      error: An error has occured.
-      create_planning_select_project: 'Project:'
-      really_close_dialog: Do you really want to close the dialog and loose the entered
-        data?
-      zoom_slider: Zoom slider
+      error: En feil har oppstått.
+      create_planning_select_project: 'Prosjekt:'
+      really_close_dialog: Vil du virkelig lukke dialogboksen og løse de inntastede
+        dataene?
+      zoom_slider: Zoom-glidebryter
     filter:
       noneElement: "(none)"
       noneSelection: "(none)"
@@ -826,7 +826,7 @@
   label_jump_to_a_project: Jump to a project...
   label_language_based: Based on user's language
   label_last_changes: last %{count} changes
-  label_last_login: Last connection
+  label_last_login: Seneste tilkobling
   label_last_month: last month
   label_last_n_days: last %{count} days
   label_last_week: last week
