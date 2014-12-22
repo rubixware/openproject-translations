@@ -661,7 +661,7 @@ it:
     label_menu_collapse: collapse
     label_menu_expand: expand
     tl_toolbar:
-      zooms: Zoom level
+      zooms: Livello di ingrandimento
       outlines: Hierarchy level
   label_account: Account
   label_activity: Attività
@@ -681,7 +681,7 @@ it:
   label_age: Età
   label_ago: giorni fa
   label_all: tutti
-  label_all_work_packages: all work packages
+  label_all_work_packages: tutti i pacchetti di lavoro
   label_all_time: tutto il tempo
   label_all_words: Tutte le parole
   label_and_its_subprojects: "%{value} e i suoi sotto-progetti"
@@ -1007,7 +1007,7 @@ it:
   label_subproject_new: Nuovo sotto-progetto
   label_subproject_plural: Sotto-progetti
   label_subtask_plural: Attività secondarie
-  label_sum_for: Sum for %{value}
+  label_sum_for: Somma per %{value}
   label_summary: Sommario
   label_system: Sistema
   label_table_of_contents: Tabella dei contenuti
@@ -1184,12 +1184,12 @@ it:
     amministratore di %{app_title}.
   notice_work_package_done_ratios_updated: Percentuale di completamento del pacchetto
     di lavoro aggiornato.
-  notice_locking_conflict: Information has been updated by at least one other user
-    in the meantime.
+  notice_locking_conflict: L'informazione è stata aggiornata da almeno un altro utente
+    nel stesso tempo.
   notice_locking_conflict_additional_information: L'aggiornamento(i) provengono da
     %{users}.
-  notice_locking_conflict_reload_page: Please reload the page, review the changes
-    and reapply your updates.
+  notice_locking_conflict_reload_page: Si prega di ricaricare la pagina per rivedere
+    le modifiche e riapplicare gli aggiornamenti.
   notice_no_principals_found: Nessun risultato trovato.
   notice_bad_request: Richiesta non valida.
   notice_not_authorized: Non sei autorizzato ad accedere a questa pagina.
@@ -1255,7 +1255,7 @@ it:
   permission_edit_project: Modifica progetto
   permission_edit_project_associations: Modifica le dipendenze del progetto
   permission_edit_reportings: Modifica segnalazioni
-  permission_edit_time_entries: Edit time logs
+  permission_edit_time_entries: Modifica registro temporale
   permission_edit_timelines: Modifica le sequenze temporali
   permission_edit_wiki_pages: Modifica le pagine wiki
   permission_export_work_packages: Esporta i pacchetti di lavoro
@@ -1327,7 +1327,7 @@ it:
   setting_cross_project_work_package_relations: Allow cross-project work package relations
   setting_date_format: Formato data
   setting_default_language: Linguaggio predefinito
-  setting_default_notification_option: Default notification option
+  setting_default_notification_option: Opzione di notifica predefinita
   setting_default_projects_modules: Default enabled modules for new projects
   setting_default_projects_public: I nuovi progetti sono pubblici come predefinito
   setting_diff_max_lines_displayed: Numero massimo di linee diff visualizzate
