@@ -653,16 +653,16 @@ it:
       noneSelection: "(nessuno)"
     button_check_all: Controlla tutti
     button_uncheck_all: Deseleziona tutti
-    label_collapsed: collapsed
-    label_expanded: expanded
+    label_collapsed: collassato
+    label_expanded: espanso
     label_collapse_all: Comprimi Tutto
     label_expand_all: Esapndi tutto
-    label_menu_item_toggle: Show/hide submenu items
-    label_menu_collapse: collapse
-    label_menu_expand: expand
+    label_menu_item_toggle: Mostra/Nascondi voci di sottomenu
+    label_menu_collapse: collassa
+    label_menu_expand: espandi
     tl_toolbar:
       zooms: Livello di ingrandimento
-      outlines: Hierarchy level
+      outlines: Livello della gerarchia
   label_account: Account
   label_activity: Attività
   label_add_another_file: Aggiungi un altro file
@@ -857,7 +857,7 @@ it:
   label_loading: Caricamento...
   label_logged_as: Acceduto come
   label_login: Login
-  label_login_with_open_id_option: or login with OpenID
+  label_login_with_open_id_option: o Accedi con OpenID
   label_logout: Disconnetti
   label_main_menu: Menu laterale
   label_max_size: Dimensione massima
@@ -1363,12 +1363,12 @@ it:
   setting_mail_handler_body_delimiters: Troncare email dopo una di queste linee
   setting_new_project_user_role_id: Ruolo assegnato ad un utente non amministratore
     che crea un progetto
-  setting_openid: Allow OpenID login and registration
+  setting_openid: Consentire la registrazione e il login a OpenID
   setting_password_active_rules: Active character classes
   setting_password_count_former_banned: Number of most recently used passwords banned
     for reuse
-  setting_password_days_valid: Number of days, after which to enforce a password change
-    (disable with 0)
+  setting_password_days_valid: Numero di giorni, dopo il quale si impone un cambio
+    della password (disabilita con 0)
   setting_password_min_length: Lunghezza minima
   setting_password_min_adhered_rules: Numero minimo di classi richieste
   setting_per_page_options: Oggetti per opzioni pagina
@@ -1459,9 +1459,9 @@ it:
   text_line_separated: Valori multipli consentiti (una linea per ogni valore).
   text_load_default_configuration: Carica la configurazione predefinita
   text_min_max_length_info: 0 significa nessuna restrizione
-  text_no_configuration_data: |
-    Roles, types, work package statuses and workflow have not been configured yet.
-    It is highly recommended to load the default configuration. You will be able to modify it once loaded.
+  text_no_configuration_data: Ruoli, tipi, status del pacchetto di lavoro e flusso
+    di lavoro non sono stati ancora configurati. Si consiglia di caricare la configurazione
+    predefinita. Sarete in grado di modificarla una volta caricato.
   text_own_membership_delete_confirmation: |
     You are about to remove some or all of your permissions and may no longer be able to edit this project after that.
     Are you sure you want to continue?
@@ -1477,7 +1477,7 @@ it:
   text_repository_usernames_mapping: Seleziona o aggiorna l'utente OpenProject mappato
     per ogni nome utente trovato nel registro dell'archivio. Gli utenti con lo stesso
     nome utente  e repository OpenProject o e-mail vengono mappati automaticamente.
-  text_rmagick_available: RMagick available (optional)
+  text_rmagick_available: RMagick disponibile (opzionale)
   text_select_mail_notifications: Seleziona le azioni per cui l'e-mail deve essere
     inviata.
   text_select_project_modules: 'Seleziona i moduli per abilitare per questo progetto:'
@@ -1623,13 +1623,13 @@ it:
       work_package_assignee: Mostra i pacchetti di lavoro con l'assegnato
       types: Mostra tipi
       status: Mostra stati
-      project_time_filter: Projects with a work package of a certain type in a certain
-        timeframe
+      project_time_filter: Progetti con un pacchetto di lavoro di un certo tipo in
+        un certo lasso di tempo
       project_time_filter_absolute_timeframe: Sequenza temporale assoluta
       project_time_filter_relative_timeframe: Relative timeframe
-      project_time_filter_historical: from %{startdate} to %{enddate}
-      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
-        from now
+      project_time_filter_historical: da %{startdate} a %{enddate}
+      project_time_filter_relative: da %{startspan}%{startspanunit} fa, a%{endspan}%{endspanunit}
+        da ora
       project_filters: Filtro progetti
       project_responsible: Visualizza progetti con responsabile
       project_status: Visualizza lo stato del progetto
