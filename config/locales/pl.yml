@@ -548,7 +548,7 @@ pl:
   description_select_work_package: Wybierz zadanie
   description_selected_columns: Wybrane kolumny
   description_sub_work_package: Sub work package of current
-  description_subwork_package: Sub work package of
+  description_subwork_package: Część zadania
   description_toc_toggle: Pokaż/Ukryj spis treści
   description_user_mail_notification: Ustawienia powiadomień pocztą
   description_wiki_subpages_reassign: Wybierz nową stronę nadrzędną
@@ -627,15 +627,15 @@ pl:
         zero: Please enter more characters
         few: Please enter {{count}} more characters
       load_more: "Ładowanie większej liczby wyników ..."
-      no_matches: No matches found
-      searching: Searching ...
+      no_matches: Nie znaleziono dopasowań
+      searching: Wyszukiwanie ...
       selection_too_big:
         one: You can only select one item
         other: You can only select {{limit}} items
         zero: You cannot select any items
         few: You can only select {{limit}} items
     timelines:
-      tooManyProjects: More than %{count} Projects. Please use a better filter!
+      tooManyProjects: Więcej niż %{count} projektów. Proszę użyj filtrowania!
       cancel: Anuluj
       save: Zapisz
       due_date: Termin
@@ -644,26 +644,26 @@ pl:
       project_type: Typ projektu
       responsible: Odpowiedzialny
       start_date: Data rozpoczęcia
-      error: An error has occured.
-      create_planning_select_project: 'Project:'
-      really_close_dialog: Do you really want to close the dialog and loose the entered
-        data?
-      zoom_slider: Zoom slider
+      error: Wystąpił błąd.
+      create_planning_select_project: 'Projekt:'
+      really_close_dialog: Czy naprawdę chcesz zamknąć okno dialogowe i utracić wprowadzone
+        dane?
+      zoom_slider: Suwak powiększenia
     filter:
       noneElement: "(brak)"
       noneSelection: "(brak)"
     button_check_all: Zaznacz wszystko
     button_uncheck_all: Odznacz wszystko
-    label_collapsed: collapsed
-    label_expanded: expanded
+    label_collapsed: zwinięty
+    label_expanded: rozwinięty
     label_collapse_all: Zwiń wszystko
     label_expand_all: Rozwiń wszystkie
-    label_menu_item_toggle: Show/hide submenu items
-    label_menu_collapse: collapse
-    label_menu_expand: expand
+    label_menu_item_toggle: Pokaż/Ukryj elementy podmenu
+    label_menu_collapse: Zwiń
+    label_menu_expand: Rozwiń
     tl_toolbar:
       zooms: Powiększenie
-      outlines: Hierarchy level
+      outlines: Poziom hierarchii
   label_account: Konto
   label_activity: Działanie
   label_add_another_file: Dodaj plik
@@ -682,7 +682,7 @@ pl:
   label_age: Wiek
   label_ago: dni temu
   label_all: wszystkie
-  label_all_work_packages: all work packages
+  label_all_work_packages: wszystkie zadania
   label_all_time: cały czas
   label_all_words: Wszystkie słowa
   label_and_its_subprojects: "%{value} oraz jego projekty podrzędne"
@@ -781,7 +781,7 @@ pl:
   label_environment: "Środowisko"
   label_equals: jest
   label_example: Przykład
-  label_expand: Expand
+  label_expand: Rozwiń
   label_expand_all: Rozwiń wszystkie
   label_export_to: 'Dostępne również w:'
   label_f_hour: "%{value} godzin"
@@ -858,7 +858,7 @@ pl:
   label_loading: "Ładowanie..."
   label_logged_as: Zalogowany jako
   label_login: Login
-  label_login_with_open_id_option: or login with OpenID
+  label_login_with_open_id_option: lub zaloguj się przy pomocy OpenID
   label_logout: Wyloguj
   label_main_menu: Menu boczne
   label_max_size: Maksymalny rozmiar
@@ -914,7 +914,7 @@ pl:
   label_overall_activity: Ogólna aktywność
   label_overall_spent_time: Całkowity spędzony czas
   label_overview: Przegląd
-  label_password_lost: Lost password
+  label_password_lost: Resetuj hasło
   label_password_rule_lowercase: Małe litery
   label_password_rule_numeric: Znaki numeryczne
   label_password_rule_special: Znaki specjalne
@@ -949,7 +949,7 @@ pl:
   label_query_plural: Zapytania niestandardowe
   label_query_menu_item: Pozycja menu zapytania
   label_read: Czytaj...
-  label_register: Register
+  label_register: Zarejestruj się
   label_registered_on: Zarejestrowany na
   label_registration_activation_by_email: aktywacja konta przez e-mail
   label_registration_automatic_activation: automatyczna aktywacja konta
@@ -1008,7 +1008,7 @@ pl:
   label_subproject_new: Nowy podprojekt
   label_subproject_plural: Podprojekty
   label_subtask_plural: Zadania podrzędne
-  label_sum_for: Sum for %{value}
+  label_sum_for: Suma dla %{value}
   label_summary: Streszczenie
   label_system: System
   label_table_of_contents: Spis treści
@@ -1365,7 +1365,7 @@ pl:
   setting_mail_handler_body_delimiters: Obcinanie e-mail po jednej z tych linii
   setting_new_project_user_role_id: Rola dla użytkownika bez uprawnień administratora,
     który tworzy projekt
-  setting_openid: Allow OpenID login and registration
+  setting_openid: Zezwól na logowanie się  i rejestrację przy użyciu OpenID
   setting_password_active_rules: Aktywne klasy znaków
   setting_password_count_former_banned: Liczba ostatnio używanych haseł zakazane do
     ponownego wykorzystania
@@ -1477,7 +1477,7 @@ pl:
   text_repository_usernames_mapping: |
     Wybierz lub zaktualizuj użytkownika OpenProject do każdego użytkownika w dzienniku repozytorium.
     Użytkownicy z tym samym loginem lub adresem e-mail w OpenProject i repozytorium są automatycznie mapowani.
-  text_rmagick_available: RMagick available (optional)
+  text_rmagick_available: Dostępny RMagick (opcja)
   text_select_mail_notifications: Wybierz akcje które mają być przesyłane powiadomieniami
     e-mail.
   text_select_project_modules: 'Wybierz moduły dla tego projektu:'
@@ -1546,8 +1546,8 @@ pl:
     edit_color: Edycja koloru
     edit_project_type: Edycja typu projektu
     edit_thing: Edycja
-    edit_timeline: Edit timeline report
-    delete_timeline: Delete timeline report
+    edit_timeline: Edytuj raport linii czasu
+    delete_timeline: Usuń raport linii czasu
     empty: "(puste)"
     enable_type_in_project: Enable type "%{type}"
     end: Koniec
@@ -1620,9 +1620,9 @@ pl:
         timeframe
       project_time_filter_absolute_timeframe: Bezwzględny zakres
       project_time_filter_relative_timeframe: Względny zakres
-      project_time_filter_historical: from %{startdate} to %{enddate}
-      project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
-        from now
+      project_time_filter_historical: od %{startdate} do %{enddate}
+      project_time_filter_relative: " %{startspan}%{startspanunit} temu, %{endspan}%{endspanunit}
+        od teraz"
       project_filters: Filtr projektów
       project_responsible: Pokaż projekty z odpowiedzialnym
       project_status: Pokaż status projektu
