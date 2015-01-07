@@ -623,18 +623,18 @@ uk:
       loading: "Завантаження ..."
     select2:
       input_too_short:
-        one: "Будь ласка додайте ще одну літеру"
-        other: "Будь ласка додайте ще {{count}} символів"
+        one: Please enter one more character
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
-        few: "Будь ласка додайте ще {{count}} символів"
+        few: Please enter {{count}} more characters
       load_more: "Завантажити більше результатів ..."
       no_matches: "Результатів не знайдено"
       searching: "Шукаємо ..."
       selection_too_big:
-        one: "Ви можете обрати лише {{limit}} об'єкт"
+        one: You can only select one item
         other: You can only select {{limit}} items
         zero: You cannot select any items
-        few: "Ви можете вибрати лише {{limit}}"
+        few: You can only select {{limit}} items
     timelines:
       tooManyProjects: "Більше ніж %{count} проектів. Будь ласка оберіть кращій фільтр!"
       cancel: Cancel

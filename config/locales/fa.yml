@@ -609,14 +609,14 @@ fa:
     select2:
       input_too_short:
         one: Please enter one more character
-        other: "لطفا {{count}} کاراکتر بیشتر درج کنید."
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
       load_more: "در حال بارگذاری نتایج بیشتر..."
       no_matches: "هیچ مورد مطابقی یافت نشد"
       searching: "جستجو ..."
       selection_too_big:
         one: You can only select one item
-        other: "شما فقط می توانید  {{limit}} آیتم انتخاب کنید"
+        other: You can only select {{limit}} items
         zero: You cannot select any items
     timelines:
       tooManyProjects: "بیشتر از %{count} از پروژه ها. لطفا فیلتر بهتری استفاده کنید!"

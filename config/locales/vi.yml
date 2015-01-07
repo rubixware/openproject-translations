@@ -609,14 +609,14 @@ vi:
     select2:
       input_too_short:
         one: Please enter one more character
-        other: Vui lòng nhập {{count}} thêm nhân vật
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
       load_more: Loading more results ...
       no_matches: Không tìm thấy
       searching: "Đang tìm ..."
       selection_too_big:
         one: You can only select one item
-        other: Bạn có thể chỉ chọn {{limit}} mục
+        other: You can only select {{limit}} items
         zero: You cannot select any items
     timelines:
       tooManyProjects: More than %{count} Projects. Please use a better filter!

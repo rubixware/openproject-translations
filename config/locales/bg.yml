@@ -608,15 +608,15 @@ bg:
       loading: "Зареждане ..."
     select2:
       input_too_short:
-        one: "Моля, въведете още един знак"
-        other: "Моля, въведете още {{count}} знаци"
+        one: Please enter one more character
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
       load_more: "Зареждане на още резултати..."
       no_matches: "Не са намерени съвпадения"
       searching: "Търсене..."
       selection_too_big:
-        one: "Можете да изберете само един елемент"
-        other: "Можете да изберете само {{limit}} елементта"
+        one: You can only select one item
+        other: You can only select {{limit}} items
         zero: You cannot select any items
     timelines:
       tooManyProjects: "Намерени са повече от %{count} проекта. Моля, използвайте

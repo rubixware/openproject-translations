@@ -608,15 +608,15 @@ tr:
       loading: Yükleniyor ...
     select2:
       input_too_short:
-        one: Lütfen {{count}} karakter daha giriniz
-        other: Lütfen {{count}} karakter daha giriniz
+        one: Please enter one more character
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
       load_more: Daha fazla sonuç yükleniyor ...
       no_matches: Eşleşme bulunamadı
       searching: Aranıyor ...
       selection_too_big:
-        one: Sadece {{limit}} öge seçebilirsiniz
-        other: Sadece {{limit}} öge seçebilirsiniz
+        one: You can only select one item
+        other: You can only select {{limit}} items
         zero: You cannot select any items
     timelines:
       tooManyProjects: "%{count} saysından çok proje mevcut. Lütfen daha iyi bir filtre

@@ -608,15 +608,15 @@
       loading: Laster ...
     select2:
       input_too_short:
-        one: Skriv inn ett mer tegn
-        other: Skriv inn {{count}} mer tegn
+        one: Please enter one more character
+        other: Please enter {{count}} more characters
         zero: Please enter more characters
       load_more: Laster inn flere resultater...
       no_matches: Ingen treff
       searching: Søker ...
       selection_too_big:
-        one: Du kan bare velge ett element
-        other: Du kan bare velge {{limit}} elementer
+        one: You can only select one item
+        other: You can only select {{limit}} items
         zero: You cannot select any items
     timelines:
       tooManyProjects: Mer enn %{count} prosjekter. Bruk et bedre filter!
