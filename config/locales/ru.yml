@@ -659,7 +659,7 @@ ru:
     button_check_all: "Выделить все"
     button_uncheck_all: "Снять все отметки"
     label_collapsed: "обрушилась"
-    label_expanded: "расширено"
+    label_expanded: "развернуто"
     label_collapse_all: "Свернуть все"
     label_expand_all: "Развернуть все"
     label_menu_item_toggle: "Показать/скрыть элементы вложенного меню"
