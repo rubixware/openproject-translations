@@ -82,7 +82,7 @@ nl:
       project:
         homepage: Website
         identifier: Identifier
-        work_packages: Werkpakket
+        work_packages: Werkpakketten
         parent: Subproject van
         versions: Versies
         project_type: Projecttype
@@ -1602,7 +1602,7 @@ nl:
       noneSelection: "(none)"
       outline: Initial outline expansion
       parent: Show subprojects of
-      work_package_filters: Filter work packages
+      work_package_filters: Filter werkpakketten
       work_package_responsible: Show work packages with responsible
       work_package_assignee: Show work packages with assignee
       types: Show types
@@ -1614,7 +1614,7 @@ nl:
       project_time_filter_historical: from %{startdate} to %{enddate}
       project_time_filter_relative: from %{startspan}%{startspanunit} ago, to %{endspan}%{endspanunit}
         from now
-      project_filters: Filter projects
+      project_filters: Filter projecten
       project_responsible: Show projects with responsible
       project_status: Show project status
       project_types: Show project types

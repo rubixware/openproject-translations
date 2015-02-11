@@ -476,7 +476,7 @@ da:
   default_status_scheduled: planlagt
   default_status_in_progress: under bearbejdelse
   default_status_tested: testet
-  default_status_on_hold: hvilende
+  default_status_on_hold: på hold
   default_status_rejected: afvist
   default_status_closed: lukket
   default_priority_low: Lav
@@ -496,7 +496,7 @@ da:
   default_role_member: Medlem
   default_type: Arbejdspakke
   default_type_task: Opgave
-  default_type_deliverable: Leveringsklar
+  default_type_deliverable: Leverance
   default_type_milestone: Milepæl
   default_type_phase: Fase
   default_type_bug: Fejl
@@ -597,9 +597,9 @@ da:
   gui_validation_error_plural: "%{count} fejl"
   js:
     unsupported_browser:
-      title: Din browser understøttes ikke
-      message: The browser you are using is no longer supported by OpenProject. Please
-        update your browser.
+      title: Din browser er ikke understøttet
+      message: Den browser du bruger er ikke længere understøttet af OpenProject.
+        Opdater venligst din browser.
       learn_more: Få mere at vide
     logoff: Du er blevet logget ud
     redirect_login: Vil du videre til login-siden?
