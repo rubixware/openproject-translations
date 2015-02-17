@@ -485,7 +485,7 @@ sk:
   default_activity_development: Vývoj
   default_activity_testing: Testovanie
   default_activity_Support: Podpora
-  default_activity_Other: Other
+  default_activity_Other: Ostatné
   default_status_new: nové
   default_status_specified: uvedené
   default_status_confirmed: potvrdené
@@ -573,8 +573,8 @@ sk:
   error_must_be_project_member: must be project member
   error_no_default_work_package_status: No default work package status is defined.
     Please check your configuration (Go to "Administration -> Work package statuses").
-  error_no_type_in_project: No type is associated to this project. Please check the
-    Project settings.
+  error_no_type_in_project: Neexistuje žiadny typ previazaný s  týmto projektom. Prosím
+    skontrolujte nastavenia projektu.
   error_scm_annotate: The entry does not exist or cannot be annotated.
   error_scm_command_failed: 'An error occurred when trying to access the repository:
     %{value}'
@@ -864,7 +864,7 @@ sk:
   label_max_size: Maximum size
   label_me: me
   label_member_new: New member
-  label_member_plural: Members
+  label_member_plural: "Členovia"
   label_menu_item_name: Name of menu item
   label_message_last: Last message
   label_message_new: New message
@@ -941,7 +941,7 @@ sk:
   label_project_default_type: Allow empty type
   label_project_new: New project
   label_project_plural: Projekty
-  label_project_settings: Project settings
+  label_project_settings: Nastavenia projektu
   label_project_view_all: View all projects
   label_public_projects: Public projects
   label_query_new: New query
@@ -965,8 +965,8 @@ sk:
   label_reported_work_packages: Reported work packages
   label_reporting: Reporting
   label_reporting_plural: Reportings
-  label_repository: Repository
-  label_repository_plural: Repositories
+  label_repository: Repozitár
+  label_repository_plural: Repozitáre
   label_responsible_for_work_packages: Work packages I am responsible for
   label_result_plural: Results
   label_reverse_chronological_order: In reverse chronological order
@@ -987,7 +987,7 @@ sk:
   label_search_titles_only: Search titles only
   label_send_information: Send account information to the user
   label_send_test_email: Send a test email
-  label_settings: Settings
+  label_settings: Nastavenia
   label_show_completed_versions: Show completed versions
   label_sort: Zoradiť
   label_sort_by: Sort by %{value}
@@ -1176,7 +1176,7 @@ sk:
   notice_email_sent: An email was sent to %{value}
   notice_failed_to_save_work_packages: 'Failed to save %{count} work package(s) on
     %{total} selected: %{ids}.'
-  notice_failed_to_save_members: 'Failed to save member(s): %{errors}.'
+  notice_failed_to_save_members: 'Nepodarilo sa uložiť člena / členov: %{errors}.'
   notice_feeds_access_key_reseted: Your RSS access key was reset.
   notice_file_not_found: The page you were trying to access doesn't exist or has been
     removed.
@@ -1234,7 +1234,7 @@ sk:
   permission_add_project: Create project
   permission_add_subprojects: Create subprojects
   permission_add_work_package_watchers: Add watchers
-  permission_browse_repository: Browse repository
+  permission_browse_repository: Prechádzať repozitár
   permission_change_wiki_parent_page: Change parent wiki page
   permission_comment_news: Comment news
   permission_commit_access: Commit access
@@ -1267,11 +1267,11 @@ sk:
   permission_manage_boards: Manage forums
   permission_manage_categories: Manage work package categories
   permission_manage_work_package_relations: Manage work package relations
-  permission_manage_members: Manage members
+  permission_manage_members: Spravovať členov
   permission_manage_news: Manage news
   permission_manage_project_activities: Manage project activities
   permission_manage_public_queries: Manage public queries
-  permission_manage_repository: Manage repository
+  permission_manage_repository: Spravovať repozitár
   permission_manage_subtasks: Manage subtasks
   permission_manage_versions: Manage versions
   permission_manage_wiki: Manage wiki
@@ -1280,7 +1280,7 @@ sk:
   permission_protect_wiki_pages: Protect wiki pages
   permission_rename_wiki_pages: Rename wiki pages
   permission_save_queries: Save queries
-  permission_select_project_modules: Select project modules
+  permission_select_project_modules: Vyberte moduly projektu
   permission_manage_types: Select types
   permission_view_calendar: View calendar
   permission_view_changesets: View changesets
@@ -1299,7 +1299,7 @@ sk:
   project_module_calendar: Kalendár
   project_module_work_package_tracking: Work package tracking
   project_module_news: Novinky
-  project_module_repository: Repository
+  project_module_repository: Repozitár
   project_module_time_tracking: Time tracking
   project_module_wiki: Wiki
   query_fields:
@@ -1330,7 +1330,7 @@ sk:
   setting_date_format: Date format
   setting_default_language: Default language
   setting_default_notification_option: Default notification option
-  setting_default_projects_modules: Default enabled modules for new projects
+  setting_default_projects_modules: Predvolené moduly novovytváraných projektov
   setting_default_projects_public: New projects are public by default
   setting_diff_max_lines_displayed: Max number of diff lines displayed
   setting_display_subprojects_work_packages: Display subprojects work packages on
@@ -1384,7 +1384,7 @@ sk:
   setting_session_ttl_hint: Value below 5 works like disabled
   setting_session_ttl_enabled: Session expires
   setting_start_of_week: Start calendars on
-  setting_sys_api_enabled: Enable WS for repository management
+  setting_sys_api_enabled: Povoliť služby typu WS pre správu repozitára
   setting_text_formatting: Text formatting
   setting_time_format: Time format
   setting_ui_theme: Theme
@@ -1399,10 +1399,10 @@ sk:
   setting_work_package_group_assignment: Allow assignment to groups
   settings:
     general: Všeobecné
-    other: Other
-    passwords: Passwords
-    session: Session
-    brute_force_prevention: Automated user blocking
+    other: Ostatné
+    passwords: Heslá
+    session: Relácie
+    brute_force_prevention: Automatizované blokovanie používateľa
   show_hide_project_menu: Hide/Show project menu
   status_active: active
   support:
@@ -1457,9 +1457,9 @@ sk:
   text_no_configuration_data: Roly, typy, pracovný balík stavy a pracovný postup zatiaľ
     neboli nakonfigurované. Doporučujeme načítať predvolenú konfiguráciu. Po je jnačítaní
     ju budete mať možnosť zmeniť podľa Vašich potrieb.
-  text_own_membership_delete_confirmation: |
-    You are about to remove some or all of your permissions and may no longer be able to edit this project after that.
-    Are you sure you want to continue?
+  text_own_membership_delete_confirmation: Chystáte sa odstrániť jedno respektíve
+    viac vašich povolení, pričom po aplikovaní zmien môžte stratiť možnosť naďalej
+    upravovať nastavenia projektu. Naozaj chcete pokračovať?
   text_plugin_assets_writable: Plugin assets directory writable
   text_powered_by: Powered by %{link}
   text_project_destroy_confirmation: Are you sure you want to delete this project
@@ -1475,7 +1475,7 @@ sk:
   text_rmagick_available: RMagick dostupné (voliteľné)
   text_select_mail_notifications: Select actions for which email notifications should
     be sent.
-  text_select_project_modules: 'Select modules to enable for this project:'
+  text_select_project_modules: 'Vyberte, ktoré moduly chcete povoliť pre tento projekt:'
   text_status_changed_by_changeset: Applied in changeset %{value}.
   text_subprojects_destroy_warning: 'Its subproject(s): %{value} will be also deleted.'
   text_time_logged_by_changeset: Applied in changeset %{value}.
@@ -1602,7 +1602,7 @@ sk:
       grouping_hide_group: Hide group "%{group}"
       grouping_one: First grouping criterion
       grouping_one_phrase: Is a subproject of
-      grouping_other: Other
+      grouping_other: Ostatné
       grouping_two: Druhé kritérium zoskupovania
       grouping_two_phrase: Has a dependency to project type
       hide_chart: Hide chart
@@ -1628,7 +1628,7 @@ sk:
       timeframe: Show timeframe
       timeframe_end: to
       timeframe_start: from
-      timeline: General Settings
+      timeline: Všeobecné nastavenia
       zoom: Zoom factor
     history: História
     new_color: New color
