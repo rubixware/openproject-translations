@@ -174,7 +174,7 @@ id:
         smaller_than_or_equal_to_max_length: harus lebih kecil atau sama dengan panjang
           maksimum
         greater_than_start_date: harus setelah tanggal start
-        inclusion: tidak termasuk dalam daftar
+        inclusion: is not set to one of the allowed values
         invalid: " tidak valid"
         less_than: harus kurang dari %{count}
         less_than_or_equal_to: harus kurang atau sama dengan %{count}
@@ -196,6 +196,9 @@ id:
         project_association:
           identical_projects: tidak dapat dibuat dari project ini sendiri
           project_association_not_allowed: tidak memungkinkan Asosiasi
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Paket-Penugasan #%{id} tidak valid
             untuk reassigning di Time entri.'
@@ -217,6 +220,9 @@ id:
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -229,8 +235,8 @@ id:
               reused:
                 one: has been used before. Please choose one that is different from
                   your last one.
-                other: telah digunakan. Silakan pilih yang berbeda dari yang %{count}
-                  terakhir.
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Silakan pilih setidaknya satu user atau grup.
           role_blank: Silakan pilih setidaknya satu Role.
@@ -254,7 +260,7 @@ id:
       query: Query kustom
       role:
         one: Role
-        other: Role
+        other: Roles
       type: Tipe
       planning_element: Elemen perencanaan
       project_type: Tipe Project
@@ -441,42 +447,42 @@ id:
     distance_in_words:
       about_x_hours:
         one: about 1 hour
-        other: sekitar %{count} jam
+        other: about %{count} hours
       about_x_months:
         one: about 1 month
-        other: sekitar %{count} bulan
+        other: about %{count} months
       about_x_years:
         one: about 1 year
-        other: sekitar %{count} tahun
+        other: about %{count} years
       almost_x_years:
         one: almost 1 year
-        other: hampir %{count} tahun
+        other: almost %{count} years
       half_a_minute: setengah menit
       less_than_x_minutes:
         one: less than a minute
-        other: kurang dari %{count} menit
+        other: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
-        other: kurang dari %{count} detik
+        other: less than %{count} seconds
       over_x_years:
         one: over 1 year
-        other: selama %{count} tahun
+        other: over %{count} years
       x_days:
         one: 1 day
-        other: "%{count} hari"
+        other: "%{count} days"
       x_minutes:
         one: 1 minute
-        other: "%{count} menit"
+        other: "%{count} minutes"
       x_months:
         one: 1 month
-        other: "%{count} bulan"
+        other: "%{count} months"
       x_seconds:
         one: 1 second
-        other: "%{count} detik"
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
-        other: jam
+        other: hours
   default_activity_management: Manajemen
   default_activity_design: Desain
   default_activity_development: Pengembangan
@@ -723,6 +729,7 @@ id:
   label_downloads_abbr: D/L
   label_duplicated_by: disalin oleh
   label_duplicates: duplikat
+  label_edit: Edit
   label_enable_multi_select: Beralih ke multiselect
   label_end_to_end: finish untuk mengakhiri
   label_end_to_start: finish ke start
@@ -1024,15 +1031,15 @@ id:
   label_workflow_summary: Ringkasan
   label_x_closed_work_packages_abbr:
     one: 1 closed
-    other: "%{count} yang berakhir"
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
     one: 1 comment
-    other: "%{count} komentar"
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
     one: 1 open
-    other: "%{count} yang open"
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
@@ -1040,7 +1047,7 @@ id:
     zero: 0 open / %{total}
   label_x_projects:
     one: 1 project
-    other: "%{count} Project"
+    other: "%{count} projects"
     zero: no projects
   label_year: Tahun
   label_yesterday: kemarin
@@ -1166,7 +1173,7 @@ id:
         units:
           byte:
             one: Byte
-            other: Byte
+            other: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1483,7 +1490,7 @@ id:
     duration: Durasi
     duration_days:
       one: 1 day
-      other: "%{count} hari"
+      other: "%{count} days"
     edit_color: Edit warna
     edit_project_type: Edit Tipe Project
     edit_thing: Edit
@@ -1658,7 +1665,7 @@ id:
     blocked: dilock sementara
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
-      other: dilock sementara (%{count} karena gagal login)
+      other: locked temporarily (%{count} failed login attempts)
     deleted: User telah dihapus
     error_status_change_failed: 'Mengubah status user gagal karena : %{errors}'
     lock: Lock permanen
@@ -1695,7 +1702,6 @@ id:
   nothing_to_preview: Tidak ada pre-view
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: Anda perlu dikonfirmasi untuk mengakses sumber ini.
@@ -1704,24 +1710,28 @@ id:
       code_409: Tidak dapat memperbarui sumber karena bertentangan modifikasi.
       invalid_content_type: Diharapkan CONTENT-TYPE untuk menjadi '%{content_type}'
         tetapi mendapat '%{actual}'.
-      invalid_resource: For property '%{property}' a resource of type '%{expected}'
-        is expected but got a resource of type '%{actual}'.
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: The current user account status does not allow
         this operation.
       missing_content_type: not specified
-      multiple_errors: Multiple fields violated their constraints.
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: The request body was neither empty, nor did it contain a single
         JSON object.
       writing_read_only_attributes: Anda tidak harus menulis hanya-baca atribut.
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: Konteks tidak ditemukan.
-        unsupported_context: Konteks tidak didukung ditemukan.
-        context_object_not_found: Tidak dapat menemukan sumber daya yang diberikan
-          dengan konteks.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: Pilihan pengguna tidak diperbolehkan
           untuk menjadi '%{property}' untuk paket pekerjaan ini.
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

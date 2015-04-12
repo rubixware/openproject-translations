@@ -184,7 +184,7 @@
         greater_than_or_equal_to: må være større enn eller lik %{count}
         smaller_than_or_equal_to_max_length: må være mindre enn eller lik maksimumslengden
         greater_than_start_date: må være senere enn startdato
-        inclusion: er ikke inkludert i listen
+        inclusion: is not set to one of the allowed values
         invalid: er ugyldig
         less_than: må være mindre enn %{count}
         less_than_or_equal_to: må være mindre enn eller lik %{count}
@@ -206,6 +206,9 @@
         project_association:
           identical_projects: kan ikke opprettes fra et prosjekt til seg selv
           project_association_not_allowed: tillater ikke assosiasjoner
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: Arbeidspakke nr. %{id} er ikke et
             gyldig mål for nytildeling av tidsoppføringer.
@@ -228,6 +231,9 @@
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -238,18 +244,18 @@
               numeric: numerisk (f.eks. "1")
               special: spesialtegn (f.eks. "%")
               reused:
-                one: har blitt brukt tidligere. Vennligst velg ett som er forskjellig
-                  fra det forrige.
-                other: har blitt brukt tidligere. Vennligst velg ett som er forskjellig
-                  fra dine siste %{count}.
+                one: has been used before. Please choose one that is different from
+                  your last one.
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Velg minst én bruker eller gruppe.
           role_blank: Velg minst én rolle.
       template:
         body: 'Kontroller følgende felter:'
         header:
-          one: 1 feil forhindret lagring av denne %{model}
-          other: "%{count} feil forhindret lagring av denne %{model}"
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: Fil
       board: Forum
@@ -264,8 +270,8 @@
       project: Prosjekt
       query: Egendefinert spørring
       role:
-        one: Rolle
-        other: Roller
+        one: Role
+        other: Roles
       type: Type
       planning_element: Planleggingselement
       project_type: Prosjekttype
@@ -451,43 +457,43 @@
   datetime:
     distance_in_words:
       about_x_hours:
-        one: cirka 1 time
-        other: cirka %{count} timer
+        one: about 1 hour
+        other: about %{count} hours
       about_x_months:
-        one: cirka 1 måned
-        other: cirka %{count} måneder
+        one: about 1 month
+        other: about %{count} months
       about_x_years:
-        one: cirka 1 år
-        other: cirka %{count} år
+        one: about 1 year
+        other: about %{count} years
       almost_x_years:
-        one: nesten 1 år
-        other: nesten %{count} år
+        one: almost 1 year
+        other: almost %{count} years
       half_a_minute: et halvt minutt
       less_than_x_minutes:
-        one: mindre enn ett minutt
-        other: mindre enn %{count} minutter
+        one: less than a minute
+        other: less than %{count} minutes
       less_than_x_seconds:
-        one: mindre enn 1 sekund
-        other: mindre enn %{count} sekunder
+        one: less than 1 second
+        other: less than %{count} seconds
       over_x_years:
-        one: mer enn 1 år
-        other: mer enn %{count} år
+        one: over 1 year
+        other: over %{count} years
       x_days:
-        one: 1 dag
-        other: "%{count} dager"
+        one: 1 day
+        other: "%{count} days"
       x_minutes:
-        one: 1 minutt
-        other: "%{count} minutter"
+        one: 1 minute
+        other: "%{count} minutes"
       x_months:
-        one: 1 måned
-        other: "%{count} måneder"
+        one: 1 month
+        other: "%{count} months"
       x_seconds:
-        one: 1 sekund
-        other: "%{count} sekunder"
+        one: 1 second
+        other: "%{count} seconds"
     units:
       hour:
-        one: time
-        other: " timer"
+        one: hour
+        other: hours
   default_activity_management: Administrasjon
   default_activity_design: Design
   default_activity_development: Utvikling
@@ -735,6 +741,7 @@
   label_downloads_abbr: D/L
   label_duplicated_by: duplisert av
   label_duplicates: duplikater
+  label_edit: Rediger
   label_enable_multi_select: Veksle multivalg
   label_end_to_end: ende til ende
   label_end_to_start: ende til start
@@ -1035,24 +1042,24 @@
   label_workflow_plural: Arbeidsflyt
   label_workflow_summary: Sammendrag
   label_x_closed_work_packages_abbr:
-    one: 1 lukket
-    other: "%{count} lukkede"
+    one: 1 closed
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
-    one: 1 kommentar
-    other: "%{count} kommentarer"
+    one: 1 comment
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
-    one: 1 åpen
-    other: "%{count} åpne"
+    one: 1 open
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
-    one: 1 åpen / %{total}
-    other: "%{count} åpne / %{total}"
+    one: 1 open / %{total}
+    other: "%{count} open / %{total}"
     zero: 0 open / %{total}
   label_x_projects:
-    one: 1 prosjekt
-    other: "%{count} prosjekter"
+    one: 1 project
+    other: "%{count} projects"
     zero: no projects
   label_year: "År"
   label_yesterday: i går
@@ -1498,8 +1505,8 @@
     delete_thing: Slett
     duration: Varighet
     duration_days:
-      one: 1 dag
-      other: "%{count} dager"
+      one: 1 day
+      other: "%{count} days"
     edit_color: Endre farge
     edit_project_type: Endre prosjekttype
     edit_thing: Rediger
@@ -1675,8 +1682,8 @@
     assign_random_password: Tildel vilkårlig passord (sendt til brukeren på e-post)
     blocked: midlertidig låst
     blocked_num_failed_logins:
-      one: midlertidig låst (ett mislykket innloggingsforsøk)
-      other: midlertidig låst (%{count} mislykkede innloggingsforsøk)
+      one: locked temporarily (one failed login attempt)
+      other: locked temporarily (%{count} failed login attempts)
     deleted: Slettet bruker
     error_status_change_failed: 'Endring av brukerstatus mislyktes på grunn av følgende
       feil: %{errors}'
@@ -1714,7 +1721,6 @@
   nothing_to_preview: Ingenting å forhåndsvise
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: Du må være pålogget for å få tilgang til denne ressursen.
@@ -1723,23 +1729,28 @@
       code_409: Kunne ikke oppdatere ressursen på grunn av konflikt med andre endringer.
       invalid_content_type: Forventet at INNHOLDSTYPE skulle være '%{content_type}',
         men mottok i stedet '%{actual}'.
-      invalid_resource: Egenskapen '%{property}' skal være ressurstype '%{expected}',
-        men mottok i stedet ressurstype '%{actual}'.
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: Kontostatusen til gjeldende brukerkonto tillater
         ikke denne operasjonen.
       missing_content_type: not specified
-      multiple_errors: Flere felter bryter med sine restriksjoner.
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: Innholdet i forespørselen var tomt og inneholder heller ikke ett
         eneste JSON-objekt.
       writing_read_only_attributes: Du kan ikke skrive til et skrivebeskyttet attributt.
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: Fant ikke kontekst.
-        unsupported_context: Fant ikke-støttet kontekst.
-        context_object_not_found: Kan ikke finne ressursen som er angitt i konteksten.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: Valgt bruker har ikke de nødvendige
           rettighetene til å være '%{property}' for denne arbeidspakken.
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

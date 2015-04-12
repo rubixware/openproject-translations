@@ -185,7 +185,7 @@ cs:
         smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
           length
         greater_than_start_date: musí být větší než počáteční datum
-        inclusion: není zahrnuto v seznamu
+        inclusion: is not set to one of the allowed values
         invalid: je neplatné
         less_than: musí být menší než %{count}
         less_than_or_equal_to: musí být menší než nebo rovna %{count}
@@ -207,6 +207,9 @@ cs:
         project_association:
           identical_projects: Nelze vytvořit z jednoho projektu do sebe
           project_association_not_allowed: neumožňuje přidružení
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Work package #%{id} is not a valid
             target for reassigning the time entries.'
@@ -219,14 +222,17 @@ cs:
               not_a_valid_parent: je neplatné
               does_not_exist: neexistuje
             status_id:
-              status_transition_invalid: is invalid because no valid transition exists
-                from old to new status for the current user's roles
+              status_transition_invalid: je neplatná, protože není platný přechod
+                neexistuje ze starého do nového stavu pro aktuální uživatelské role
             priority_id:
               only_active_priorities_allowed: needs to be active
             category:
-              only_same_project_categories_allowed: The category of a work package
-                must be within the same project as the work package.
-              does_not_exist: The specified category does not exist.
+              only_same_project_categories_allowed: Kategorie pracovního balíčku musí
+                být v rámci stejného projektu jako pracovního balíčku.
+              does_not_exist: Zadaná kategorie neexistuje.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -267,8 +273,8 @@ cs:
       query: Vlastní dotaz
       role:
         one: Role
-        other: Role
-        few: Role
+        other: Roles
+        few: Roles
       type: Typ
       planning_element: Prvek plánování
       project_type: Typ projektu
@@ -453,13 +459,13 @@ cs:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: přibližně 1 hodinou
-        other: přibližně %{count} hodin
-        few: přibližně %{count} hodin
+        one: about 1 hour
+        other: about %{count} hours
+        few: about %{count} hours
       about_x_months:
-        one: přibližně 1 měsíc
-        other: přibližně %{count} měsíců
-        few: přibližně %{count} měsíce
+        one: about 1 month
+        other: about %{count} months
+        few: about %{count} months
       about_x_years:
         one: about 1 year
         other: about %{count} years
@@ -749,6 +755,7 @@ cs:
   label_downloads_abbr: D/L
   label_duplicated_by: duplikováno
   label_duplicates: duplikovaů
+  label_edit: Upravit
   label_enable_multi_select: Přepnout multiselect
   label_end_to_end: end to end
   label_end_to_start: end to start
@@ -1049,15 +1056,15 @@ cs:
   label_workflow_plural: Pracovní vrstvy
   label_workflow_summary: Souhrn
   label_x_closed_work_packages_abbr:
-    one: 1 uzavřena
-    other: "%{count} uzavřeno"
+    one: 1 closed
+    other: "%{count} closed"
     zero: 0 closed
-    few: "%{count} uzavřeny"
+    few: "%{count} closed"
   label_x_comments:
-    one: 1 komentář
-    other: "%{count} komentářů"
+    one: 1 comment
+    other: "%{count} comments"
     zero: no comments
-    few: "%{count} komentáře"
+    few: "%{count} comments"
   label_x_open_work_packages_abbr:
     one: 1 open
     other: "%{count} open"
@@ -1204,7 +1211,7 @@ cs:
           byte:
             one: Byte
             other: Bytes
-            few: Byte
+            few: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1737,7 +1744,6 @@ cs:
   nothing_to_preview: Nothing to preview
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: You need to be authenticated to access this resource.
@@ -1746,23 +1752,28 @@ cs:
       code_409: Couldn't update the resource because of conflicting modifications.
       invalid_content_type: Expected CONTENT-TYPE to be '%{content_type}' but got
         '%{actual}'.
-      invalid_resource: For property '%{property}' a resource of type '%{expected}'
-        is expected but got a resource of type '%{actual}'.
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: The current user account status does not allow
         this operation.
       missing_content_type: not specified
-      multiple_errors: Multiple fields violated their constraints.
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: The request body was neither empty, nor did it contain a single
         JSON object.
       writing_read_only_attributes: You must not write a read-only attribute.
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: No context found.
-        unsupported_context: Unsupported context found.
-        context_object_not_found: Cannot find the resource given with the context.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: The chosen user is not allowed to be
           '%{property}' for this work package.
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

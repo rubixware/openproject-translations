@@ -164,7 +164,7 @@ ja:
         greater_than_or_equal_to: "は%{count}以上の値にしてください。"
         smaller_than_or_equal_to_max_length: "は最大長さより以下でなければなりません。"
         greater_than_start_date: "は開始日より後にしてください。"
-        inclusion: "はリストに含まれていません。"
+        inclusion: is not set to one of the allowed values
         invalid: "は不正な値です。"
         less_than: "は%{count}より小さい値にしてください。"
         less_than_or_equal_to: "は%{count}以下の値にしてください。"
@@ -186,6 +186,9 @@ ja:
         project_association:
           identical_projects: "は同一プロジェクトから作成することができません。"
           project_association_not_allowed: "関連付けを許可していません。"
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: "作業時間を再割り当てるには、作業項目#%{id}は対象外である。"
           attributes:
@@ -204,6 +207,9 @@ ja:
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -215,7 +221,8 @@ ja:
               reused:
                 one: has been used before. Please choose one that is different from
                   your last one.
-                other: "これは以前に使用されています。直近の%{count}つから異なるのを選択してください。"
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: "一つ以上のユーザーまたはグループを選択してください。"
           role_blank: 1つ以上の役割を選択してください。
@@ -223,7 +230,7 @@ ja:
         body: "次のフィールドをチェックしてください："
         header:
           one: 1 error prohibited this %{model} from being saved
-          other: "この%{model}は%{count}つエラーによって保存が禁止されました。"
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: "ファイル"
       board: "フォーラム"
@@ -239,7 +246,7 @@ ja:
       query: "ユーザーのクエリ"
       role:
         one: Role
-        other: "役割"
+        other: Roles
       type: "種別"
       planning_element: "計画の要素"
       project_type: "プロジェクトの種類"
@@ -424,42 +431,42 @@ ja:
     distance_in_words:
       about_x_hours:
         one: about 1 hour
-        other: "およそ%{count}時間"
+        other: about %{count} hours
       about_x_months:
         one: about 1 month
-        other: "およそ %{count} ヶ月"
+        other: about %{count} months
       about_x_years:
         one: about 1 year
-        other: "およそ%{count} 年間"
+        other: about %{count} years
       almost_x_years:
         one: almost 1 year
-        other: "だいたい %{count} 年間"
+        other: almost %{count} years
       half_a_minute: 30秒前後
       less_than_x_minutes:
         one: less than a minute
-        other: "%{count}分未満"
+        other: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
-        other: "%{count}秒未満"
+        other: less than %{count} seconds
       over_x_years:
         one: over 1 year
-        other: "%{count} 年"
+        other: over %{count} years
       x_days:
         one: 1 day
-        other: "%{count}日"
+        other: "%{count} days"
       x_minutes:
         one: 1 minute
-        other: "%{count}分"
+        other: "%{count} minutes"
       x_months:
         one: 1 month
-        other: "%{count} ヶ月"
+        other: "%{count} months"
       x_seconds:
         one: 1 second
-        other: "%{count}秒"
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
-        other: " 時間"
+        other: hours
   default_activity_management: "管理"
   default_activity_design: "設計作業"
   default_activity_development: "開発作業"
@@ -691,6 +698,7 @@ ja:
   label_downloads_abbr: D/L
   label_duplicated_by: "次の項目が重複"
   label_duplicates: "次と重複"
+  label_edit: "編集"
   label_enable_multi_select: "複数選択の切り替え"
   label_end_to_end: "最後～最後"
   label_end_to_start: "最後～最初"
@@ -987,23 +995,23 @@ ja:
   label_workflow_summary: "サマリー"
   label_x_closed_work_packages_abbr:
     one: 1 closed
-    other: "%{count}つ終了"
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
     one: 1 comment
-    other: "%{count}つコメント"
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
     one: 1 open
-    other: "%{count}件未完了"
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
-    other: "%{count}件未完了 / 全%{total}件"
+    other: "%{count} open / %{total}"
     zero: 0 open / %{total}
   label_x_projects:
     one: 1 project
-    other: "%{count}件プロジェクト"
+    other: "%{count} projects"
     zero: no projects
   label_year: "年"
   label_yesterday: "昨日"
@@ -1110,7 +1118,7 @@ ja:
         units:
           byte:
             one: Byte
-            other: "バイト"
+            other: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1403,7 +1411,7 @@ ja:
     duration: "期間"
     duration_days:
       one: 1 day
-      other: "%{count}日"
+      other: "%{count} days"
     edit_color: "色を編集する"
     edit_project_type: "プロジェクトの種類を編集する"
     edit_thing: "編集"
@@ -1563,7 +1571,7 @@ ja:
     blocked: "一時的ロック"
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
-      other: "一時的にロックされています。 （%{count}回のログイン試行が失敗）"
+      other: locked temporarily (%{count} failed login attempts)
     deleted: "削除されたユーザ"
     error_status_change_failed: "次のエラーによりユーザーのステータスの変更が失敗しました：%{errors}"
     lock: "永続ロックする"
@@ -1595,7 +1603,6 @@ ja:
   nothing_to_preview: "プレビューできるものは何もありません。"
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: "このリソースへのアクセスするには認証を行う必要があります。"
@@ -1603,20 +1610,26 @@ ja:
       code_404: The requested resource could not be found.
       code_409: "変更が競合しているため、リソースを更新できませんでした。"
       invalid_content_type: "コンテンツの種類は'%{content_type}'を期待されたが '%{actual}'を得ました。"
-      invalid_resource: "'%{property}'のプロパティに関して%{expected}'の種類のリソースを期待されたが、'%{actual}'の種類のリソースを得ました。"
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: The current user account status does not allow
         this operation.
       missing_content_type: not specified
-      multiple_errors: "複数のフィールドが制約を違反しました。"
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: "リクエストの内容は空でもないし、1つの JSONオブジェクトも含まれていません。"
       writing_read_only_attributes: "読み取り専用の属性を書き込みできません。"
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: "コンテキストが見つかりません。"
-        unsupported_context: "サポートされていないコンテキストが見つかりました。"
-        context_object_not_found: "コンテキストで指定されたリソースが見つかりません。"
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: "選ばれたユーザーは、この作業項目の'%{property}' にすることはできません。"
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

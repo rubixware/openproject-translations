@@ -174,7 +174,7 @@ ko:
         smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
           length
         greater_than_start_date: must be greater than start date
-        inclusion: is not included in the list
+        inclusion: is not set to one of the allowed values
         invalid: is invalid
         less_than: must be less than %{count}
         less_than_or_equal_to: must be less than or equal to %{count}
@@ -196,6 +196,9 @@ ko:
         project_association:
           identical_projects: can not be created from one project to itself
           project_association_not_allowed: does not allow associations
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Work package #%{id} is not a valid
             target for reassigning the time entries.'
@@ -217,6 +220,9 @@ ko:
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -229,7 +235,8 @@ ko:
               reused:
                 one: has been used before. Please choose one that is different from
                   your last one.
-                other: "이미 사용되었습니다. 마지막 %{count} 번과는 다른 것을 사용하십시오. "
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Please choose at least one user or group.
           role_blank: Please choose at least one role.
@@ -237,7 +244,7 @@ ko:
         body: 'Please check the following fields:'
         header:
           one: 1 error prohibited this %{model} from being saved
-          other: "%{count} 오류 때문에 %{model} 을 저장할 수 없습니다."
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: "파일"
       board: Forum
@@ -253,7 +260,7 @@ ko:
       query: Custom query
       role:
         one: Role
-        other: "역활"
+        other: Roles
       type: Type
       planning_element: Planning element
       project_type: Project type
@@ -439,42 +446,42 @@ ko:
     distance_in_words:
       about_x_hours:
         one: about 1 hour
-        other: "약 %{count} 시간"
+        other: about %{count} hours
       about_x_months:
         one: about 1 month
-        other: "약 %{count} 개월"
+        other: about %{count} months
       about_x_years:
         one: about 1 year
-        other: "약 %{count} 년"
+        other: about %{count} years
       almost_x_years:
         one: almost 1 year
-        other: "거의 %{count} 년"
+        other: almost %{count} years
       half_a_minute: half a minute
       less_than_x_minutes:
         one: less than a minute
-        other: "%{count} 분 이만"
+        other: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
-        other: "%{count} 초 미만"
+        other: less than %{count} seconds
       over_x_years:
         one: over 1 year
-        other: "%{count} 년 초과"
+        other: over %{count} years
       x_days:
         one: 1 day
-        other: "%{count} 일"
+        other: "%{count} days"
       x_minutes:
         one: 1 minute
-        other: "%{count} 분"
+        other: "%{count} minutes"
       x_months:
         one: 1 month
-        other: "%{count} 개월"
+        other: "%{count} months"
       x_seconds:
         one: 1 second
-        other: "%{count} 초"
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
-        other: "시간"
+        other: hours
   default_activity_management: "관리"
   default_activity_design: Design
   default_activity_development: Development
@@ -722,6 +729,7 @@ ko:
   label_downloads_abbr: D/L
   label_duplicated_by: duplicated by
   label_duplicates: duplicates
+  label_edit: Edit
   label_enable_multi_select: Toggle multiselect
   label_end_to_end: end to end
   label_end_to_start: end to start
@@ -1021,23 +1029,23 @@ ko:
   label_workflow_summary: Summary
   label_x_closed_work_packages_abbr:
     one: 1 closed
-    other: "%{count} 마감"
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
     one: 1 comment
-    other: "댓글 %{count}개"
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
     one: 1 open
-    other: "%{count} 오픈"
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
-    other: "%{count} 오픈 / %{total}"
+    other: "%{count} open / %{total}"
     zero: 0 open / %{total}
   label_x_projects:
     one: 1 project
-    other: "%{count} 프로젝트"
+    other: "%{count} projects"
     zero: no projects
   label_year: Year
   label_yesterday: yesterday
@@ -1170,7 +1178,7 @@ ko:
         units:
           byte:
             one: Byte
-            other: "바이트"
+            other: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1486,7 +1494,7 @@ ko:
     duration: Duration
     duration_days:
       one: 1 day
-      other: "%{count} 일"
+      other: "%{count} days"
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Edit
@@ -1664,7 +1672,7 @@ ko:
     blocked: locked temporarily
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
-      other: "일시적으로 잠김 (%{count} 로그인 시도 실패)"
+      other: locked temporarily (%{count} failed login attempts)
     deleted: Deleted user
     error_status_change_failed: 'Changing the user status failed due to the following
       errors: %{errors}'
@@ -1702,7 +1710,6 @@ ko:
   nothing_to_preview: Nothing to preview
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: "접근하기 위해서 인증해야 합니다."
@@ -1711,22 +1718,27 @@ ko:
       code_409: "수정사항이 출동되어 업데이트 할 수 없습니다."
       invalid_content_type: "예상되는 CONTENT-TYPE 은 '%{content_type}' 이지만, '%{actual}'
         을 응답 받았습니다."
-      invalid_resource: "속성 '%{property}' 형식의 리소스에 대 한 '%{expected}' 예상 하지만 '%{actual}'
-        형식의 리소스를 가지고 있습니다."
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: "현재 사용자의 계정 상태는이 작업을 허용 하지 않습니다."
       missing_content_type: not specified
-      multiple_errors: "여러 필드가 조건에 부합하지 않습니다."
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: The request body was neither empty, nor did it contain a single
         JSON object.
       writing_read_only_attributes: "읽기 전용 특성은 변경할 수 없습니다."
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: "찾을 수 없음"
-        unsupported_context: "지원되지 않는 문맥 발견"
-        context_object_not_found: "해당 문맥으로 리소스를 찾을 수 없습니다."
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: "선택한 사용자는 이 작업 패키지에 대해 '%{property}'
           허가되지 않았습니다."
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

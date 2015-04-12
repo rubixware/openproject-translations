@@ -162,7 +162,7 @@ zh:
         greater_than_or_equal_to: "必须大于或等于 %{count}"
         smaller_than_or_equal_to_max_length: "必须小于或等于最大长度"
         greater_than_start_date: "必须大于开始日期"
-        inclusion: "不包括在列表中"
+        inclusion: is not set to one of the allowed values
         invalid: "是无效的"
         less_than: "必须小于 %{count}"
         less_than_or_equal_to: "必须小于或等于 %{count}"
@@ -184,6 +184,9 @@ zh:
         project_association:
           identical_projects: "不能创建关联到项目自身"
           project_association_not_allowed: "不允许关联"
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: "工作包 #%{id} 不是重新分配时间条目的有效目标。"
           attributes:
@@ -202,6 +205,9 @@ zh:
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -213,7 +219,8 @@ zh:
               reused:
                 one: has been used before. Please choose one that is different from
                   your last one.
-                other: "已被使用过。请选择一个不同于您最后 %{count}。"
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: "请选择至少一个用户或组。"
           role_blank: "请选择至少一个角色。"
@@ -221,7 +228,7 @@ zh:
         body: "请检查以下字段："
         header:
           one: 1 error prohibited this %{model} from being saved
-          other: "%{count} 个错误阻止保存 %{model}"
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: "文件"
       board: "论坛"
@@ -237,7 +244,7 @@ zh:
       query: "自定义查询"
       role:
         one: Role
-        other: "角色"
+        other: Roles
       type: "类型"
       planning_element: "规划元素"
       project_type: "项目类型"
@@ -422,42 +429,42 @@ zh:
     distance_in_words:
       about_x_hours:
         one: about 1 hour
-        other: "大约 %{count} 小时"
+        other: about %{count} hours
       about_x_months:
         one: about 1 month
-        other: "大约 %{count} 月"
+        other: about %{count} months
       about_x_years:
         one: about 1 year
-        other: "大约 %{count} 年"
+        other: about %{count} years
       almost_x_years:
         one: almost 1 year
-        other: "几乎 %{count} 年"
+        other: almost %{count} years
       half_a_minute: "半分钟"
       less_than_x_minutes:
         one: less than a minute
-        other: "小于 %{count} 分钟"
+        other: less than %{count} minutes
       less_than_x_seconds:
         one: less than 1 second
-        other: "小于 %{count} 秒"
+        other: less than %{count} seconds
       over_x_years:
         one: over 1 year
-        other: "超过 %{count} 年"
+        other: over %{count} years
       x_days:
         one: 1 day
-        other: "%{count} 天"
+        other: "%{count} days"
       x_minutes:
         one: 1 minute
-        other: "%{count} 分钟"
+        other: "%{count} minutes"
       x_months:
         one: 1 month
-        other: "%{count} 月"
+        other: "%{count} months"
       x_seconds:
         one: 1 second
-        other: "%{count} 秒"
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
-        other: "小时"
+        other: hours
   default_activity_management: "管理"
   default_activity_design: "设计"
   default_activity_development: "开发"
@@ -689,6 +696,7 @@ zh:
   label_downloads_abbr: D/L
   label_duplicated_by: "复制于"
   label_duplicates: "复制"
+  label_edit: "编辑"
   label_enable_multi_select: "切换多选"
   label_end_to_end: "结束结束"
   label_end_to_start: "结束开始"
@@ -985,23 +993,23 @@ zh:
   label_workflow_summary: "摘要"
   label_x_closed_work_packages_abbr:
     one: 1 closed
-    other: "%{count} 关闭"
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
     one: 1 comment
-    other: "%{count} 评论"
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
     one: 1 open
-    other: "%{count} 待处理"
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
     one: 1 open / %{total}
-    other: "%{count} 打开 / %{total}"
+    other: "%{count} open / %{total}"
     zero: 0 open / %{total}
   label_x_projects:
     one: 1 project
-    other: "%{count} 项目"
+    other: "%{count} projects"
     zero: no projects
   label_year: "年"
   label_yesterday: "昨天"
@@ -1110,7 +1118,7 @@ zh:
         units:
           byte:
             one: Byte
-            other: "字节"
+            other: Bytes
           gb: GB
           kb: kB
           mb: MB
@@ -1398,7 +1406,7 @@ zh:
     duration: "持续时间"
     duration_days:
       one: 1 day
-      other: "%{count} 天"
+      other: "%{count} days"
     edit_color: "编辑颜色"
     edit_project_type: "编辑项目类型"
     edit_thing: "编辑"
@@ -1559,7 +1567,7 @@ zh:
     blocked: "暂时锁定"
     blocked_num_failed_logins:
       one: locked temporarily (one failed login attempt)
-      other: "暂时锁定 （%{count} 登录尝试失败）"
+      other: locked temporarily (%{count} failed login attempts)
     deleted: "已删除的用户"
     error_status_change_failed: "用户状态更改失败，因为以下错误: %{errors}"
     lock: "永久锁定"
@@ -1591,7 +1599,6 @@ zh:
   nothing_to_preview: "没有什么要预览"
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: "你需要被授权访问该资源。"
@@ -1599,20 +1606,26 @@ zh:
       code_404: The requested resource could not be found.
       code_409: "无法更新资源，因为发生冲突的修改。"
       invalid_content_type: "预期CONTENT-TYPE为%{content_type}，但是获得了'%{actual}'。"
-      invalid_resource: "对于属性'%{property}'，预期获得类型为'%{expected}'的资源，但是获得了类型'%{actual}'的资源。"
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: The current user account status does not allow
         this operation.
       missing_content_type: not specified
-      multiple_errors: "多个字段违反他们的约束。"
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: "请求主体既不是空的也没有包括一个单一的 JSON 对象。"
       writing_read_only_attributes: "你不能写入只读属性。"
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: "发现没有上下文。"
-        unsupported_context: "发现不支持的上下文。"
-        context_object_not_found: "找不到与上下文给出的资源。"
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: "所选的用户不允许为此工作包的 '%{property}'。"
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

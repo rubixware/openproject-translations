@@ -183,7 +183,7 @@ pt:
         smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
           length
         greater_than_start_date: deve ser maior que a data de início
-        inclusion: Não está incluído na lista
+        inclusion: is not set to one of the allowed values
         invalid: "é inválido"
         less_than: deve ser menor que % {count}
         less_than_or_equal_to: deve ser menor ou igual a %{count}
@@ -205,6 +205,9 @@ pt:
         project_association:
           identical_projects: can not be created from one project to itself
           project_association_not_allowed: não permite associações
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Work package #%{id} is not a valid
             target for reassigning the time entries.'
@@ -218,14 +221,17 @@ pt:
               not_a_valid_parent: "é inválido"
               does_not_exist: não existe
             status_id:
-              status_transition_invalid: is invalid because no valid transition exists
-                from old to new status for the current user's roles
+              status_transition_invalid: "é inválido porque nenhuma transição válida
+                existe entre o status antigo e novo da função atual deste usuário"
             priority_id:
               only_active_priorities_allowed: tem de estar ativo
             category:
-              only_same_project_categories_allowed: The category of a work package
-                must be within the same project as the work package.
-              does_not_exist: The specified category does not exist.
+              only_same_project_categories_allowed: A categoria de um pacote de trabalho
+                deve estar dentro do mesmo projeto que o pacote de trabalho.
+              does_not_exist: A categoria especificada não existe.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: O número estimado de horas
+                deve ser >=0.
         user:
           attributes:
             password:
@@ -262,13 +268,8 @@ pt:
       project: Project
       query: Custom query
       role:
-        one: |
-          [one]
-          Papel
-
-          [other]
-          Papeis
-        other: Papel
+        one: Role
+        other: Roles
       type: Tipo
       planning_element: Elemento de planeamento
       project_type: Tipo do projeto
@@ -590,8 +591,8 @@ pt:
   error_scm_command_failed: 'An error occurred when trying to access the repository:
     %{value}'
   error_scm_not_found: The entry or revision was not found in the repository.
-  error_unable_delete_status: Unable to delete work package status because it contains
-    work packages.
+  error_unable_delete_status: Não foi possível excluir o status do pacote de trabalho,
+    porque ele contém pacotes de trabalho.
   error_unable_delete_default_status: Unable to delete default work package status.
     Please select another default work package status before deleting the current
     one.
@@ -737,6 +738,7 @@ pt:
   label_downloads_abbr: D/L
   label_duplicated_by: duplicated by
   label_duplicates: duplicates
+  label_edit: Edit
   label_enable_multi_select: Toggle multiselect
   label_end_to_end: end to end
   label_end_to_start: end to start
@@ -1075,7 +1077,8 @@ pt:
   label_keyboard_shortcut_go_news: Go to project news
   label_keyboard_shortcut_go_timelines: Go to timelines
   label_keyboard_shortcut_new_work_package: Create new work package
-  label_keyboard_shortcut_details_package: Show work packages details pane
+  label_keyboard_shortcut_details_package: Mostrar o painel de detalhes dos pacotes
+    de trabalho
   label_keyboard_shortcut_go_edit: Go to edit the current item (on detail pages only)
   label_keyboard_shortcut_open_more_menu: Open more-menu (on detail pages only)
   label_keyboard_shortcut_go_preview: Go to preview the current edit (on edit pages
@@ -1553,8 +1556,8 @@ pt:
         absolute: Absolute
         none: None
         relative: Relative
-        compare_relative_prefix: Compare current planning to
-        compare_relative_suffix: ago
+        compare_relative_prefix: Comparar o planejamento atual para
+        compare_relative_suffix: atrás
         compare_absolute: Compare current planning to %{date}
       time_relative:
         days: days
@@ -1582,7 +1585,7 @@ pt:
       status: Show status
       project_time_filter: Projects with a work package of a certain type in a certain
         timeframe
-      project_time_filter_timeframe: Timeframe
+      project_time_filter_timeframe: Período de tempo
       project_time_filter_historical_from: from
       project_time_filter_historical_to: to
       project_time_filter_historical: "%{start_label} %{startdate} %{end_label} %{enddate}"
@@ -1717,32 +1720,37 @@ pt:
   nothing_to_preview: Nothing to preview
   api_v3:
     attributes:
-      _type: Resource Type
-      lock_version: Lock Version
+      lock_version: Versão de bloqueio
     errors:
-      code_401: You need to be authenticated to access this resource.
-      code_403: You are not authorized to access this resource.
-      code_404: The requested resource could not be found.
-      code_409: Couldn't update the resource because of conflicting modifications.
-      invalid_content_type: Expected CONTENT-TYPE to be '%{content_type}' but got
-        '%{actual}'.
-      invalid_resource: For property '%{property}' a resource of type '%{expected}'
-        is expected but got a resource of type '%{actual}'.
-      invalid_user_status_transition: The current user account status does not allow
-        this operation.
-      missing_content_type: not specified
-      multiple_errors: Multiple fields violated their constraints.
-      parse_error: The request body was neither empty, nor did it contain a single
-        JSON object.
-      writing_read_only_attributes: You must not write a read-only attribute.
+      code_401: Você precisa estar autenticado para acessar a este recurso.
+      code_403: Você não está autorizado a acessar a este recurso.
+      code_404: O recurso solicitado não pôde ser encontrado.
+      code_409: Não consegui atualizar o recurso devido a modificações conflitantes.
+      invalid_content_type: Espera-se que CONTENT-TYPE saja '%{content_type}' mas
+        tem '%{actual}'.
+      invalid_resource: Para a propriedade '%{property}' um link como '%{expected}'
+        é esperado, mas tem '%{actual}'.
+      invalid_user_status_transition: O status da conta do usuário atual não permite
+        esta operação.
+      missing_content_type: não especificado
+      multiple_errors: Várias restrições de campo foram violadas.
+      parse_error: O corpo da solicitação não era vazia, ou nem contém um único objeto
+        JSON.
+      writing_read_only_attributes: Você não deve escrever um atributo de somente
+        leitura.
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: No context found.
-        unsupported_context: Unsupported context found.
-        context_object_not_found: Cannot find the resource given with the context.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: The chosen user is not allowed to be
           '%{property}' for this work package.
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

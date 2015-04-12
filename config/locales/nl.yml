@@ -189,7 +189,7 @@ nl:
         smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
           length
         greater_than_start_date: moet groter zijn dan begindatum
-        inclusion: is niet opgenomen in de lijst
+        inclusion: is not set to one of the allowed values
         invalid: is ongeldig
         less_than: moet minder dan %{count}
         less_than_or_equal_to: moet kleiner zijn dan of gelijk aan %{count}
@@ -211,6 +211,9 @@ nl:
         project_association:
           identical_projects: kan niet worden gemaakt van het ene project naar zichzelf
           project_association_not_allowed: staat geen associaties toe
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Werkpakket #%{id} is niet een geldig
             doel voor het opnieuw toewijzen van de tijden.'
@@ -224,14 +227,18 @@ nl:
               not_a_valid_parent: is ongeldig
               does_not_exist: bestaat niet
             status_id:
-              status_transition_invalid: is invalid because no valid transition exists
-                from old to new status for the current user's roles
+              status_transition_invalid: is ongeldig want er bestaat geen geldige
+                transitie van de oude naar de nieuwe status voor rol van de huidige
+                gebruiker
             priority_id:
               only_active_priorities_allowed: moet actief zijn
             category:
-              only_same_project_categories_allowed: The category of a work package
-                must be within the same project as the work package.
-              does_not_exist: The specified category does not exist.
+              only_same_project_categories_allowed: De categorie van het werkpakket  moet
+                binnen hetzelfde project bestaan als het werkpakket.
+              does_not_exist: De gekozen categorie bestaat niet.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: Geschatte uren moeten >=
+                0.
         user:
           attributes:
             password:
@@ -242,16 +249,18 @@ nl:
               numeric: numerieke (bijvoorbeeld ' 1')
               special: speciale (bijvoorbeeld ' %')
               reused:
-                one: is reeds eerder gebruikt. Kies een die verschilt van uw laatste.
-                other: is reeds eerder gebruikt. Kies een die verschilt van uw laatste  %{count}.
+                one: has been used before. Please choose one that is different from
+                  your last one.
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Kies ten minste één gebruiker of groep.
           role_blank: Kies ten minste één rol.
       template:
         body: 'Controleer de volgende velden:'
         header:
-          one: 1 fout voorkomt dat dit %{model} wordt opgeslagen
-          other: "%{count} fouten voorkomen dat dit %{model} wordt opgeslagen"
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: Bestand
       board: Forum
@@ -266,8 +275,8 @@ nl:
       project: Project
       query: Aangepaste query
       role:
-        one: Rol
-        other: Rol
+        one: Role
+        other: Roles
       type: Type
       planning_element: Planning element
       project_type: Projecttype
@@ -454,39 +463,39 @@ nl:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: ongeveer 1 uur
-        other: ongeveer %{count} uren
+        one: about 1 hour
+        other: about %{count} hours
       about_x_months:
-        one: ongeveer 1 maand
-        other: Ongeveer %{count} maanden
+        one: about 1 month
+        other: about %{count} months
       about_x_years:
-        one: ongeveer 1 jaar
-        other: ongeveer %{count} jaar
+        one: about 1 year
+        other: about %{count} years
       almost_x_years:
-        one: bijna 1 jaar
-        other: bijna %{count} jaar
+        one: almost 1 year
+        other: almost %{count} years
       half_a_minute: een halve minuut
       less_than_x_minutes:
-        one: minder dan een minuut
-        other: minder dan %{count} minuten
+        one: less than a minute
+        other: less than %{count} minutes
       less_than_x_seconds:
-        one: minder dan 1 seconde
-        other: minder dan %{count} seconden
+        one: less than 1 second
+        other: less than %{count} seconds
       over_x_years:
-        one: meer dan 1 jaar
-        other: meer dan %{count} jaren
+        one: over 1 year
+        other: over %{count} years
       x_days:
-        one: 1 dag
-        other: "%{count} dagen"
+        one: 1 day
+        other: "%{count} days"
       x_minutes:
-        one: 1 minuut
-        other: "%{count} minuten"
+        one: 1 minute
+        other: "%{count} minutes"
       x_months:
-        one: 1 maand
-        other: "%{count} maanden"
+        one: 1 month
+        other: "%{count} months"
       x_seconds:
-        one: 1 seconde
-        other: "%{count} seconden"
+        one: 1 second
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
@@ -592,8 +601,8 @@ nl:
   error_scm_command_failed: 'Er is een fout opgetreden tijdens het proberen om toegang
     te krijgen tot de repository: %{value}'
   error_scm_not_found: De vermelding of de herziening werd niet gevonden in de repository.
-  error_unable_delete_status: Unable to delete work package status because it contains
-    work packages.
+  error_unable_delete_status: Kan deze status niet verwijderen omdat er werkpakketten
+    zijn die deze status gebruiken.
   error_unable_delete_default_status: Niet in staat de status van het standaard werkpakket
     te verwijderen. Gelieve een andere status van het standaard werkpakket te selecteren
     alvorens de huidige te verwijderen.
@@ -740,6 +749,7 @@ nl:
   label_downloads_abbr: D/L
   label_duplicated_by: gedupliceerd door
   label_duplicates: duplicaten
+  label_edit: Wijzig
   label_enable_multi_select: Omschakelen multiselect
   label_end_to_end: einde tot einde
   label_end_to_start: einde tot start
@@ -1045,12 +1055,12 @@ nl:
   label_workflow_plural: Workflows
   label_workflow_summary: Overzicht
   label_x_closed_work_packages_abbr:
-    one: 1 gesloten
-    other: "%{count} gesloten"
+    one: 1 closed
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
-    one: 1 reactie
-    other: "%{count} reacties"
+    one: 1 comment
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
     one: 1 open
@@ -1062,7 +1072,7 @@ nl:
     zero: 0 open / %{total}
   label_x_projects:
     one: 1 project
-    other: "%{count} projecten"
+    other: "%{count} projects"
     zero: no projects
   label_year: Jaar
   label_yesterday: gisteren
@@ -1085,7 +1095,7 @@ nl:
   label_keyboard_shortcut_go_news: Ga naar Projectnieuws
   label_keyboard_shortcut_go_timelines: Ga naar tijdlijnen
   label_keyboard_shortcut_new_work_package: Nieuw werkpakket maken
-  label_keyboard_shortcut_details_package: Show work packages details pane
+  label_keyboard_shortcut_details_package: Toon detailvlak van het werkpakket
   label_keyboard_shortcut_go_edit: Ga naar het bewerken van het huidige item (enkel
     op de detailpagina's)
   label_keyboard_shortcut_open_more_menu: Meer-menu openen (enkel op de detailpagina's)
@@ -1514,8 +1524,8 @@ nl:
     delete_thing: Verwijderen
     duration: Duration
     duration_days:
-      one: 1 dag
-      other: "%{count} dagen"
+      one: 1 day
+      other: "%{count} days"
     edit_color: Edit color
     edit_project_type: Edit project type
     edit_thing: Wijzig
@@ -1567,8 +1577,8 @@ nl:
         absolute: Absolute
         none: Geen
         relative: Relative
-        compare_relative_prefix: Compare current planning to
-        compare_relative_suffix: ago
+        compare_relative_prefix: Vergelijk de huidige planning met
+        compare_relative_suffix: geleden
         compare_absolute: Compare current planning to %{date}
       time_relative:
         days: dagen
@@ -1596,7 +1606,7 @@ nl:
       status: Show status
       project_time_filter: Projects with a work package of a certain type in a certain
         timeframe
-      project_time_filter_timeframe: Timeframe
+      project_time_filter_timeframe: Periode
       project_time_filter_historical_from: from
       project_time_filter_historical_to: to
       project_time_filter_historical: "%{start_label} %{startdate} %{end_label} %{enddate}"
@@ -1731,32 +1741,36 @@ nl:
   nothing_to_preview: Nothing to preview
   api_v3:
     attributes:
-      _type: Resource Type
-      lock_version: Lock Version
+      lock_version: Vergrendel versie
     errors:
-      code_401: You need to be authenticated to access this resource.
-      code_403: You are not authorized to access this resource.
-      code_404: The requested resource could not be found.
-      code_409: Couldn't update the resource because of conflicting modifications.
-      invalid_content_type: Expected CONTENT-TYPE to be '%{content_type}' but got
-        '%{actual}'.
-      invalid_resource: For property '%{property}' a resource of type '%{expected}'
-        is expected but got a resource of type '%{actual}'.
-      invalid_user_status_transition: The current user account status does not allow
-        this operation.
-      missing_content_type: not specified
-      multiple_errors: Multiple fields violated their constraints.
-      parse_error: The request body was neither empty, nor did it contain a single
-        JSON object.
-      writing_read_only_attributes: You must not write a read-only attribute.
-      invalid_format: 'Invalid format for property ''%{property}'': Expected format
-        like ''%{expected_format}'', but got ''%{actual}''.'
+      code_401: U moet geauthenticeerd zijn om toegang te hebben tot deze resource.
+      code_403: U bent niet gemachtigd om toegang te hebben tot deze resource.
+      code_404: De gevraagde resource kan niet worden gevonden.
+      code_409: Door conflicterende wijzigingen kan deze resource niet worden bijgewerkt.
+      invalid_content_type: CONTENT-TYPE  '%{content_type}' werd verwacht, maar '%{actual}'
+        werd ingegeven.
+      invalid_resource: Eigenschap '%{property}' verwacht een link zoals '%{expected}',
+        maar kreeg '%{actual}'.
+      invalid_user_status_transition: De accountstatus van de huidige gebruiker laat
+        deze actie niet toe.
+      missing_content_type: niet bepaald
+      multiple_errors: Meerdere veldbeperkingen werden overtreden.
+      parse_error: De aanvraag is niet leeg en bevat ook geen single JSON object.
+      writing_read_only_attributes: U mag geen read-only attribuut schrijven.
+      invalid_format: 'Ongeldig formaat voor eigenschap ''%{property}'': een formaat
+        zoals ''%{expected_format}'' wordt verwacht, maar ''%{actual}'' werd ingegeven.'
       render:
-        context_not_found: No context found.
-        unsupported_context: Unsupported context found.
-        context_object_not_found: Cannot find the resource given with the context.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
-        invalid_user_assigned_to_work_package: The chosen user is not allowed to be
-          '%{property}' for this work package.
+        invalid_user_assigned_to_work_package: De gekozen gebruiker kan geen '%{property}'
+          zijn voor dit werkpakket.
+        estimated_hours: Geschatte uren uren kunnen niet op ouderwerkpaketten worden
+          gezet.
+        done_ratio: De vooruitgangsratio kan niet op een ouderwerkpakket worden gezet
+          wanneer die uit de status wordt afgeleid of is uitgeschakeld.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema

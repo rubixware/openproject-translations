@@ -183,7 +183,7 @@ et:
         smaller_than_or_equal_to_max_length: must be smaller than or equal to maximum
           length
         greater_than_start_date: peab olema alguskuupäevast hilisem
-        inclusion: ei ole nimistus
+        inclusion: is not set to one of the allowed values
         invalid: ei sobi
         less_than: peab olema väiksem kui %{count}
         less_than_or_equal_to: peab olema väiksem või võrdne kui %{count}
@@ -205,6 +205,9 @@ et:
         project_association:
           identical_projects: ei saa seostada endaga
           project_association_not_allowed: ei luba seoseid
+        repository:
+          not_whitelisted: is not allowed by the configuration
+          no_directory: is not a directory
         work_package:
           is_not_a_valid_target_for_time_entries: 'Töötunde ei sobi üle kanda teemale
             #%{id}.'
@@ -225,6 +228,9 @@ et:
               only_same_project_categories_allowed: The category of a work package
                 must be within the same project as the work package.
               does_not_exist: The specified category does not exist.
+            estimated_hours:
+              only_values_greater_or_equal_zeroes_allowed: The estimated hours must
+                be >= 0.
         user:
           attributes:
             password:
@@ -235,17 +241,18 @@ et:
               numeric: arvuline (nt 1, 2, 3)
               special: erimärk (nt %, &)
               reused:
-                one: Vali uus parool, mis erineb eelmisest paroolist.
-                other: Vali uus parool, mis erineb eelmiselt kasutatud %{count}-st
-                  paroolist.
+                one: has been used before. Please choose one that is different from
+                  your last one.
+                other: has been used before. Please choose one that is different from
+                  your last %{count}.
         member:
           principal_blank: Vali vähemalt üks kasutaja või grupp.
           role_blank: Vali vähemalt üks roll.
       template:
         body: 'Kontrolli järgnevad väljad:'
         header:
-          one: 1 viga ei võimaldanud selle %{model} salvestamist
-          other: "%{count} viga ei võimaldanud selle %{model} salvestamist"
+          one: 1 error prohibited this %{model} from being saved
+          other: "%{count} errors prohibited this %{model} from being saved"
     models:
       attachment: Fail
       board: Foorum
@@ -260,8 +267,8 @@ et:
       project: Projekt
       query: Kohandatud päring
       role:
-        one: Roll
-        other: Rolli
+        one: Role
+        other: Roles
       type: Liik
       planning_element: Planeerimise osa
       project_type: Projekti tüüp
@@ -448,39 +455,39 @@ et:
   datetime:
     distance_in_words:
       about_x_hours:
-        one: umbes 1 tund
-        other: umbes %{count} tundi
+        one: about 1 hour
+        other: about %{count} hours
       about_x_months:
-        one: umbes 1 kuu
-        other: umbes %{count} kuud
+        one: about 1 month
+        other: about %{count} months
       about_x_years:
-        one: umbes 1 aasta
-        other: umbes %{count} aastat
+        one: about 1 year
+        other: about %{count} years
       almost_x_years:
-        one: peaaegu 1 aasta
-        other: peaaegu %{count} aastat
+        one: almost 1 year
+        other: almost %{count} years
       half_a_minute: pool minutit
       less_than_x_minutes:
-        one: vähem kui minut
-        other: vähem kui %{count} minutit
+        one: less than a minute
+        other: less than %{count} minutes
       less_than_x_seconds:
-        one: vähem kui sekund
-        other: vähem kui %{count} sekundit
+        one: less than 1 second
+        other: less than %{count} seconds
       over_x_years:
-        one: rohkem kui aasta
-        other: rohkem kui %{count} aastat
+        one: over 1 year
+        other: over %{count} years
       x_days:
-        one: 1 päev
-        other: "%{count} päeva"
+        one: 1 day
+        other: "%{count} days"
       x_minutes:
-        one: 1 minut
-        other: "%{count} minutit"
+        one: 1 minute
+        other: "%{count} minutes"
       x_months:
-        one: 1 kuu
-        other: "%{count} kuud"
+        one: 1 month
+        other: "%{count} months"
       x_seconds:
-        one: 1 sekund
-        other: "%{count} sekundit"
+        one: 1 second
+        other: "%{count} seconds"
     units:
       hour:
         one: hour
@@ -733,6 +740,7 @@ et:
   label_downloads_abbr: A/L
   label_duplicated_by: dubleeris
   label_duplicates: duplikaadid
+  label_edit: Muuda
   label_enable_multi_select: Võimalda mitmene valik
   label_end_to_end: otsast lõpuni
   label_end_to_start: lõpust alguseni
@@ -1031,24 +1039,24 @@ et:
   label_workflow_plural: Töövood
   label_workflow_summary: Kokkuvõte
   label_x_closed_work_packages_abbr:
-    one: 1 suletud
-    other: "%{count} suletud"
+    one: 1 closed
+    other: "%{count} closed"
     zero: 0 closed
   label_x_comments:
-    one: 1 kommentaar
-    other: "%{count} kommentaari"
+    one: 1 comment
+    other: "%{count} comments"
     zero: no comments
   label_x_open_work_packages_abbr:
-    one: 1 avatud
-    other: "%{count} avatud"
+    one: 1 open
+    other: "%{count} open"
     zero: 0 open
   label_x_open_work_packages_abbr_on_total:
-    one: 1 avatud %{total}-st
-    other: "%{count} avatud %{total}-st"
+    one: 1 open / %{total}
+    other: "%{count} open / %{total}"
     zero: 0 open / %{total}
   label_x_projects:
-    one: 1 projekt
-    other: "%{count} projekti"
+    one: 1 project
+    other: "%{count} projects"
     zero: no projects
   label_year: Aasta
   label_yesterday: eile
@@ -1173,8 +1181,8 @@ et:
         format: "%n %u"
         units:
           byte:
-            one: Bait
-            other: Baiti
+            one: Byte
+            other: Bytes
           gb: GB
           kb: KB
           mb: MB
@@ -1493,8 +1501,8 @@ et:
     delete_thing: Kustuta
     duration: kestus
     duration_days:
-      one: 1 päev
-      other: "%{count} päeva"
+      one: 1 day
+      other: "%{count} days"
     edit_color: Muuda värvi
     edit_project_type: Muuda projekti tüüpi
     edit_thing: Muuda
@@ -1666,8 +1674,8 @@ et:
       teel)
     blocked: ajutiselt blokeeritud
     blocked_num_failed_logins:
-      one: ajutiselt blokeeritud (üks ebaõnnestunud sisselogimise katse)
-      other: ajutiselt blokeeritud (%{count} ebaõnnestunud sisselogimise katset)
+      one: locked temporarily (one failed login attempt)
+      other: locked temporarily (%{count} failed login attempts)
     deleted: Kustutatud kasutaja
     error_status_change_failed: 'Kasutaja oleku muutmine nurjus järgmiste tõrgete
       tõttu: %{errors}'
@@ -1705,7 +1713,6 @@ et:
   nothing_to_preview: Eelvaateks pole midagi näidata
   api_v3:
     attributes:
-      _type: Resource Type
       lock_version: Lock Version
     errors:
       code_401: You need to be authenticated to access this resource.
@@ -1714,23 +1721,28 @@ et:
       code_409: Couldn't update the resource because of conflicting modifications.
       invalid_content_type: Expected CONTENT-TYPE to be '%{content_type}' but got
         '%{actual}'.
-      invalid_resource: For property '%{property}' a resource of type '%{expected}'
-        is expected but got a resource of type '%{actual}'.
+      invalid_resource: For property '%{property}' a link like '%{expected}' is expected,
+        but got '%{actual}'.
       invalid_user_status_transition: The current user account status does not allow
         this operation.
       missing_content_type: not specified
-      multiple_errors: Multiple fields violated their constraints.
+      multiple_errors: Multiple field constraints have been violated.
       parse_error: The request body was neither empty, nor did it contain a single
         JSON object.
       writing_read_only_attributes: You must not write a read-only attribute.
       invalid_format: 'Invalid format for property ''%{property}'': Expected format
         like ''%{expected_format}'', but got ''%{actual}''.'
       render:
-        context_not_found: No context found.
-        unsupported_context: Unsupported context found.
-        context_object_not_found: Cannot find the resource given with the context.
+        context_not_parsable: The context provided is not a link to a resource.
+        unsupported_context: The resource given is not supported as context.
+        context_object_not_found: Cannot find the resource given as the context.
       validation:
         invalid_user_assigned_to_work_package: The chosen user is not allowed to be
           '%{property}' for this work package.
+        estimated_hours: Estimated hours cannot be set on parent work packages.
+        done_ratio: Done ratio cannot be set on parent work packages, when it is inferred
+          by status or when it is disabled.
+        start_date: Start date cannot be set on parent work packages.
+        due_date: Due date cannot be set on parent work packages.
     resources:
       schema: Schema
